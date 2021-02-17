@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apache-spark on 20&#39;s 블로그</title>
+    <link>https://key4920.github.io/categories/apache-spark/</link>
+    <description>Recent content in Apache-spark on 20&#39;s 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sun, 14 Feb 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://key4920.github.io/categories/apache-spark/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mac OS에 스파크 3.0 설치 및 pyspark 시작</title>
+      <link>https://key4920.github.io/2021/02/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC-3.0-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/</link>
+      <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://key4920.github.io/2021/02/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC-3.0-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/</guid>
+      <description>&lt;p&gt;맥북 Mac OS에 Spark를 설치해보고 주피터 노트북에서 pyspark를 실행해보자!&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
