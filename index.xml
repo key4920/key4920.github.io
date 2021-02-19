@@ -1,25 +1,177 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>20&#39;s 블로그</title>
-    <link>https://key4920.github.io/</link>
-    <description>Recent content on 20&#39;s 블로그</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ko-kr</language>
-    <lastBuildDate>Sun, 14 Feb 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://key4920.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Mac OS에 스파크3 설치 및 pyspark 시작</title>
-      <link>https://key4920.github.io/2021/02/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/</link>
-      <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://key4920.github.io/2021/02/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/</guid>
-      <description>&lt;p&gt;맥북 Mac OS에 Spark를 설치해보고 주피터 노트북에서 pyspark를 실행해보자!&lt;br&gt;
-NT. Java 와 Python은 설치 돼 있다는 가정으로 진행한다.&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>20&#39;s 블로그</title>
+        <link>https://key4920.github.io/</link>
+        <description>Recent content on 20&#39;s 블로그</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 14 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://key4920.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Mac OS에 스파크3 설치 및 pyspark 시작</title>
+        <link>https://key4920.github.io/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/</link>
+        <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://key4920.github.io/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/</guid>
+        <description>&lt;img src="https://key4920.github.io/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/matt-le-SJSpo9hQf7s-unsplash.jpg" alt="Featured image of post Mac OS에 스파크3 설치 및 pyspark 시작" /&gt;&lt;h2 id=&#34;step1-스파크-버전-선택-후-다운로드&#34;&gt;STEP1. 스파크 버전 선택 후 다운로드&lt;/h2&gt;
+&lt;p&gt;NT. Java 와 Python은 설치 돼 있다는 가정으로 진행한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;스파크 다운로드 사이트 링크&lt;/strong&gt; : &lt;a class=&#34;link&#34; href=&#34;http://spark.apache.org/downloads.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Downloads | Apache Spark&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;사이트에 접속하면 아래 화면이 나오게 된다.&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 377; flex-basis: 906px&#34;&gt;
+		&lt;a href=&#34;https://key4920.github.io/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/download_spark_version.png&#34; data-size=&#34;880x233&#34;&gt;&lt;img src=&#34;https://key4920.github.io/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/download_spark_version.png&#34;
+				srcset=&#34;https://key4920.github.io/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/download_spark_version_hu145a0ef7c780ebc8a2ae3cb22b089091_45515_480x0_resize_box_2.png 480w, https://key4920.github.io/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/download_spark_version_hu145a0ef7c780ebc8a2ae3cb22b089091_45515_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;880&#34;
+				height=&#34;233&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;download_spark_version.png&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;download_spark_version.png&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;원래는 Spark 2.4.7 을 선택해서 설치했었다.&lt;br&gt;
+하지만 로컬의 Java 버전이 11이었으므로, 그냥 이참에 Spark3.0을 시도해보기로 했다!&lt;/p&gt;
+&lt;p&gt;(참고) Spark3.0은 Java 11을 지원하고, Spark2.X는 Java 8을 지원한다.&lt;/p&gt;
+&lt;p&gt;우선 원하는 Spark 버전 선택하여 &amp;lsquo;Download Spark&amp;rsquo; 를 클릭해주면 다음과 같은 화면으로 넘어간다.&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 216; flex-basis: 519px&#34;&gt;
+		&lt;a href=&#34;https://key4920.github.io/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/download_spark_mirror.png&#34; data-size=&#34;1209x559&#34;&gt;&lt;img src=&#34;https://key4920.github.io/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/download_spark_mirror.png&#34;
+				srcset=&#34;https://key4920.github.io/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/download_spark_mirror_huccdc39ff23770142892f8dd0f6e57ac7_143441_480x0_resize_box_2.png 480w, https://key4920.github.io/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/download_spark_mirror_huccdc39ff23770142892f8dd0f6e57ac7_143441_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1209&#34;
+				height=&#34;559&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;download_spark_mirror.png&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;download_spark_mirror.png&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;mirror sites 중 한개를 선택해 다운로드 해주는데, 그냥 최상단 링크를 눌러 다운로드 해준다.&lt;/p&gt;
+&lt;h2 id=&#34;step2-다운로드한-압축-파일을-home-directory에-풀어준다&#34;&gt;STEP2. 다운로드한 압축 파일을 home directory에 풀어준다.&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;tar -zxvf spark-3.0.1-bin-hadoop3.2.tar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;step3-bash_profile-환경변수-수정&#34;&gt;STEP3. ~/.bash_profile 환경변수 수정&lt;/h2&gt;
+&lt;p&gt;어떤 directory에서도 spark notebook 열 수 있도록 환경변수 설정해준다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## .bash_profile 있는지 확인&lt;/span&gt;
+ls -a 
+&lt;span class=&#34;c1&#34;&gt;## .bash_profile 파일 열기&lt;/span&gt;
+nano .bash_profile
+&lt;span class=&#34;c1&#34;&gt;## 또는 &lt;/span&gt;
+vi .bash_profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;아래 환경변수 추가로 써준다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 버전 맞게 써주기&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;SPARK_PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;~/spark-3.0.1-bin-hadoop3.2 
+&lt;span class=&#34;c1&#34;&gt;## PySpark Shell을 주피터 노트북에서 열 수 있도록 설정&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PYSPARK_DRIVER_PYTHON&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;jupyter&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PYSPARK_DRIVER_PYTHON_OPTS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;notebook&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;## 파이썬 3를 사용한다면 아래 설정 추가해 주어야 에러가 나지 않음&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PYSPARK_PYTHON&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;python3
+
+&lt;span class=&#34;c1&#34;&gt;## sparknb는 명령어 마음대로 써준 것이므로, 원하는 이름으로 수정 가능&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;## local[2] 는 로컬 코어 2개를 사용한다는 뜻으로 본인 로컬 환경에 맞게 수정 가능&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;sparknb&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;$SPARK_PATH/bin/pyspark --master local[2]&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;만약 nano .bash_profile 했었으면  ^x —&amp;gt; Y —&amp;gt; enter 로 저장하고 빠져나오기&lt;/p&gt;
+&lt;p&gt;vi .bash_profile 했었으면 :wq 입력 후 저장하고 빠져나오기&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; .bash_profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;이제-모두-완료됐으니-간단한-실습해보자&#34;&gt;이제 모두 완료됐으니, 간단한 실습해보자!&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 터미널에서 sparknb입력하여 주피터 노트북 실행&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;## 위에서 alias 다른 이름으로 설정했다면, 해당 이름으로 실행&lt;/span&gt;
+sparknb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;주피터에서-파이썬-코드-작성&#34;&gt;주피터에서 파이썬 코드 작성&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Reason why we have the getOrCreate code&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# http://stackoverflow.com/questions/28999332/how-to-access-sparkcontext-in-pyspark-script&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;sc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SparkContext&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getOrCreate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;sc&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div&gt;
+    &lt;p&gt;&lt;b&gt;SparkContext&lt;/b&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&#34;http://172.30.1.9:4041&#34;&gt;Spark UI&lt;/a&gt;&lt;/p&gt;
+
+    &lt;dl&gt;
+      &lt;dt&gt;Version&lt;/dt&gt;
+        &lt;dd&gt;&lt;code&gt;v3.0.1&lt;/code&gt;&lt;/dd&gt;
+      &lt;dt&gt;Master&lt;/dt&gt;
+        &lt;dd&gt;&lt;code&gt;local[2]&lt;/code&gt;&lt;/dd&gt;
+      &lt;dt&gt;AppName&lt;/dt&gt;
+        &lt;dd&gt;&lt;code&gt;PySparkShell&lt;/code&gt;&lt;/dd&gt;
+    &lt;/dl&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;numpy&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;np&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;TOTAL&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1000000&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;dots&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sc&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;parallelize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;2.0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;random&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;random&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TOTAL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)])&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cache&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Number of random points:&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dots&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;stats&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dots&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stats&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Mean:&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stats&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mean&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;stdev:&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stats&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stdev&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Number of random points: 1000000 &lt;br&gt;
+Mean: [-0.00076914  0.00090079]&lt;br&gt;
+stdev: [0.57721218 0.57750566]&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;dots&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;collect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()[:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;## 형식 구경하기&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;[array([0.71638614, 0.34966844]),&lt;br&gt;
+array([0.85926697, 0.43265725]),&lt;br&gt;
+array([-0.12204166, -0.8161978 ]),&lt;br&gt;
+array([-0.96733469, -0.57462963]),&lt;br&gt;
+array([-0.13704113, -0.48361848])]&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;dots&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ParallelCollectionRDD[0] at readRDDFromFile at PythonRDD.scala:262&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;matplotlib&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inline&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;operator&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;itemgetter&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;matplotlib&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pyplot&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;figure&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;figsize&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Plot 1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;subplot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xlim&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ylim&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;sample&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dots&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sample&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.01&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;X&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sample&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;itemgetter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;collect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;Y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sample&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;itemgetter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;collect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;scatter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;X&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Plot 2&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;subplot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xlim&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ylim&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;inCircle&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;lambda&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;linalg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;norm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;dotsIn&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sample&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;filter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;inCircle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cache&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;dotsOut&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sample&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;filter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;lambda&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inCircle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cache&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# inside circle&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;Xin&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dotsIn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;itemgetter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;collect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;Yin&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dotsIn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;itemgetter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;collect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;scatter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Xin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Yin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;r&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# outside circle&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;Xout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dotsOut&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;itemgetter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;collect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;Yout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dotsOut&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;itemgetter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;collect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;scatter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Xout&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Yout&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;lt;matplotlib.collections.PathCollection at 0x7f88920d0a50&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 202; flex-basis: 485px&#34;&gt;
+		&lt;a href=&#34;https://key4920.github.io/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/spark_first_example_5_1.png&#34; data-size=&#34;621x307&#34;&gt;&lt;img src=&#34;https://key4920.github.io/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/spark_first_example_5_1.png&#34;
+				srcset=&#34;https://key4920.github.io/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/spark_first_example_5_1_hu8a5414a31e0e5fe7f4642035136b2fa9_24097_480x0_resize_box_2.png 480w, https://key4920.github.io/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/spark_first_example_5_1_hu8a5414a31e0e5fe7f4642035136b2fa9_24097_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;621&#34;
+				height=&#34;307&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;png&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;png&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://medium.com/@GalarnykMichael/install-spark-on-mac-pyspark-453f395f240b&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Install Spark on Mac (PySpark)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://kingname.tistory.com/159&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;[mac] Apache Spark Study -1 ( Spark설치(HomeBrew) )&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://parkaparka.tistory.com/27&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;apache-spark@3.0.1 설치&lt;/a&gt;&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
 </rss>
