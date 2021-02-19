@@ -21,14 +21,5 @@
 NT. Java 와 Python은 설치 돼 있다는 가정으로 진행한다.&lt;/p&gt;</description>
     </item>
     
-    <item>
-      <title></title>
-      <link>https://key4920.github.io/1/01/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://key4920.github.io/1/01/</guid>
-      <description># Reason why we have the getOrCreate code # http://stackoverflow.com/questions/28999332/how-to-access-sparkcontext-in-pyspark-script sc = SparkContext.getOrCreate() sc &amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://172.30.1.9:4041&amp;quot;&amp;gt;Spark UI&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;dl&amp;gt; &amp;lt;dt&amp;gt;Version&amp;lt;/dt&amp;gt; &amp;lt;dd&amp;gt;&amp;lt;code&amp;gt;v3.0.1&amp;lt;/code&amp;gt;&amp;lt;/dd&amp;gt; &amp;lt;dt&amp;gt;Master&amp;lt;/dt&amp;gt; &amp;lt;dd&amp;gt;&amp;lt;code&amp;gt;local[2]&amp;lt;/code&amp;gt;&amp;lt;/dd&amp;gt; &amp;lt;dt&amp;gt;AppName&amp;lt;/dt&amp;gt; &amp;lt;dd&amp;gt;&amp;lt;code&amp;gt;PySparkShell&amp;lt;/code&amp;gt;&amp;lt;/dd&amp;gt; &amp;lt;/dl&amp;gt;  import numpy as np TOTAL = 1000000 dots = sc.parallelize([2.0 * np.random.random(2) - 1.0 for i in range(TOTAL)]).cache() print(&amp;#34;Number of random points:&amp;#34;, dots.count()) stats = dots.stats() print(&amp;#39;Mean:&amp;#39;, stats.mean()) print(&amp;#39;stdev:&amp;#39;, stats.stdev()) Number of random points: 1000000 Mean: [-0.00076914 0.00090079] stdev: [0.57721218 0.57750566]  dots.collect()[:5] ## 형식 구경하기 [array([0.</description>
-    </item>
-    
   </channel>
 </rss>
