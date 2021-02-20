@@ -83,18 +83,19 @@ sparknb
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;sc&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;div&gt;
-    &lt;p&gt;&lt;b&gt;SparkContext&lt;/b&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&#34;http://172.30.1.9:4041&#34;&gt;Spark UI&lt;/a&gt;&lt;/p&gt;
-
+	
+    &lt;p&gt;&lt;b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;SparkContext&lt;/b&gt;&lt;/p&gt;
+	
+    &lt;p&gt;&lt;a href=&#34;http://172.30.1.9:4041&#34;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Spark UI&lt;/a&gt;&lt;/p&gt;
     &lt;dl&gt;
-      &lt;dt&gt;Version&lt;/dt&gt;
-        &lt;dd&gt;&lt;code&gt;v3.0.1&lt;/code&gt;&lt;/dd&gt;
-      &lt;dt&gt;Master&lt;/dt&gt;
-        &lt;dd&gt;&lt;code&gt;local[2]&lt;/code&gt;&lt;/dd&gt;
-      &lt;dt&gt;AppName&lt;/dt&gt;
-        &lt;dd&gt;&lt;code&gt;PySparkShell&lt;/code&gt;&lt;/dd&gt;
+      &lt;dt&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Version&lt;/dt&gt;
+        &lt;dd&gt;&lt;code&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;v3.0.1&lt;/code&gt;&lt;/dd&gt;
+      &lt;dt&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Master&lt;/dt&gt;
+        &lt;dd&gt;&lt;code&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;local[2]&lt;/code&gt;&lt;/dd&gt;
+      &lt;dt&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;AppName&lt;/dt&gt;
+        &lt;dd&gt;&lt;code&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;PySparkShell&lt;/code&gt;&lt;/dd&gt;
     &lt;/dl&gt;
+    
 &lt;/div&gt;
 
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;numpy&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;np&lt;/span&gt;
