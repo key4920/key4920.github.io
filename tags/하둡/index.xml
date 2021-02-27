@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>하둡 on 20&#39;s 블로그</title>
+    <link>https://key4920.github.io/tags/%ED%95%98%EB%91%A1/</link>
+    <description>Recent content in 하둡 on 20&#39;s 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 27 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://key4920.github.io/tags/%ED%95%98%EB%91%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mac OS에 하둡(Hadoop) 설치</title>
+      <link>https://key4920.github.io/p/mac-os%EC%97%90-%ED%95%98%EB%91%A1hadoop-%EC%84%A4%EC%B9%98/</link>
+      <pubDate>Sat, 27 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://key4920.github.io/p/mac-os%EC%97%90-%ED%95%98%EB%91%A1hadoop-%EC%84%A4%EC%B9%98/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
