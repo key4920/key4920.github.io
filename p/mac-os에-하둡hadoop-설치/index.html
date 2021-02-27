@@ -257,7 +257,7 @@ if (!doNotTrack) {
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">## 하둡 버전 X.X.X는 본인이 설치한 버전으로 수정 </span>
 <span class="nb">cd</span> /usr/local/cellar/hadoop/3.3.0/libexec/etc/hadoop
 </code></pre></div><p>Finder에서 저 경로가 보이지 않았지만, 터미널에서 명령어 치니 경로가 잘 들어가지긴 했다.</p>
-<p>그래도 직접 Finder에서 보기 위해서 Finder에서 ***&lsquo;Cmd+Shift+G&rsquo;***를 치니 경로 검색 창이 떴고 그걸로 들어가니 Finder에서 볼 수 있었다.</p>
+<p>그래도 직접 Finder에서 보기 위해서 Finder에서 <strong><em>&lsquo;Cmd+Shift+G&rsquo;</em></strong> 를 치니 경로 검색 창이 떴고 그걸로 들어가니 Finder에서 볼 수 있었다.</p>
 <p><strong>수정해야 할 파일들</strong></p>
 <blockquote>
 <p><strong>(1) hadoop-env.sh</strong><br>
@@ -345,7 +345,7 @@ if (!doNotTrack) {
 cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys
 chmod <span class="m">0600</span> ~/.ssh/authorized_keys
 </code></pre></div><p>그냥 hadoop 폴더 내에서 입력했더니 ./ssh 폴더가 없다고 떴다.</p>
-<p>나같은 경우는 가장 하위 홈 디렉토리에서 명령어 입력하니 됐다. (/Users/&ldquo;user_name&rdquo;/)</p>
+<p>나 같은 경우는 가장 하위 홈 디렉토리에서 명령어 입력하니 됐다. (/Users/&ldquo;user_name&rdquo;/)</p>
 <p>이제 HDFS 로 포맷한다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /usr/local/cellar/hadoop/3.3.0/libexec/bin
 hdfs namenode -format

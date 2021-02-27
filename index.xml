@@ -26,7 +26,7 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 하둡 버전 X.X.X는 본인이 설치한 버전으로 수정 &lt;/span&gt;
 &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /usr/local/cellar/hadoop/3.3.0/libexec/etc/hadoop
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Finder에서 저 경로가 보이지 않았지만, 터미널에서 명령어 치니 경로가 잘 들어가지긴 했다.&lt;/p&gt;
-&lt;p&gt;그래도 직접 Finder에서 보기 위해서 Finder에서 ***&amp;lsquo;Cmd+Shift+G&amp;rsquo;***를 치니 경로 검색 창이 떴고 그걸로 들어가니 Finder에서 볼 수 있었다.&lt;/p&gt;
+&lt;p&gt;그래도 직접 Finder에서 보기 위해서 Finder에서 &lt;strong&gt;&lt;em&gt;&amp;lsquo;Cmd+Shift+G&amp;rsquo;&lt;/em&gt;&lt;/strong&gt; 를 치니 경로 검색 창이 떴고 그걸로 들어가니 Finder에서 볼 수 있었다.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;수정해야 할 파일들&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;(1) hadoop-env.sh&lt;/strong&gt;&lt;br&gt;
@@ -114,7 +114,7 @@
 cat ~/.ssh/id_rsa.pub &amp;gt;&amp;gt; ~/.ssh/authorized_keys
 chmod &lt;span class=&#34;m&#34;&gt;0600&lt;/span&gt; ~/.ssh/authorized_keys
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;그냥 hadoop 폴더 내에서 입력했더니 ./ssh 폴더가 없다고 떴다.&lt;/p&gt;
-&lt;p&gt;나같은 경우는 가장 하위 홈 디렉토리에서 명령어 입력하니 됐다. (/Users/&amp;ldquo;user_name&amp;rdquo;/)&lt;/p&gt;
+&lt;p&gt;나 같은 경우는 가장 하위 홈 디렉토리에서 명령어 입력하니 됐다. (/Users/&amp;ldquo;user_name&amp;rdquo;/)&lt;/p&gt;
 &lt;p&gt;이제 HDFS 로 포맷한다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /usr/local/cellar/hadoop/3.3.0/libexec/bin
 hdfs namenode -format
