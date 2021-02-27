@@ -150,17 +150,16 @@ hdfs namenode -format
 &lt;span class=&#34;m&#34;&gt;28745&lt;/span&gt; DataNode
 &lt;span class=&#34;m&#34;&gt;28206&lt;/span&gt; ResourceManager
 &lt;span class=&#34;m&#34;&gt;28879&lt;/span&gt; SecondaryNameNode
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;그럼 이제 &lt;em&gt;&lt;a class=&#34;link&#34; href=&#34;http://localhost&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;localhost&lt;/a&gt; 로 접속해서 확인해보자&lt;/em&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;그럼 이제 &lt;em&gt;localhost&lt;/em&gt; 로 접속해서 확인해보자&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Cluster status&lt;/strong&gt; : &lt;a class=&#34;link&#34; href=&#34;http://localhost:8088/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://localhost:8088&lt;/a&gt;&lt;br&gt;
 &lt;strong&gt;HDFS status&lt;/strong&gt; : &lt;a class=&#34;link&#34; href=&#34;http://localhost:9870/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;http://localhost:9870&lt;/a&gt;&lt;br&gt;
+    &gt;http://localhost:9870&lt;/a&gt; &lt;br&gt;
 &lt;strong&gt;Secondary NameNode status&lt;/strong&gt; : &lt;a class=&#34;link&#34; href=&#34;http://localhost:9868/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://localhost:9868&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&#34;cluster-status&#34;&gt;Cluster status&lt;/h4&gt;
+&lt;h3 id=&#34;cluster-status&#34;&gt;Cluster status&lt;/h3&gt;
 &lt;p&gt;&lt;figure style=&#34;flex-grow: 364; flex-basis: 874px&#34;&gt;
 		&lt;a href=&#34;https://key4920.github.io/p/mac-os%EC%97%90-%ED%95%98%EB%91%A1hadoop-%EC%84%A4%EC%B9%98/cluster_status.png&#34; data-size=&#34;1898x521&#34;&gt;&lt;img src=&#34;https://key4920.github.io/p/mac-os%EC%97%90-%ED%95%98%EB%91%A1hadoop-%EC%84%A4%EC%B9%98/cluster_status.png&#34;
 				srcset=&#34;https://key4920.github.io/p/mac-os%EC%97%90-%ED%95%98%EB%91%A1hadoop-%EC%84%A4%EC%B9%98/cluster_status_hubd2d11e347e76e1397360d541fbb6952_136556_480x0_resize_box_2.png 480w, https://key4920.github.io/p/mac-os%EC%97%90-%ED%95%98%EB%91%A1hadoop-%EC%84%A4%EC%B9%98/cluster_status_hubd2d11e347e76e1397360d541fbb6952_136556_1024x0_resize_box_2.png 1024w&#34;
@@ -173,7 +172,7 @@ hdfs namenode -format
 		&lt;figcaption&gt;cluster_status.png&lt;/figcaption&gt;
 		
 	&lt;/figure&gt;&lt;/p&gt;
-&lt;h4 id=&#34;hdfs-status&#34;&gt;HDFS status&lt;/h4&gt;
+&lt;h3 id=&#34;hdfs-status&#34;&gt;HDFS status&lt;/h3&gt;
 &lt;p&gt;&lt;figure style=&#34;flex-grow: 236; flex-basis: 566px&#34;&gt;
 		&lt;a href=&#34;https://key4920.github.io/p/mac-os%EC%97%90-%ED%95%98%EB%91%A1hadoop-%EC%84%A4%EC%B9%98/hdfs_status.png&#34; data-size=&#34;1882x797&#34;&gt;&lt;img src=&#34;https://key4920.github.io/p/mac-os%EC%97%90-%ED%95%98%EB%91%A1hadoop-%EC%84%A4%EC%B9%98/hdfs_status.png&#34;
 				srcset=&#34;https://key4920.github.io/p/mac-os%EC%97%90-%ED%95%98%EB%91%A1hadoop-%EC%84%A4%EC%B9%98/hdfs_status_hu6a8ef2145418e9c56908977ad1b5f666_116007_480x0_resize_box_2.png 480w, https://key4920.github.io/p/mac-os%EC%97%90-%ED%95%98%EB%91%A1hadoop-%EC%84%A4%EC%B9%98/hdfs_status_hu6a8ef2145418e9c56908977ad1b5f666_116007_1024x0_resize_box_2.png 1024w&#34;
@@ -207,7 +206,7 @@ hdfs namenode -format
         <item>
         <title>Mac OS에 스파크3 설치 및 pyspark 시작</title>
         <link>https://key4920.github.io/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/</link>
-        <pubDate>Sun, 14 Feb 2021 00:00:00 +0900</pubDate>
+        <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
         
         <guid>https://key4920.github.io/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/</guid>
         <description>&lt;img src="https://key4920.github.io/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/spark_background.jpg" alt="Featured image of post Mac OS에 스파크3 설치 및 pyspark 시작" /&gt;&lt;h3 id=&#34;설치-환경&#34;&gt;설치 환경&lt;/h3&gt;
