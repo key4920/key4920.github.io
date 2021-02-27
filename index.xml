@@ -153,11 +153,11 @@ hdfs namenode -format
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;그럼 이제 &lt;em&gt;&lt;a class=&#34;link&#34; href=&#34;http://localhost&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;localhost&lt;/a&gt; 로 접속해서 확인해보자&lt;/em&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Cluster status: &lt;a class=&#34;link&#34; href=&#34;http://localhost:8088/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;&lt;strong&gt;Cluster status&lt;/strong&gt; : &lt;a class=&#34;link&#34; href=&#34;http://localhost:8088/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://localhost:8088&lt;/a&gt;&lt;br&gt;
-HDFS status: &lt;a class=&#34;link&#34; href=&#34;http://localhost:9870/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;strong&gt;HDFS status&lt;/strong&gt; : &lt;a class=&#34;link&#34; href=&#34;http://localhost:9870/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://localhost:9870&lt;/a&gt;&lt;br&gt;
-Secondary NameNode status: &lt;a class=&#34;link&#34; href=&#34;http://localhost:9868/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;strong&gt;Secondary NameNode status&lt;/strong&gt; : &lt;a class=&#34;link&#34; href=&#34;http://localhost:9868/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://localhost:9868&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h4 id=&#34;cluster-status&#34;&gt;Cluster status&lt;/h4&gt;
