@@ -276,11 +276,30 @@ vi .bash_profile
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;만약 nano .bash_profile 했었으면  ^x —&amp;gt; Y —&amp;gt; enter 로 저장하고 빠져나오기&lt;/p&gt;
 &lt;p&gt;vi .bash_profile 했었으면 :wq 입력 후 저장하고 빠져나오기&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; .bash_profile
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;이제-모두-완료됐으니-간단한-실습해보자&#34;&gt;이제 모두 완료됐으니, 간단한 실습해보자!&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;step4-실행-확인&#34;&gt;STEP4. 실행 확인&lt;/h2&gt;
+&lt;h3 id=&#34;spark-shell-실행&#34;&gt;spark-shell 실행&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 터미널에서 spark-shell 입력하여 스파크 쉘 실행&lt;/span&gt;
+spark-shell
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;터미널에 spark-shell 입력하면 아래와 같이 정상적으로 실행되면서 스칼라를 통해 코드를 작성할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 275; flex-basis: 661px&#34;&gt;
+		&lt;a href=&#34;https://key4920.github.io/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/spark-shell.png&#34; data-size=&#34;513x186&#34;&gt;&lt;img src=&#34;https://key4920.github.io/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/spark-shell.png&#34;
+				srcset=&#34;https://key4920.github.io/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/spark-shell_huaeb5065bcfc56707c199c9a3a1878073_45801_480x0_resize_box_2.png 480w, https://key4920.github.io/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/spark-shell_huaeb5065bcfc56707c199c9a3a1878073_45801_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;513&#34;
+				height=&#34;186&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;spark-shell.png&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;spark-shell.png&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;주피터-노트북에서-실행&#34;&gt;주피터 노트북에서 실행&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 터미널에서 sparknb입력하여 주피터 노트북 실행&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;## 위에서 alias 다른 이름으로 설정했다면, 해당 이름으로 실행&lt;/span&gt;
 sparknb
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;주피터에서-파이썬-코드-작성&#34;&gt;주피터에서 파이썬 코드 작성&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;명령어 입력하면 주피터 노트북이 켜지고, pyspark를 작성할 수 있다.&lt;/p&gt;
+&lt;h2 id=&#34;step-5-이제-모두-완료됐으니-간단한-실습해보자&#34;&gt;STEP 5. 이제 모두 완료됐으니, 간단한 실습해보자!&lt;/h2&gt;
+&lt;h3 id=&#34;주피터-노트북에서-파이썬-코드-작성&#34;&gt;주피터 노트북에서 파이썬 코드 작성&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Reason why we have the getOrCreate code&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# http://stackoverflow.com/questions/28999332/how-to-access-sparkcontext-in-pyspark-script&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;sc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SparkContext&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getOrCreate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
