@@ -35,7 +35,7 @@
 &lt;li&gt;어차피 제로 베이스로 시작하는거, 나에겐 Jekyll이나  Hugo나 외계어로 보이는건 똑같았다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;자 이제 생성을 시작해보자!&lt;/p&gt;
-&lt;h1 id=&#34;step1-hugo-설치&#34;&gt;STEP1. Hugo 설치&lt;/h1&gt;
+&lt;h2 id=&#34;step1-hugo-설치&#34;&gt;STEP1. Hugo 설치&lt;/h2&gt;
 &lt;p&gt;나는 맥북이므로 brew를 활용하여 설치하였다.&lt;/p&gt;
 &lt;p&gt;brew 가 없다면 &lt;a class=&#34;link&#34; href=&#34;https://brew.sh/index_ko&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;brew&lt;/a&gt; 에서 설치 해 준다.&lt;/p&gt;
@@ -45,7 +45,7 @@
 $ hugo version
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;윈도우이거나 brew 이외의 설치 방법은 Hugo 공식 사이트인  &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/getting-started/quick-start/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://gohugo.io/getting-started/quick-start/&lt;/a&gt; 나 하단 Reference의 블로그들을 참고해 주시길 바란다.&lt;/p&gt;
-&lt;h1 id=&#34;step2-hugo-블로그-폴더-생성&#34;&gt;STEP2. Hugo 블로그 폴더 생성&lt;/h1&gt;
+&lt;h2 id=&#34;step2-hugo-블로그-폴더-생성&#34;&gt;STEP2. Hugo 블로그 폴더 생성&lt;/h2&gt;
 &lt;p&gt;사실 용어는 잘 모르겠다.ㅎㅎ&lt;/p&gt;
 &lt;p&gt;그냥 쉽게 생각하면 앞으로 블로그에 올라갈 콘텐츠들이나 테마 등 모든 것이 담기는 폴더라고 생각하면 된다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 폴더 이름은 마음대로 지정해도 된다. &lt;/span&gt;
@@ -77,7 +77,7 @@ Visit https://gohugo.io/ &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; quicksta
 		&lt;figcaption&gt;blog_structure&lt;/figcaption&gt;
 		
 	&lt;/figure&gt;&lt;/p&gt;
-&lt;h1 id=&#34;step3-테마-추가하기&#34;&gt;STEP3. 테마 추가하기&lt;/h1&gt;
+&lt;h2 id=&#34;step3-테마-추가하기&#34;&gt;STEP3. 테마 추가하기&lt;/h2&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Complete List&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;나는 무지랭이이므로 다른 분들이 이쁘게 만들어주신 테마를 사용할 것이다.&lt;/p&gt;
@@ -88,7 +88,7 @@ Visit https://gohugo.io/ &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; quicksta
 &lt;ul&gt;
 &lt;li&gt;그냥 내가 파란색 보라색 이런 색을 좋아한다.&lt;/li&gt;
 &lt;li&gt;고르고보니 다크모드도 지원된다. 감사하다!&lt;/li&gt;
-&lt;li&gt;Hugo 버전이 **최신 버전(Hugo ≥ 0.78.0.)**이어야 했어서 upgrade 해줬다.&lt;/li&gt;
+&lt;li&gt;Hugo 버전이 &lt;strong&gt;최신 버전(Hugo ≥ 0.78.0.)&lt;/strong&gt; 이어야 했어서 upgrade 해줬다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -108,7 +108,7 @@ $ git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/stac
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이제 아까 blog 폴더 내에 themes에 들어가보면 &amp;lsquo;stack&amp;rsquo; 폴더가 생긴 것을 볼 수 있다.&lt;/p&gt;
 &lt;p&gt;그 다음, 보통 글을 한개를 써서 올려보라는데 사실 나는 어떻게 해야하는지 감이 없어서 애를 먹었더랬다.&lt;/p&gt;
 &lt;p&gt;뒤에 할 터이니 우선 다음 step으로 넘어가자!&lt;/p&gt;
-&lt;h1 id=&#34;step4-github-저장소-생성&#34;&gt;STEP4. Github 저장소 생성&lt;/h1&gt;
+&lt;h2 id=&#34;step4-github-저장소-생성&#34;&gt;STEP4. Github 저장소 생성&lt;/h2&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://gohugo.io/hosting-and-deployment/hosting-on-github/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Github 저장소 2개를 생성 해야 한다.&lt;/p&gt;
@@ -117,9 +117,9 @@ $ git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/stac
 &lt;li&gt;다른 하나는 렌더링된 웹사이트를 담을 저장소 (key4920.github.io)&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;사실 뭔소린지 잘 모른다. 내가 아는 것은 &lt;strong&gt;2개를 생성&lt;/strong&gt;해야하고, 2번인 웹사이트를 담을 저장소는 이름을 &lt;!-- raw HTML omitted --&gt;github.io 로 지어야 한다는 것이다.&lt;/p&gt;
-&lt;p&gt;&amp;lt; &lt;strong&gt;나의 첫번째 뻘짓 &amp;gt;&lt;/strong&gt;
-저 &lt;!-- raw HTML omitted --&gt;이어야 한다는 것을 무시하고, 내 마음대로 지어보려 했다가 자꾸 에러가 났었다. 그런데 반드시 &lt;strong&gt;본인의 github id로&lt;/strong&gt; 생성해 주어야한다.
-바꿀 수 있는 것 같지만, 나중에 시간이 남으면 시도해보도록하고, 패스한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;lt; 나의 첫번째 뻘짓 &amp;gt;&lt;/strong&gt;&lt;br&gt;
+2번 저장소의 USERNAME 부분이 내 id 이어야 한다는 것을 무시하고, 내 마음대로 지어보려 했다가 자꾸 에러가 났었다.&lt;br&gt;
+반드시 본인의 &lt;strong&gt;github id&lt;/strong&gt;로 생성해 주어야한다. 바꿀 수 있는 것 같지만, 나중에 시간이 남으면 시도해 보도록하고, 패스한다.&lt;/p&gt;
 &lt;p&gt;&lt;figure style=&#34;flex-grow: 123; flex-basis: 296px&#34;&gt;
 		&lt;a href=&#34;https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_repository.png&#34; data-size=&#34;766x621&#34;&gt;&lt;img src=&#34;https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_repository.png&#34;
 				srcset=&#34;https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_repository_hubb99cc5a21d4de72d9f2885b5b86643b_89466_480x0_resize_box_2.png 480w, https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_repository_hubb99cc5a21d4de72d9f2885b5b86643b_89466_1024x0_resize_box_2.png 1024w&#34;
@@ -180,7 +180,7 @@ $ git submodule add -b master git@github.com:key4920/key4920.github.io.git publi
 		&lt;figcaption&gt;github_addr&lt;/figcaption&gt;
 		
 	&lt;/figure&gt;&lt;/p&gt;
-&lt;h1 id=&#34;step5-예시-사이트-보기&#34;&gt;STEP5. 예시 사이트 보기&lt;/h1&gt;
+&lt;h2 id=&#34;step5-예시-사이트-보기&#34;&gt;STEP5. 예시 사이트 보기&lt;/h2&gt;
 &lt;p&gt;아까 언급했듯이, 막상 글을 쓰려니 어떻게 해야하는지 막막했다.&lt;/p&gt;
 &lt;p&gt;그런데 보통 themes/stack 폴더 내에 들어가보면 &amp;lsquo;exampleSite&amp;rsquo; 폴더가 있다.&lt;/p&gt;
 &lt;p&gt;&amp;lsquo;exampleSite&amp;rsquo; 폴더 안에 있는 모든 폴더 및 파일들을 복사해서 blog 폴더 안에 덮어쓰기 해준다.&lt;/p&gt;
@@ -218,7 +218,7 @@ $ git submodule add -b master git@github.com:key4920/key4920.github.io.git publi
     &gt;key4920.github.io&lt;/a&gt; 를 입력해서 들어가도 사이트가 build 된 상태가 아니다.&lt;/p&gt;
 &lt;p&gt;앞의 &lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://localhost:1313/&lt;/a&gt; 에서 결과가 맘에 들면 git 업로드 해줘야 실제 내 블로그에 적용된다.&lt;/p&gt;
-&lt;h1 id=&#34;step6-사이트에-글-업로드&#34;&gt;STEP6. 사이트에 글 업로드&lt;/h1&gt;
+&lt;h2 id=&#34;step6-사이트에-글-업로드&#34;&gt;STEP6. 사이트에 글 업로드&lt;/h2&gt;
 &lt;p&gt;blog 폴더에 들어가서 &amp;lsquo;deploy.sh&amp;rsquo; 파일을 하나 생성하고 파일 안에 아래 내용을 복붙해서 저장해준다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;이때 hugo -t stack 부분에서 &amp;lsquo;stack&amp;rsquo;을 본인 테마 이름으로 수정 해 준다.&lt;/li&gt;

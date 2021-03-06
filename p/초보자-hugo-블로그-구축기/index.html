@@ -104,24 +104,6 @@ if (!doNotTrack) {
         
 
         <li >
-            <a href='/about'>
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="7" r="4" />
-  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-</svg>
-
-
-
-                
-                <span>About</span>
-            </a>
-        </li>
-        
-        
-
-        <li >
             <a href='/archives'>
                 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -157,6 +139,28 @@ if (!doNotTrack) {
 
                 
                 <span>BigData Platform</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/categories/hugo-blog/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-blockquote" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M6 15h15" />
+  <path d="M21 19h-15" />
+  <path d="M15 11h6" />
+  <path d="M21 7h-6" />
+  <path d="M9 9h1a1 1 0 1 1 -1 1v-2.5a2 2 0 0 1 2 -2" />
+  <path d="M3 9h1a1 1 0 1 1 -1 1v-2.5a2 2 0 0 1 2 -2" />
+</svg>
+
+
+
+                
+                <span>Hugo</span>
             </a>
         </li>
         
@@ -288,7 +292,7 @@ if (!doNotTrack) {
 <li>어차피 제로 베이스로 시작하는거, 나에겐 Jekyll이나  Hugo나 외계어로 보이는건 똑같았다.</li>
 </ul>
 <p>자 이제 생성을 시작해보자!</p>
-<h1 id="step1-hugo-설치">STEP1. Hugo 설치</h1>
+<h2 id="step1-hugo-설치">STEP1. Hugo 설치</h2>
 <p>나는 맥북이므로 brew를 활용하여 설치하였다.</p>
 <p>brew 가 없다면 <a class="link" href="https://brew.sh/index_ko"  target="_blank" rel="noopener"
     >brew</a> 에서 설치 해 준다.</p>
@@ -298,7 +302,7 @@ if (!doNotTrack) {
 $ hugo version
 </code></pre></div><p>윈도우이거나 brew 이외의 설치 방법은 Hugo 공식 사이트인  <a class="link" href="https://gohugo.io/getting-started/quick-start/"  target="_blank" rel="noopener"
     >https://gohugo.io/getting-started/quick-start/</a> 나 하단 Reference의 블로그들을 참고해 주시길 바란다.</p>
-<h1 id="step2-hugo-블로그-폴더-생성">STEP2. Hugo 블로그 폴더 생성</h1>
+<h2 id="step2-hugo-블로그-폴더-생성">STEP2. Hugo 블로그 폴더 생성</h2>
 <p>사실 용어는 잘 모르겠다.ㅎㅎ</p>
 <p>그냥 쉽게 생각하면 앞으로 블로그에 올라갈 콘텐츠들이나 테마 등 모든 것이 담기는 폴더라고 생각하면 된다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">## 폴더 이름은 마음대로 지정해도 된다. </span>
@@ -330,7 +334,7 @@ Visit https://gohugo.io/ <span class="k">for</span> quickstart guide and full do
 		<figcaption>blog_structure</figcaption>
 		
 	</figure></p>
-<h1 id="step3-테마-추가하기">STEP3. 테마 추가하기</h1>
+<h2 id="step3-테마-추가하기">STEP3. 테마 추가하기</h2>
 <p><a class="link" href="https://themes.gohugo.io"  target="_blank" rel="noopener"
     >Complete List</a></p>
 <p>나는 무지랭이이므로 다른 분들이 이쁘게 만들어주신 테마를 사용할 것이다.</p>
@@ -341,7 +345,7 @@ Visit https://gohugo.io/ <span class="k">for</span> quickstart guide and full do
 <ul>
 <li>그냥 내가 파란색 보라색 이런 색을 좋아한다.</li>
 <li>고르고보니 다크모드도 지원된다. 감사하다!</li>
-<li>Hugo 버전이 **최신 버전(Hugo ≥ 0.78.0.)**이어야 했어서 upgrade 해줬다.</li>
+<li>Hugo 버전이 <strong>최신 버전(Hugo ≥ 0.78.0.)</strong> 이어야 했어서 upgrade 해줬다.</li>
 </ul>
 </li>
 </ul>
@@ -361,7 +365,7 @@ $ git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/stac
 </code></pre></div><p>이제 아까 blog 폴더 내에 themes에 들어가보면 &lsquo;stack&rsquo; 폴더가 생긴 것을 볼 수 있다.</p>
 <p>그 다음, 보통 글을 한개를 써서 올려보라는데 사실 나는 어떻게 해야하는지 감이 없어서 애를 먹었더랬다.</p>
 <p>뒤에 할 터이니 우선 다음 step으로 넘어가자!</p>
-<h1 id="step4-github-저장소-생성">STEP4. Github 저장소 생성</h1>
+<h2 id="step4-github-저장소-생성">STEP4. Github 저장소 생성</h2>
 <p><a class="link" href="https://gohugo.io/hosting-and-deployment/hosting-on-github/"  target="_blank" rel="noopener"
     >https://gohugo.io/hosting-and-deployment/hosting-on-github/</a></p>
 <p>Github 저장소 2개를 생성 해야 한다.</p>
@@ -370,9 +374,9 @@ $ git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/stac
 <li>다른 하나는 렌더링된 웹사이트를 담을 저장소 (key4920.github.io)</li>
 </ol>
 <p>사실 뭔소린지 잘 모른다. 내가 아는 것은 <strong>2개를 생성</strong>해야하고, 2번인 웹사이트를 담을 저장소는 이름을 <!-- raw HTML omitted -->github.io 로 지어야 한다는 것이다.</p>
-<p>&lt; <strong>나의 첫번째 뻘짓 &gt;</strong>
-저 <!-- raw HTML omitted -->이어야 한다는 것을 무시하고, 내 마음대로 지어보려 했다가 자꾸 에러가 났었다. 그런데 반드시 <strong>본인의 github id로</strong> 생성해 주어야한다.
-바꿀 수 있는 것 같지만, 나중에 시간이 남으면 시도해보도록하고, 패스한다.</p>
+<p><strong>&lt; 나의 첫번째 뻘짓 &gt;</strong><br>
+2번 저장소의 USERNAME 부분이 내 id 이어야 한다는 것을 무시하고, 내 마음대로 지어보려 했다가 자꾸 에러가 났었다.<br>
+반드시 본인의 <strong>github id</strong>로 생성해 주어야한다. 바꿀 수 있는 것 같지만, 나중에 시간이 남으면 시도해 보도록하고, 패스한다.</p>
 <p><figure style="flex-grow: 123; flex-basis: 296px">
 		<a href="/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_repository.png" data-size="766x621"><img src="/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_repository.png"
 				srcset="/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_repository_hubb99cc5a21d4de72d9f2885b5b86643b_89466_480x0_resize_box_2.png 480w, /p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_repository_hubb99cc5a21d4de72d9f2885b5b86643b_89466_1024x0_resize_box_2.png 1024w"
@@ -433,7 +437,7 @@ $ git submodule add -b master git@github.com:key4920/key4920.github.io.git publi
 		<figcaption>github_addr</figcaption>
 		
 	</figure></p>
-<h1 id="step5-예시-사이트-보기">STEP5. 예시 사이트 보기</h1>
+<h2 id="step5-예시-사이트-보기">STEP5. 예시 사이트 보기</h2>
 <p>아까 언급했듯이, 막상 글을 쓰려니 어떻게 해야하는지 막막했다.</p>
 <p>그런데 보통 themes/stack 폴더 내에 들어가보면 &lsquo;exampleSite&rsquo; 폴더가 있다.</p>
 <p>&lsquo;exampleSite&rsquo; 폴더 안에 있는 모든 폴더 및 파일들을 복사해서 blog 폴더 안에 덮어쓰기 해준다.</p>
@@ -471,7 +475,7 @@ $ git submodule add -b master git@github.com:key4920/key4920.github.io.git publi
     >key4920.github.io</a> 를 입력해서 들어가도 사이트가 build 된 상태가 아니다.</p>
 <p>앞의 <a class="link" href="http://localhost:1313/"  target="_blank" rel="noopener"
     >http://localhost:1313/</a> 에서 결과가 맘에 들면 git 업로드 해줘야 실제 내 블로그에 적용된다.</p>
-<h1 id="step6-사이트에-글-업로드">STEP6. 사이트에 글 업로드</h1>
+<h2 id="step6-사이트에-글-업로드">STEP6. 사이트에 글 업로드</h2>
 <p>blog 폴더에 들어가서 &lsquo;deploy.sh&rsquo; 파일을 하나 생성하고 파일 안에 아래 내용을 복붙해서 저장해준다.</p>
 <ul>
 <li>이때 hugo -t stack 부분에서 &lsquo;stack&rsquo;을 본인 테마 이름으로 수정 해 준다.</li>
