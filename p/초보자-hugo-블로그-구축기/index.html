@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='무지랭이의 Hugo로 블로그 사이트 만들기 과정'><title>초보자 Hugo 블로그 구축기</title>
+
+<link rel='canonical' href='https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='초보자 Hugo 블로그 구축기'>
+<meta property='og:description' content='무지랭이의 Hugo로 블로그 사이트 만들기 과정'>
+<meta property='og:url' content='https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/'>
+<meta property='og:site_name' content='20&#39;s 블로그'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:tag' content='Mac OS' /><meta property='article:published_time' content='2021-03-06T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-03-06T00:00:00&#43;00:00'/><meta property='og:image' content='https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/hugo_background3.png' />
+<meta name="twitter:site" content="https://github.com/key4920"><meta name="twitter:title" content="초보자 Hugo 블로그 구축기">
+<meta name="twitter:description" content="무지랭이의 Hugo로 블로그 사이트 만들기 과정"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/hugo_background3.png' />
+    <link rel="shortcut icon" href="img/koala_favicon_test.png" />
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-189742603-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="메뉴 여닫기">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/koala_hu3fdd2889ea2c731bb28828eeab982d1d_12406_300x0_resize_box_2.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">💜</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://key4920.github.io">20&#39;s 블로그</a></h1>
+        <h2 class="site-description">Stay Hungry, Stay Foolish</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/categories/bigdata-platform/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-affiliate" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5.5 5.5l1.706 5.685m5.607 5.609l5.687 1.706" />
+  <path d="M11.683 12.317l6.817 -6.817" />
+  <circle cx="5.5" cy="5.5" r="1.5" />
+  <circle cx="18.5" cy="5.5" r="1.5" />
+  <circle cx="18.5" cy="18.5" r="1.5" />
+  <circle cx="8.5" cy="15.5" r="4.5" />
+</svg>
+
+
+
+                
+                <span>BigData Platform</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://key4920.github.io" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/">
+                <img src="/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/hugo_background3_hu56f4d7d20a2a1a4d1da9d89b10e547df_138578_800x0_resize_box_2.png"
+                        srcset="/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/hugo_background3_hu56f4d7d20a2a1a4d1da9d89b10e547df_138578_800x0_resize_box_2.png 800w, /p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/hugo_background3_hu56f4d7d20a2a1a4d1da9d89b10e547df_138578_1600x0_resize_box_2.png 1600w"
+                        width="800" 
+                        height="613" 
+                        loading="lazy"
+                        alt="Featured image of post 초보자 Hugo 블로그 구축기" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/hugo-blog/" >
+                Hugo Blog
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/">초보자 Hugo 블로그 구축기</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        무지랭이의 Hugo로 블로그 사이트 만들기 과정
+    </h3>
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Mar 06, 2021</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <h2 id="구축-환경">구축 환경</h2>
+<blockquote>
+<p><strong>사전지식</strong> : git도 commit add push 외에 안써봄, 웹 지식 없음, 전공자 아님<br>
+<strong>OS</strong> : MacOS Catalina 10.15.7</p>
+</blockquote>
+<h1 id="hugo란">Hugo란?</h1>
+<p>: Go 언어로 쓰여진 **&lsquo;정적 웹사이트 생성기&rsquo;(Static site generator)**라고 한다.</p>
+<p><strong>Go 언어란? :</strong> 구글에서 발표한 언어로, 파이썬 같은 스크립트 언어가 아닌 <strong>컴파일 언어</strong>이다.</p>
+<p><strong>정적 웹사이트란? (Static site) :</strong></p>
+<ul>
+<li>말 그대로 웹사이트가 &lsquo;정적&rsquo;(Static)인 사이트이다. 우리가 봐오는 일반적인 블로그처럼 사용자가 접속할 때마다 고정된 화면을 보여준다.</li>
+<li>정적이지 않은(Dynamic) 웹사이트의 대표적인 예로는 유튜브, 네이버 등 이 있다. 이런 사이트들은 내가 접속을 할 때마다 사이트의 화면이 바뀔 수 있다.</li>
+<li>정적인 웹사이트의 구축은 그렇지 않은 사이트보다 더 구축하기 쉽고 빠르다는 장점이 있다.</li>
+</ul>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->→<!-- raw HTML omitted --> <!-- raw HTML omitted -->
+따라서 <strong>Hugo</strong>는 이런 <strong>정적 사이트를 만들어 줄 수 있는 생성기</strong>라고만 이해하고 넘어갔다.</p>
+<p><strong>그렇다면 왜 Hugo 를 선택했는가?</strong></p>
+<ul>
+<li>사실 큰 이유는 없다 ㅎㅎ</li>
+<li>그냥 일반적으로 많이 쓰이는 것으로 보이는 Jekyll보다 사이트 생성이 빠르다고 하였고 Go언어를 공부해보고자 하는 사람들이 많이 시도해 본 것으로 보인다.</li>
+<li>어차피 제로 베이스로 시작하는거, 나에겐 Jekyll이나  Hugo나 외계어로 보이는건 똑같았다.</li>
+</ul>
+<p>자 이제 생성을 시작해보자!</p>
+<h1 id="step1-hugo-설치">STEP1. Hugo 설치</h1>
+<p>나는 맥북이므로 brew를 활용하여 설치하였다.</p>
+<p>brew 가 없다면 <a class="link" href="https://brew.sh/index_ko"  target="_blank" rel="noopener"
+    >brew</a> 에서 설치 해 준다.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ brew install hugo 
+
+<span class="c1">## 설치 후 버전 확인으로 설치가 잘 됏는지 확인해보자</span>
+$ hugo version
+</code></pre></div><p>윈도우이거나 brew 이외의 설치 방법은 Hugo 공식 사이트인  <a class="link" href="https://gohugo.io/getting-started/quick-start/"  target="_blank" rel="noopener"
+    >https://gohugo.io/getting-started/quick-start/</a> 나 하단 Reference의 블로그들을 참고해 주시길 바란다.</p>
+<h1 id="step2-hugo-블로그-폴더-생성">STEP2. Hugo 블로그 폴더 생성</h1>
+<p>사실 용어는 잘 모르겠다.ㅎㅎ</p>
+<p>그냥 쉽게 생각하면 앞으로 블로그에 올라갈 콘텐츠들이나 테마 등 모든 것이 담기는 폴더라고 생각하면 된다.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">## 폴더 이름은 마음대로 지정해도 된다. </span>
+<span class="c1">## 나는 blog라고 지었는데 변경을 원하면 blog 대신 다른 이름을 쓰면 된다.</span>
+$ hugo new site blog
+</code></pre></div><p>나는 그냥 /Users/내이름/  경로에서 명령어를 입력하여 생성했다.</p>
+<p>생성 되면 Hugo site가 생성됐다며 아래와 같은 메세지가 출력된다!</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">Congratulations! Your new Hugo site is created in /Users/내이름/blog.
+Just a few more steps and you<span class="err">&#39;</span>re ready to go:
+**
+1. Download a theme into the same-named folder.
+   Choose a theme from https://themes.gohugo.io/ or
+   create your own with the <span class="s2">&#34;hugo new theme &lt;THEMENAME&gt;&#34;</span> command.
+2. Perhaps you want to add some content. You can add single files
+   with <span class="s2">&#34;hugo new &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;&#34;</span>.
+3. Start the built-in live server via <span class="s2">&#34;hugo server&#34;</span>.
+
+Visit https://gohugo.io/ <span class="k">for</span> quickstart guide and full documentation.
+</code></pre></div><p>/Users/내이름/blog 폴더에 들어가면 아래와 같은 기본적인 구조가 생성 돼 있다.</p>
+<p><figure style="flex-grow: 204; flex-basis: 491px">
+		<a href="/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_structure.png" data-size="330x161"><img src="/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_structure.png"
+				srcset="/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_structure_hua3172ee879f1ac60bda12ab9a5ad48ae_18304_480x0_resize_box_2.png 480w, /p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_structure_hua3172ee879f1ac60bda12ab9a5ad48ae_18304_1024x0_resize_box_2.png 1024w"
+				width="330"
+				height="161"
+				loading="lazy"
+				alt="blog_structure">
+		</a>
+		
+		<figcaption>blog_structure</figcaption>
+		
+	</figure></p>
+<h1 id="step3-테마-추가하기">STEP3. 테마 추가하기</h1>
+<p><a class="link" href="https://themes.gohugo.io"  target="_blank" rel="noopener"
+    >Complete List</a></p>
+<p>나는 무지랭이이므로 다른 분들이 이쁘게 만들어주신 테마를 사용할 것이다.</p>
+<p><strong>내가 선택한 테마 :</strong>  <a class="link" href="https://themes.gohugo.io/hugo-theme-stack/"  target="_blank" rel="noopener"
+    >https://themes.gohugo.io/hugo-theme-stack/</a></p>
+<ul>
+<li>선택 이유 및 후기 :
+<ul>
+<li>그냥 내가 파란색 보라색 이런 색을 좋아한다.</li>
+<li>고르고보니 다크모드도 지원된다. 감사하다!</li>
+<li>Hugo 버전이 **최신 버전(Hugo ≥ 0.78.0.)**이어야 했어서 upgrade 해줬다.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">## 버전 확인 ; 0.78.0 이상이 아니라면 upgrade 필요하다.</span>
+$ hugo version
+
+<span class="c1">## (참고) 나는 brew로 간단하게 upgrade 해줬다.</span>
+$ brew upgrade hugo 
+</code></pre></div><p>이제 내가 고른 테마를 다운 받자!</p>
+<p>저 테마의 github ; <a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack.git"  target="_blank" rel="noopener"
+    >https://github.com/CaiJimmy/hugo-theme-stack.git</a></p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">## 우선, STEP2에서 만든 blog 경로로 들어가자</span>
+$ <span class="nb">cd</span> blog
+
+<span class="c1">## 테마 다운로드</span>
+$ git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/stack
+</code></pre></div><p>이제 아까 blog 폴더 내에 themes에 들어가보면 &lsquo;stack&rsquo; 폴더가 생긴 것을 볼 수 있다.</p>
+<p>그 다음, 보통 글을 한개를 써서 올려보라는데 사실 나는 어떻게 해야하는지 감이 없어서 애를 먹었더랬다.</p>
+<p>뒤에 할 터이니 우선 다음 step으로 넘어가자!</p>
+<h1 id="step4-github-저장소-생성">STEP4. Github 저장소 생성</h1>
+<p><a class="link" href="https://gohugo.io/hosting-and-deployment/hosting-on-github/"  target="_blank" rel="noopener"
+    >https://gohugo.io/hosting-and-deployment/hosting-on-github/</a></p>
+<p>Github 저장소 2개를 생성 해야 한다.</p>
+<ol>
+<li>하나는 블로그 컨텐츠 저장소 생성 (blog)</li>
+<li>다른 하나는 렌더링된 웹사이트를 담을 저장소 (key4920.github.io)</li>
+</ol>
+<p>사실 뭔소린지 잘 모른다. 내가 아는 것은 <strong>2개를 생성</strong>해야하고, 2번인 웹사이트를 담을 저장소는 이름을 <!-- raw HTML omitted -->github.io 로 지어야 한다는 것이다.</p>
+<p>&lt; <strong>나의 첫번째 뻘짓 &gt;</strong>
+저 <!-- raw HTML omitted -->이어야 한다는 것을 무시하고, 내 마음대로 지어보려 했다가 자꾸 에러가 났었다. 그런데 반드시 <strong>본인의 github id로</strong> 생성해 주어야한다.
+바꿀 수 있는 것 같지만, 나중에 시간이 남으면 시도해보도록하고, 패스한다.</p>
+<p><figure style="flex-grow: 123; flex-basis: 296px">
+		<a href="/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_repository.png" data-size="766x621"><img src="/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_repository.png"
+				srcset="/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_repository_hubb99cc5a21d4de72d9f2885b5b86643b_89466_480x0_resize_box_2.png 480w, /p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_repository_hubb99cc5a21d4de72d9f2885b5b86643b_89466_1024x0_resize_box_2.png 1024w"
+				width="766"
+				height="621"
+				loading="lazy"
+				alt="blog_repository">
+		</a>
+		
+		<figcaption>blog_repository</figcaption>
+		
+	</figure></p>
+<p><figure style="flex-grow: 123; flex-basis: 295px">
+		<a href="/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/github_repository.png" data-size="773x627"><img src="/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/github_repository.png"
+				srcset="/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/github_repository_hude73d8a3e1a879e3ead58d4acc547457_92331_480x0_resize_box_2.png 480w, /p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/github_repository_hude73d8a3e1a879e3ead58d4acc547457_92331_1024x0_resize_box_2.png 1024w"
+				width="773"
+				height="627"
+				loading="lazy"
+				alt="github_repository">
+		</a>
+		
+		<figcaption>github_repository</figcaption>
+		
+	</figure></p>
+<p>두개 모두 이미 가지고 있으므로 already exists라고 뜨지만 그냥 저렇게 생성해주면 된다.</p>
+<p>1번 저장소인 &lsquo;blog&rsquo;를 내가 처음에 만들었던 &lsquo;blog&rsquo; 폴더랑 연동 해 주고</p>
+<p>2번 저장소인 &lsquo;key4920.github.io&rsquo;를 submodule로 등록 해 준다.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">## 우선 처음 만들었던 blog 폴더로 이동 (이미 들어와 있으면 패스)</span>
+<span class="nb">cd</span> blog
+
+<span class="c1">## git 연동</span>
+$ git init
+$ git remote add origin https://github.com/key4920/blog.git
+$ git submodule add -b master git@github.com:key4920/key4920.github.io.git public
+</code></pre></div><p>&lt; <strong>나의 두번째 뻘짓 &gt;</strong></p>
+<ol>
+<li>blog remote할 때 Permission denied (publickey).에러가 났다.</li>
+</ol>
+<ul>
+<li>잘 모르지만 github 주소를 &lsquo;https&rsquo; &lsquo;ssh&rsquo; 중에 <strong>&lsquo;https&rsquo; 주소</strong>로 하니 됐고</li>
+</ul>
+<ol start="2">
+<li><a class="link" href="http://key4920.github.io"  target="_blank" rel="noopener"
+    >key4920.github.io</a> submodule 할 때는 Unable to checkout submodule ‘public’ 에러가 났다.</li>
+</ol>
+<ul>
+<li>얘는 <strong>&lsquo;ssh&rsquo; 주소</strong>로 하니 됐다&hellip; 왜인지는 모르겠다&hellip;</li>
+</ul>
+<p><figure style="flex-grow: 188; flex-basis: 452px">
+		<a href="/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/github_addr.png" data-size="360x191"><img src="/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/github_addr.png"
+				srcset="/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/github_addr_hu87774d3b572feb8993a809e8cc186719_27135_480x0_resize_box_2.png 480w, /p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/github_addr_hu87774d3b572feb8993a809e8cc186719_27135_1024x0_resize_box_2.png 1024w"
+				width="360"
+				height="191"
+				loading="lazy"
+				alt="github_addr">
+		</a>
+		
+		<figcaption>github_addr</figcaption>
+		
+	</figure></p>
+<h1 id="step5-예시-사이트-보기">STEP5. 예시 사이트 보기</h1>
+<p>아까 언급했듯이, 막상 글을 쓰려니 어떻게 해야하는지 막막했다.</p>
+<p>그런데 보통 themes/stack 폴더 내에 들어가보면 &lsquo;exampleSite&rsquo; 폴더가 있다.</p>
+<p>&lsquo;exampleSite&rsquo; 폴더 안에 있는 모든 폴더 및 파일들을 복사해서 blog 폴더 안에 덮어쓰기 해준다.</p>
+<ul>
+<li>이때 내가 고른 테마의 exampleSite 안에는 &lsquo;config.yaml&rsquo; 파일이 있는데<br>
+이건 기본적으로 생성 돼 있던 &lsquo;config.toml&rsquo; 파일과 동일한 것이지만 파일 확장자가 달라서 &lsquo;덮어쓰기&rsquo;가 안됐으므로 &lsquo;config.toml&rsquo; 파일은 삭제 해 줬다.</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ hugo server -D
+</code></pre></div><p>입력해주면 아래와 같은 문구와 함께 <a class="link" href="http://localhost:1313/"  target="_blank" rel="noopener"
+    >http://localhost:1313/</a> 에 접속하라고 뜨는데, 이 url은 내 사이트를 build하기 전 예시로 보여주는 기능이다.</p>
+<p>웹에 이 url을 복붙해서 들어가면 현재 내 blog의 예시 사이트를 볼 수 있다.</p>
+<p><figure style="flex-grow: 230; flex-basis: 552px">
+		<a href="/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/local_host.png" data-size="681x296"><img src="/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/local_host.png"
+				srcset="/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/local_host_hu4da3b1b99a55c7e36a0ad32a365cc766_42191_480x0_resize_box_2.png 480w, /p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/local_host_hu4da3b1b99a55c7e36a0ad32a365cc766_42191_1024x0_resize_box_2.png 1024w"
+				width="681"
+				height="296"
+				loading="lazy"
+				alt="local_host">
+		</a>
+		
+		<figcaption>local_host</figcaption>
+		
+	</figure></p>
+<p>나 같은 초보자들은 이제 exampleSite에서 복붙했던 content 내의 예시 글들을 참고해서 blog 내의 구조를 익히면 된다.</p>
+<p>내가 고른 테마 같은 경우엔, 블로그에 올라가는 일반적인 글 경로는 blog/content/post/콘텐츠이름 에 있었다.</p>
+<p><strong>&lt; 나의 세번째 뻘짓 &gt;</strong><br>
+이건 내가 썼던 &lsquo;stack&rsquo; 테마에 한정된 이야기 이지만, &lsquo;config.yaml&rsquo; 안에  dateFormat 이 있었는데<br>
+# dateFormat :<br>
+# published :<br>
+# lastUpdated :<br>
+모두 #를 앞에 붙여서 주석처리 해 주었다. 이게 있으니 자꾸 콘텐츠의 글의 날짜가 이상한 형식으로 보였다.<br>
+더이상 지원하지 않는다고하니 주석처리 해주거나 지워준다.</p>
+<p>여태까지는 blog 폴더 안에 어느 형식으로 어떤 구조로 콘텐츠를 넣으면 어떻게 보이는지를 살펴보았다.</p>
+<p>하지만, 실제 내 블로그 url인 <a class="link" href="http://key4920.github.io"  target="_blank" rel="noopener"
+    >key4920.github.io</a> 를 입력해서 들어가도 사이트가 build 된 상태가 아니다.</p>
+<p>앞의 <a class="link" href="http://localhost:1313/"  target="_blank" rel="noopener"
+    >http://localhost:1313/</a> 에서 결과가 맘에 들면 git 업로드 해줘야 실제 내 블로그에 적용된다.</p>
+<h1 id="step6-사이트에-글-업로드">STEP6. 사이트에 글 업로드</h1>
+<p>blog 폴더에 들어가서 &lsquo;deploy.sh&rsquo; 파일을 하나 생성하고 파일 안에 아래 내용을 복붙해서 저장해준다.</p>
+<ul>
+<li>이때 hugo -t stack 부분에서 &lsquo;stack&rsquo;을 본인 테마 이름으로 수정 해 준다.</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/sh
+</span><span class="cp"></span>
+<span class="c1"># If a command fails then the deploy stops</span>
+<span class="nb">set</span> -e
+
+<span class="nb">printf</span> <span class="s2">&#34;\033[0;32mDeploying updates to GitHub...\033[0m\n&#34;</span>
+
+<span class="c1"># Build the project.</span>
+<span class="c1">####### 이부분을 본인 테마로 변경해주세요~ #######</span>
+hugo -t stack 
+
+<span class="c1"># Go To Public folder</span>
+<span class="nb">cd</span> public
+
+<span class="c1"># Add changes to git.</span>
+git add .
+
+<span class="c1"># Commit changes.</span>
+<span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&#34;</span>
+<span class="k">if</span> <span class="o">[</span> -n <span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+	<span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span>
+<span class="k">fi</span>
+git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+
+<span class="c1"># Push source and build repos.</span>
+git push origin master
+
+<span class="nb">cd</span> ..
+
+<span class="c1"># anyblogname 업데이트</span>
+git add .
+
+<span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site `date`&#34;</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -eq <span class="m">1</span> <span class="o">]</span>
+  <span class="k">then</span> <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+<span class="k">fi</span>
+git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+
+git push origin master
+</code></pre></div><p>원래는 이 파일 안에 한줄 한줄을 주옥같이 터미널에서 매번 실행 해 주어야하지만, 귀찮으므로 이런 파일을 만들고 파일만 실행하면 안의 코드가 실행되게 하는 원리이다.</p>
+<p>이제 이 파일을 실행해보자!</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">## 뒤에는 그냥 커밋 메시지이다. </span>
+$ ./deploy.sh <span class="s2">&#34;message&#34;</span>
+</code></pre></div><p><strong>&lt; 나의 네번째 뻘짓 &gt;</strong><br>
+이때 나는 권한이 없다며 에러가 났다. 아래 코드로 권한 지정해주자<br>
+또한 가끔 내가 변경한 파일이 untracked file이어서 Github로 push가 안 된다. <br>
+이럴 때는 위의 <a class="link" href="http://deploy.sh"  target="_blank" rel="noopener"
+    >deploy.sh</a> 파일 내의 코드들을 한줄씩 직접 실행 해 준다.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">## 권한 에러 있었다면 지정</span>
+chmod +x deploy.sh
+</code></pre></div><hr>
+<h3 id="앞으로-블로그-업데이트에-필요한-일">앞으로 블로그 업데이트에 필요한 일</h3>
+<ol>
+<li>content 폴더 내에 마크다운 형식으로 글 파일 넣거나 (자세한 경로는 본인 테마마다 상이할 수 있습니다.) config 등 다른 파일 customising</li>
+<li>콘텐츠 업로드에 필요한 코드</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">## 본인 hugo blog 폴더 들어가기</span>
+$ <span class="nb">cd</span> blog 
+<span class="c1">## (옵션) 예시 사이트를 보는 것이므로 옵션 </span>
+$ hugo server -D 
+<span class="c1">## 빠져나오려면 Ctrl + C</span>
+$ ./deploy.sh <span class="s2">&#34;commit message&#34;</span>
+</code></pre></div><hr>
+<h3 id="추가-기능">추가 기능</h3>
+<ol>
+<li>config 파일에서 원하는대로 이것저것 변경 해준다.
+<ul>
+<li>DefaultContentLanguage: ko 로 언어도 수정해주고</li>
+<li>favicon이나 이미지도 넣어주는 등 다양하게 커스터마이징 해 주었다!</li>
+</ul>
+</li>
+<li>구글이나 네이버, 다음에 글이 검색 될 수 있도록 노출 시키는 기능 추가 또는 구글 애드센스 넣기</li>
+<li>댓글 기능 넣기</li>
+</ol>
+<p>등 다양하게 기능을 넣어 본인의 블로그를 구축해 나갈 수 있다~</p>
+<p>앞으로 다른 글에서 다뤄보도록 하겠다.</p>
+<h2 id="reference">Reference</h2>
+<p><a class="link" href="https://gohugo.io/getting-started/quick-start/"  target="_blank" rel="noopener"
+    >https://gohugo.io/getting-started/quick-start/</a></p>
+<p><a class="link" href="https://gohugo.io/hosting-and-deployment/hosting-on-github/"  target="_blank" rel="noopener"
+    >https://gohugo.io/hosting-and-deployment/hosting-on-github/</a></p>
+<p><a class="link" href="https://github.com/Integerous/Integerous.github.io"  target="_blank" rel="noopener"
+    >https://github.com/Integerous/Integerous.github.io</a></p>
+<p><a class="link" href="https://hoontaeklee.github.io/20191229_blogging_with_hugo/#2-unable-to-checkout-submodule-public"  target="_blank" rel="noopener"
+    >https://hoontaeklee.github.io/20191229_blogging_with_hugo/#2-unable-to-checkout-submodule-public</a></p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/hugo/">Hugo</a>
+        
+            <a href="/tags/mac-os/">Mac OS</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under key4920</span>
+    </section>
+    </footer>
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">관련 글</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/p/mac-os%EC%97%90-%ED%95%98%EB%91%A1hadoop-%EC%84%A4%EC%B9%98/">
+        
+        
+            <div class="article-image">
+                <img src="/p/mac-os%EC%97%90-%ED%95%98%EB%91%A1hadoop-%EC%84%A4%EC%B9%98/hadoop_background4.df70ff0276a2eb3d99257e817819e888_hu1783eb9fe029120aabcc802e1a50626d_92235_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-33D/Anai6z2ZJX6BeBnoiA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Mac OS에 하둡(Hadoop) 설치</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/">
+        
+        
+            <div class="article-image">
+                <img src="/p/mac-os%EC%97%90-%EC%8A%A4%ED%8C%8C%ED%81%AC3-%EC%84%A4%EC%B9%98-%EB%B0%8F-pyspark-%EC%8B%9C%EC%9E%91/spark_background.6e4d4861d558f31fcf6f8606ffe82fe4_hu22b93fbf3ae8131af4f1d04f088e66d4_94698_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy" 
+                        data-key="" 
+                        data-hash="md5-bk1IYdVY8x/Pb4YG/&#43;gv5A==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Mac OS에 스파크3 설치 및 pyspark 시작</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2021 20&#39;s 블로그
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.2.0">Stack</a></b> 테마 사용 중
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

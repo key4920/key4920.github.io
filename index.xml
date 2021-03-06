@@ -6,7 +6,310 @@
         <description>Recent content on 20&#39;s 블로그</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 27 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://key4920.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 06 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://key4920.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>초보자 Hugo 블로그 구축기</title>
+        <link>https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/</link>
+        <pubDate>Sat, 06 Mar 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/</guid>
+        <description>&lt;img src="https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/hugo_background3.png" alt="Featured image of post 초보자 Hugo 블로그 구축기" /&gt;&lt;h2 id=&#34;구축-환경&#34;&gt;구축 환경&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;사전지식&lt;/strong&gt; : git도 commit add push 외에 안써봄, 웹 지식 없음, 전공자 아님&lt;br&gt;
+&lt;strong&gt;OS&lt;/strong&gt; : MacOS Catalina 10.15.7&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;hugo란&#34;&gt;Hugo란?&lt;/h1&gt;
+&lt;p&gt;: Go 언어로 쓰여진 **&amp;lsquo;정적 웹사이트 생성기&amp;rsquo;(Static site generator)**라고 한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Go 언어란? :&lt;/strong&gt; 구글에서 발표한 언어로, 파이썬 같은 스크립트 언어가 아닌 &lt;strong&gt;컴파일 언어&lt;/strong&gt;이다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;정적 웹사이트란? (Static site) :&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;말 그대로 웹사이트가 &amp;lsquo;정적&amp;rsquo;(Static)인 사이트이다. 우리가 봐오는 일반적인 블로그처럼 사용자가 접속할 때마다 고정된 화면을 보여준다.&lt;/li&gt;
+&lt;li&gt;정적이지 않은(Dynamic) 웹사이트의 대표적인 예로는 유튜브, 네이버 등 이 있다. 이런 사이트들은 내가 접속을 할 때마다 사이트의 화면이 바뀔 수 있다.&lt;/li&gt;
+&lt;li&gt;정적인 웹사이트의 구축은 그렇지 않은 사이트보다 더 구축하기 쉽고 빠르다는 장점이 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;→&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;
+따라서 &lt;strong&gt;Hugo&lt;/strong&gt;는 이런 &lt;strong&gt;정적 사이트를 만들어 줄 수 있는 생성기&lt;/strong&gt;라고만 이해하고 넘어갔다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;그렇다면 왜 Hugo 를 선택했는가?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;사실 큰 이유는 없다 ㅎㅎ&lt;/li&gt;
+&lt;li&gt;그냥 일반적으로 많이 쓰이는 것으로 보이는 Jekyll보다 사이트 생성이 빠르다고 하였고 Go언어를 공부해보고자 하는 사람들이 많이 시도해 본 것으로 보인다.&lt;/li&gt;
+&lt;li&gt;어차피 제로 베이스로 시작하는거, 나에겐 Jekyll이나  Hugo나 외계어로 보이는건 똑같았다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;자 이제 생성을 시작해보자!&lt;/p&gt;
+&lt;h1 id=&#34;step1-hugo-설치&#34;&gt;STEP1. Hugo 설치&lt;/h1&gt;
+&lt;p&gt;나는 맥북이므로 brew를 활용하여 설치하였다.&lt;/p&gt;
+&lt;p&gt;brew 가 없다면 &lt;a class=&#34;link&#34; href=&#34;https://brew.sh/index_ko&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;brew&lt;/a&gt; 에서 설치 해 준다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ brew install hugo 
+
+&lt;span class=&#34;c1&#34;&gt;## 설치 후 버전 확인으로 설치가 잘 됏는지 확인해보자&lt;/span&gt;
+$ hugo version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;윈도우이거나 brew 이외의 설치 방법은 Hugo 공식 사이트인  &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/getting-started/quick-start/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://gohugo.io/getting-started/quick-start/&lt;/a&gt; 나 하단 Reference의 블로그들을 참고해 주시길 바란다.&lt;/p&gt;
+&lt;h1 id=&#34;step2-hugo-블로그-폴더-생성&#34;&gt;STEP2. Hugo 블로그 폴더 생성&lt;/h1&gt;
+&lt;p&gt;사실 용어는 잘 모르겠다.ㅎㅎ&lt;/p&gt;
+&lt;p&gt;그냥 쉽게 생각하면 앞으로 블로그에 올라갈 콘텐츠들이나 테마 등 모든 것이 담기는 폴더라고 생각하면 된다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 폴더 이름은 마음대로 지정해도 된다. &lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;## 나는 blog라고 지었는데 변경을 원하면 blog 대신 다른 이름을 쓰면 된다.&lt;/span&gt;
+$ hugo new site blog
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;나는 그냥 /Users/내이름/  경로에서 명령어를 입력하여 생성했다.&lt;/p&gt;
+&lt;p&gt;생성 되면 Hugo site가 생성됐다며 아래와 같은 메세지가 출력된다!&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Congratulations! Your new Hugo site is created in /Users/내이름/blog.
+Just a few more steps and you&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;re ready to go:
+**
+1. Download a theme into the same-named folder.
+   Choose a theme from https://themes.gohugo.io/ or
+   create your own with the &lt;span class=&#34;s2&#34;&gt;&amp;#34;hugo new theme &amp;lt;THEMENAME&amp;gt;&amp;#34;&lt;/span&gt; command.
+2. Perhaps you want to add some content. You can add single files
+   with &lt;span class=&#34;s2&#34;&gt;&amp;#34;hugo new &amp;lt;SECTIONNAME&amp;gt;/&amp;lt;FILENAME&amp;gt;.&amp;lt;FORMAT&amp;gt;&amp;#34;&lt;/span&gt;.
+3. Start the built-in live server via &lt;span class=&#34;s2&#34;&gt;&amp;#34;hugo server&amp;#34;&lt;/span&gt;.
+
+Visit https://gohugo.io/ &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; quickstart guide and full documentation.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;/Users/내이름/blog 폴더에 들어가면 아래와 같은 기본적인 구조가 생성 돼 있다.&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 204; flex-basis: 491px&#34;&gt;
+		&lt;a href=&#34;https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_structure.png&#34; data-size=&#34;330x161&#34;&gt;&lt;img src=&#34;https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_structure.png&#34;
+				srcset=&#34;https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_structure_hua3172ee879f1ac60bda12ab9a5ad48ae_18304_480x0_resize_box_2.png 480w, https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_structure_hua3172ee879f1ac60bda12ab9a5ad48ae_18304_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;330&#34;
+				height=&#34;161&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;blog_structure&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;blog_structure&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h1 id=&#34;step3-테마-추가하기&#34;&gt;STEP3. 테마 추가하기&lt;/h1&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Complete List&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;나는 무지랭이이므로 다른 분들이 이쁘게 만들어주신 테마를 사용할 것이다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;내가 선택한 테마 :&lt;/strong&gt;  &lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/hugo-theme-stack/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://themes.gohugo.io/hugo-theme-stack/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;선택 이유 및 후기 :
+&lt;ul&gt;
+&lt;li&gt;그냥 내가 파란색 보라색 이런 색을 좋아한다.&lt;/li&gt;
+&lt;li&gt;고르고보니 다크모드도 지원된다. 감사하다!&lt;/li&gt;
+&lt;li&gt;Hugo 버전이 **최신 버전(Hugo ≥ 0.78.0.)**이어야 했어서 upgrade 해줬다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 버전 확인 ; 0.78.0 이상이 아니라면 upgrade 필요하다.&lt;/span&gt;
+$ hugo version
+
+&lt;span class=&#34;c1&#34;&gt;## (참고) 나는 brew로 간단하게 upgrade 해줬다.&lt;/span&gt;
+$ brew upgrade hugo 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이제 내가 고른 테마를 다운 받자!&lt;/p&gt;
+&lt;p&gt;저 테마의 github ; &lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack.git&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/CaiJimmy/hugo-theme-stack.git&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 우선, STEP2에서 만든 blog 경로로 들어가자&lt;/span&gt;
+$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; blog
+
+&lt;span class=&#34;c1&#34;&gt;## 테마 다운로드&lt;/span&gt;
+$ git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/stack
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이제 아까 blog 폴더 내에 themes에 들어가보면 &amp;lsquo;stack&amp;rsquo; 폴더가 생긴 것을 볼 수 있다.&lt;/p&gt;
+&lt;p&gt;그 다음, 보통 글을 한개를 써서 올려보라는데 사실 나는 어떻게 해야하는지 감이 없어서 애를 먹었더랬다.&lt;/p&gt;
+&lt;p&gt;뒤에 할 터이니 우선 다음 step으로 넘어가자!&lt;/p&gt;
+&lt;h1 id=&#34;step4-github-저장소-생성&#34;&gt;STEP4. Github 저장소 생성&lt;/h1&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://gohugo.io/hosting-and-deployment/hosting-on-github/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Github 저장소 2개를 생성 해야 한다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;하나는 블로그 컨텐츠 저장소 생성 (blog)&lt;/li&gt;
+&lt;li&gt;다른 하나는 렌더링된 웹사이트를 담을 저장소 (key4920.github.io)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;사실 뭔소린지 잘 모른다. 내가 아는 것은 &lt;strong&gt;2개를 생성&lt;/strong&gt;해야하고, 2번인 웹사이트를 담을 저장소는 이름을 &lt;!-- raw HTML omitted --&gt;github.io 로 지어야 한다는 것이다.&lt;/p&gt;
+&lt;p&gt;&amp;lt; &lt;strong&gt;나의 첫번째 뻘짓 &amp;gt;&lt;/strong&gt;
+저 &lt;!-- raw HTML omitted --&gt;이어야 한다는 것을 무시하고, 내 마음대로 지어보려 했다가 자꾸 에러가 났었다. 그런데 반드시 &lt;strong&gt;본인의 github id로&lt;/strong&gt; 생성해 주어야한다.
+바꿀 수 있는 것 같지만, 나중에 시간이 남으면 시도해보도록하고, 패스한다.&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 123; flex-basis: 296px&#34;&gt;
+		&lt;a href=&#34;https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_repository.png&#34; data-size=&#34;766x621&#34;&gt;&lt;img src=&#34;https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_repository.png&#34;
+				srcset=&#34;https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_repository_hubb99cc5a21d4de72d9f2885b5b86643b_89466_480x0_resize_box_2.png 480w, https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/blog_repository_hubb99cc5a21d4de72d9f2885b5b86643b_89466_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;766&#34;
+				height=&#34;621&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;blog_repository&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;blog_repository&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 123; flex-basis: 295px&#34;&gt;
+		&lt;a href=&#34;https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/github_repository.png&#34; data-size=&#34;773x627&#34;&gt;&lt;img src=&#34;https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/github_repository.png&#34;
+				srcset=&#34;https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/github_repository_hude73d8a3e1a879e3ead58d4acc547457_92331_480x0_resize_box_2.png 480w, https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/github_repository_hude73d8a3e1a879e3ead58d4acc547457_92331_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;773&#34;
+				height=&#34;627&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;github_repository&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;github_repository&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;두개 모두 이미 가지고 있으므로 already exists라고 뜨지만 그냥 저렇게 생성해주면 된다.&lt;/p&gt;
+&lt;p&gt;1번 저장소인 &amp;lsquo;blog&amp;rsquo;를 내가 처음에 만들었던 &amp;lsquo;blog&amp;rsquo; 폴더랑 연동 해 주고&lt;/p&gt;
+&lt;p&gt;2번 저장소인 &amp;lsquo;key4920.github.io&amp;rsquo;를 submodule로 등록 해 준다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 우선 처음 만들었던 blog 폴더로 이동 (이미 들어와 있으면 패스)&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; blog
+
+&lt;span class=&#34;c1&#34;&gt;## git 연동&lt;/span&gt;
+$ git init
+$ git remote add origin https://github.com/key4920/blog.git
+$ git submodule add -b master git@github.com:key4920/key4920.github.io.git public
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;lt; &lt;strong&gt;나의 두번째 뻘짓 &amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;blog remote할 때 Permission denied (publickey).에러가 났다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;잘 모르지만 github 주소를 &amp;lsquo;https&amp;rsquo; &amp;lsquo;ssh&amp;rsquo; 중에 &lt;strong&gt;&amp;lsquo;https&amp;rsquo; 주소&lt;/strong&gt;로 하니 됐고&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://key4920.github.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;key4920.github.io&lt;/a&gt; submodule 할 때는 Unable to checkout submodule ‘public’ 에러가 났다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;얘는 &lt;strong&gt;&amp;lsquo;ssh&amp;rsquo; 주소&lt;/strong&gt;로 하니 됐다&amp;hellip; 왜인지는 모르겠다&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 188; flex-basis: 452px&#34;&gt;
+		&lt;a href=&#34;https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/github_addr.png&#34; data-size=&#34;360x191&#34;&gt;&lt;img src=&#34;https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/github_addr.png&#34;
+				srcset=&#34;https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/github_addr_hu87774d3b572feb8993a809e8cc186719_27135_480x0_resize_box_2.png 480w, https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/github_addr_hu87774d3b572feb8993a809e8cc186719_27135_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;360&#34;
+				height=&#34;191&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;github_addr&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;github_addr&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;h1 id=&#34;step5-예시-사이트-보기&#34;&gt;STEP5. 예시 사이트 보기&lt;/h1&gt;
+&lt;p&gt;아까 언급했듯이, 막상 글을 쓰려니 어떻게 해야하는지 막막했다.&lt;/p&gt;
+&lt;p&gt;그런데 보통 themes/stack 폴더 내에 들어가보면 &amp;lsquo;exampleSite&amp;rsquo; 폴더가 있다.&lt;/p&gt;
+&lt;p&gt;&amp;lsquo;exampleSite&amp;rsquo; 폴더 안에 있는 모든 폴더 및 파일들을 복사해서 blog 폴더 안에 덮어쓰기 해준다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;이때 내가 고른 테마의 exampleSite 안에는 &amp;lsquo;config.yaml&amp;rsquo; 파일이 있는데&lt;br&gt;
+이건 기본적으로 생성 돼 있던 &amp;lsquo;config.toml&amp;rsquo; 파일과 동일한 것이지만 파일 확장자가 달라서 &amp;lsquo;덮어쓰기&amp;rsquo;가 안됐으므로 &amp;lsquo;config.toml&amp;rsquo; 파일은 삭제 해 줬다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ hugo server -D
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;입력해주면 아래와 같은 문구와 함께 &lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://localhost:1313/&lt;/a&gt; 에 접속하라고 뜨는데, 이 url은 내 사이트를 build하기 전 예시로 보여주는 기능이다.&lt;/p&gt;
+&lt;p&gt;웹에 이 url을 복붙해서 들어가면 현재 내 blog의 예시 사이트를 볼 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 230; flex-basis: 552px&#34;&gt;
+		&lt;a href=&#34;https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/local_host.png&#34; data-size=&#34;681x296&#34;&gt;&lt;img src=&#34;https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/local_host.png&#34;
+				srcset=&#34;https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/local_host_hu4da3b1b99a55c7e36a0ad32a365cc766_42191_480x0_resize_box_2.png 480w, https://key4920.github.io/p/%EC%B4%88%EB%B3%B4%EC%9E%90-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EA%B5%AC%EC%B6%95%EA%B8%B0/local_host_hu4da3b1b99a55c7e36a0ad32a365cc766_42191_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;681&#34;
+				height=&#34;296&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;local_host&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;local_host&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;나 같은 초보자들은 이제 exampleSite에서 복붙했던 content 내의 예시 글들을 참고해서 blog 내의 구조를 익히면 된다.&lt;/p&gt;
+&lt;p&gt;내가 고른 테마 같은 경우엔, 블로그에 올라가는 일반적인 글 경로는 blog/content/post/콘텐츠이름 에 있었다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;lt; 나의 세번째 뻘짓 &amp;gt;&lt;/strong&gt;&lt;br&gt;
+이건 내가 썼던 &amp;lsquo;stack&amp;rsquo; 테마에 한정된 이야기 이지만, &amp;lsquo;config.yaml&amp;rsquo; 안에  dateFormat 이 있었는데&lt;br&gt;
+# dateFormat :&lt;br&gt;
+# published :&lt;br&gt;
+# lastUpdated :&lt;br&gt;
+모두 #를 앞에 붙여서 주석처리 해 주었다. 이게 있으니 자꾸 콘텐츠의 글의 날짜가 이상한 형식으로 보였다.&lt;br&gt;
+더이상 지원하지 않는다고하니 주석처리 해주거나 지워준다.&lt;/p&gt;
+&lt;p&gt;여태까지는 blog 폴더 안에 어느 형식으로 어떤 구조로 콘텐츠를 넣으면 어떻게 보이는지를 살펴보았다.&lt;/p&gt;
+&lt;p&gt;하지만, 실제 내 블로그 url인 &lt;a class=&#34;link&#34; href=&#34;http://key4920.github.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;key4920.github.io&lt;/a&gt; 를 입력해서 들어가도 사이트가 build 된 상태가 아니다.&lt;/p&gt;
+&lt;p&gt;앞의 &lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://localhost:1313/&lt;/a&gt; 에서 결과가 맘에 들면 git 업로드 해줘야 실제 내 블로그에 적용된다.&lt;/p&gt;
+&lt;h1 id=&#34;step6-사이트에-글-업로드&#34;&gt;STEP6. 사이트에 글 업로드&lt;/h1&gt;
+&lt;p&gt;blog 폴더에 들어가서 &amp;lsquo;deploy.sh&amp;rsquo; 파일을 하나 생성하고 파일 안에 아래 내용을 복붙해서 저장해준다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;이때 hugo -t stack 부분에서 &amp;lsquo;stack&amp;rsquo;을 본인 테마 이름으로 수정 해 준다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/sh
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# If a command fails then the deploy stops&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; -e
+
+&lt;span class=&#34;nb&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m\n&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Build the project.&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;####### 이부분을 본인 테마로 변경해주세요~ #######&lt;/span&gt;
+hugo -t stack 
+
+&lt;span class=&#34;c1&#34;&gt;# Go To Public folder&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; public
+
+&lt;span class=&#34;c1&#34;&gt;# Add changes to git.&lt;/span&gt;
+git add .
+
+&lt;span class=&#34;c1&#34;&gt;# Commit changes.&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;msg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;rebuilding site &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;date&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -n &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$*&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+	&lt;span class=&#34;nv&#34;&gt;msg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$*&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$msg&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Push source and build repos.&lt;/span&gt;
+git push origin master
+
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ..
+
+&lt;span class=&#34;c1&#34;&gt;# anyblogname 업데이트&lt;/span&gt;
+git add .
+
+&lt;span class=&#34;nv&#34;&gt;msg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;rebuilding site `date`&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$#&lt;/span&gt; -eq &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;msg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$msg&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;원래는 이 파일 안에 한줄 한줄을 주옥같이 터미널에서 매번 실행 해 주어야하지만, 귀찮으므로 이런 파일을 만들고 파일만 실행하면 안의 코드가 실행되게 하는 원리이다.&lt;/p&gt;
+&lt;p&gt;이제 이 파일을 실행해보자!&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 뒤에는 그냥 커밋 메시지이다. &lt;/span&gt;
+$ ./deploy.sh &lt;span class=&#34;s2&#34;&gt;&amp;#34;message&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;&amp;lt; 나의 네번째 뻘짓 &amp;gt;&lt;/strong&gt;&lt;br&gt;
+이때 나는 권한이 없다며 에러가 났다. 아래 코드로 권한 지정해주자&lt;br&gt;
+또한 가끔 내가 변경한 파일이 untracked file이어서 Github로 push가 안 된다. &lt;br&gt;
+이럴 때는 위의 &lt;a class=&#34;link&#34; href=&#34;http://deploy.sh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;deploy.sh&lt;/a&gt; 파일 내의 코드들을 한줄씩 직접 실행 해 준다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 권한 에러 있었다면 지정&lt;/span&gt;
+chmod +x deploy.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id=&#34;앞으로-블로그-업데이트에-필요한-일&#34;&gt;앞으로 블로그 업데이트에 필요한 일&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;content 폴더 내에 마크다운 형식으로 글 파일 넣거나 (자세한 경로는 본인 테마마다 상이할 수 있습니다.) config 등 다른 파일 customising&lt;/li&gt;
+&lt;li&gt;콘텐츠 업로드에 필요한 코드&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 본인 hugo blog 폴더 들어가기&lt;/span&gt;
+$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; blog 
+&lt;span class=&#34;c1&#34;&gt;## (옵션) 예시 사이트를 보는 것이므로 옵션 &lt;/span&gt;
+$ hugo server -D 
+&lt;span class=&#34;c1&#34;&gt;## 빠져나오려면 Ctrl + C&lt;/span&gt;
+$ ./deploy.sh &lt;span class=&#34;s2&#34;&gt;&amp;#34;commit message&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id=&#34;추가-기능&#34;&gt;추가 기능&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;config 파일에서 원하는대로 이것저것 변경 해준다.
+&lt;ul&gt;
+&lt;li&gt;DefaultContentLanguage: ko 로 언어도 수정해주고&lt;/li&gt;
+&lt;li&gt;favicon이나 이미지도 넣어주는 등 다양하게 커스터마이징 해 주었다!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;구글이나 네이버, 다음에 글이 검색 될 수 있도록 노출 시키는 기능 추가 또는 구글 애드센스 넣기&lt;/li&gt;
+&lt;li&gt;댓글 기능 넣기&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;등 다양하게 기능을 넣어 본인의 블로그를 구축해 나갈 수 있다~&lt;/p&gt;
+&lt;p&gt;앞으로 다른 글에서 다뤄보도록 하겠다.&lt;/p&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/getting-started/quick-start/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://gohugo.io/getting-started/quick-start/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://gohugo.io/hosting-and-deployment/hosting-on-github/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Integerous/Integerous.github.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Integerous/Integerous.github.io&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://hoontaeklee.github.io/20191229_blogging_with_hugo/#2-unable-to-checkout-submodule-public&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://hoontaeklee.github.io/20191229_blogging_with_hugo/#2-unable-to-checkout-submodule-public&lt;/a&gt;&lt;/p&gt;</description>
+        </item>
+        <item>
         <title>Mac OS에 하둡(Hadoop) 설치</title>
         <link>https://key4920.github.io/p/mac-os%EC%97%90-%ED%95%98%EB%91%A1hadoop-%EC%84%A4%EC%B9%98/</link>
         <pubDate>Sat, 27 Feb 2021 00:00:00 +0000</pubDate>
