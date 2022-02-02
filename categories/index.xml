@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 202 Blue Note</title>
+    <link>https://key4920.github.io/categories/</link>
+    <description>Recent content in Categories on 202 Blue Note</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://key4920.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo Blog</title>
+      <link>https://key4920.github.io/categories/Hugo-Blog/</link>
+      <pubDate>Sat, 06 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://key4920.github.io/categories/Hugo-Blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BigData Platform</title>
+      <link>https://key4920.github.io/categories/BigData-Platform/</link>
+      <pubDate>Sat, 27 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://key4920.github.io/categories/BigData-Platform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hadoop</title>
+      <link>https://key4920.github.io/categories/Hadoop/</link>
+      <pubDate>Sat, 27 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://key4920.github.io/categories/Hadoop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Apache Spark</title>
+      <link>https://key4920.github.io/categories/Apache-Spark/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://key4920.github.io/categories/Apache-Spark/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

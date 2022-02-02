@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="맥북 Mac OS에 Spark를 설치해보고 주피터 노트북에서 pyspark를 실행해보자!">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Mac OS에 스파크3 설치 및 pyspark 시작" />
+<meta property="og:description" content="맥북 Mac OS에 Spark를 설치해보고 주피터 노트북에서 pyspark를 실행해보자!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://key4920.github.io/docs/bigdata_platform/ApacheSpark/spark_install/" /><meta property="og:image" content="https://key4920.github.io/docs/bigdata_platform/ApacheSpark/spark_install/spark_thumbnail.png"/><meta property="article:section" content="docs" />
+
+
+
+<title>Mac OS에 스파크3 설치 및 pyspark 시작 | 202 Blue Note</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.97cfda4f5e3c9fa49a2bf8d401f4ddc0eec576c99cdcf6afbec19173200c37db.css" integrity="sha256-l8/aT148n6SaK/jUAfTdwO7Fdsmc3PavvsGRcyAMN9s=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.92a1f644d0d40f6eed88a17ae0c4c47c3bf5c1805c4668a196bb1ec823d2c722.js" integrity="sha256-kqH2RNDUD27tiKF64MTEfDv1wYBcRmihlrseyCPSxyI=" crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-189742603-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><img src="/logo.png" alt="Logo" /><span>202 Blue Note</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/" target="_blank" rel="noopener">
+        Home
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/bigdata_platform/" class="">BigData Platform</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-493de9819b5c0666906ab2facfddd86e" class="toggle" checked />
+    <label for="section-493de9819b5c0666906ab2facfddd86e" class="flex justify-between">
+      <a href="https://key4920.github.io/docs/bigdata_platform/ApacheSpark/" class="">Apache Spark</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/bigdata_platform/ApacheSpark/spark_install/" class=" active">Mac OS에 스파크3 설치 및 pyspark 시작</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-884ac8cf1b1346e7e6d0492566fcf838" class="toggle"  />
+    <label for="section-884ac8cf1b1346e7e6d0492566fcf838" class="flex justify-between">
+      <a href="https://key4920.github.io/docs/bigdata_platform/Hadoop/" class="">Hadoop</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/bigdata_platform/Hadoop/hadoop_install/" class="">Mac OS에 하둡(Hadoop) 설치</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/" class="">ETC</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eb9b6782719ffdbc4862381781d40384" class="toggle"  />
+    <label for="section-eb9b6782719ffdbc4862381781d40384" class="flex justify-between">
+      <a href="https://key4920.github.io/docs/ETC/Hugo/" class="">Hugo</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/Hugo/first_hugo_blog/" class="">초보자 Hugo 블로그 구축기</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/key4920" target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Mac OS에 스파크3 설치 및 pyspark 시작</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#step1-스파크-버전-선택-후-다운로드">STEP1. 스파크 버전 선택 후 다운로드</a></li>
+        <li><a href="#step2-다운로드한-압축-파일을-home-directory에-풀어준다">STEP2. 다운로드한 압축 파일을 home directory에 풀어준다.</a></li>
+        <li><a href="#step3-bash_profile-환경변수-수정">STEP3. ~/.bash_profile 환경변수 수정</a></li>
+        <li><a href="#step4-실행-확인">STEP4. 실행 확인</a>
+          <ul>
+            <li><a href="#spark-shell-실행">spark-shell 실행</a></li>
+            <li><a href="#주피터-노트북에서-실행">주피터 노트북에서 실행</a></li>
+          </ul>
+        </li>
+        <li><a href="#step-5-이제-모두-완료됐으니-간단한-실습해보자">STEP 5. 이제 모두 완료됐으니, 간단한 실습해보자!</a>
+          <ul>
+            <li><a href="#주피터-노트북에서-파이썬-코드-작성">주피터 노트북에서 파이썬 코드 작성</a></li>
+          </ul>
+        </li>
+        <li><a href="#reference">Reference</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><p>설치 환경</p>
+<blockquote>
+<p><strong>OS</strong> : MacOS Catalina 10.15.7<br>
+<strong>Java</strong> : java 11.0.1<br>
+<strong>Python</strong> : Python 3.7.6<br>
+<strong>Spark</strong> : spark 3.0.1</p>
+</blockquote>
+<h2 id="step1-스파크-버전-선택-후-다운로드">
+  STEP1. 스파크 버전 선택 후 다운로드
+  <a class="anchor" href="#step1-%ec%8a%a4%ed%8c%8c%ed%81%ac-%eb%b2%84%ec%a0%84-%ec%84%a0%ed%83%9d-%ed%9b%84-%eb%8b%a4%ec%9a%b4%eb%a1%9c%eb%93%9c">#</a>
+</h2>
+<p>NT. Java 와 Python은 설치 돼 있다는 가정으로 진행한다.<br>
+<strong>스파크 다운로드 사이트 링크</strong> : <a href="http://spark.apache.org/downloads.html">Downloads | Apache Spark</a><br>
+사이트에 접속하면 아래 화면이 나오게 된다.</p>
+<p><img src="download_spark_version.png" alt="download_spark_version.png" /></p>
+<p>원래는 Spark 2.4.7 을 선택해서 설치했었다.<br>
+하지만 로컬의 Java 버전이 11이었으므로, 그냥 이참에 Spark3.0을 시도해보기로 했다!</p>
+<p>(참고) Spark3.0은 Java 11을 지원하고, Spark2.X는 Java 8을 지원한다.</p>
+<p>우선 원하는 Spark 버전 선택하여 &lsquo;Download Spark&rsquo; 를 클릭해주면 다음과 같은 화면으로 넘어간다.</p>
+<p><img src="download_spark_mirror.png" alt="download_spark_mirror.png" /></p>
+<p>mirror sites 중 한개를 선택해 다운로드 해주는데, 그냥 최상단 링크를 눌러 다운로드 해준다.</p>
+<h2 id="step2-다운로드한-압축-파일을-home-directory에-풀어준다">
+  STEP2. 다운로드한 압축 파일을 home directory에 풀어준다.
+  <a class="anchor" href="#step2-%eb%8b%a4%ec%9a%b4%eb%a1%9c%eb%93%9c%ed%95%9c-%ec%95%95%ec%b6%95-%ed%8c%8c%ec%9d%bc%ec%9d%84-home-directory%ec%97%90-%ed%92%80%ec%96%b4%ec%a4%80%eb%8b%a4">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tar -zxvf spark-3.0.1-bin-hadoop3.2.tar
+</code></pre></div><h2 id="step3-bash_profile-환경변수-수정">
+  STEP3. ~/.bash_profile 환경변수 수정
+  <a class="anchor" href="#step3-bash_profile-%ed%99%98%ea%b2%bd%eb%b3%80%ec%88%98-%ec%88%98%ec%a0%95">#</a>
+</h2>
+<p>어떤 directory에서도 spark notebook 열 수 있도록 환경변수 설정해준다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">## .bash_profile 있는지 확인</span>
+ls -a 
+<span style="color:#75715e">## .bash_profile 파일 열기</span>
+nano .bash_profile
+<span style="color:#75715e">## 또는 </span>
+vi .bash_profile
+</code></pre></div><p>아래 환경변수 추가로 써준다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">## 버전 맞게 써주기</span>
+export SPARK_PATH<span style="color:#f92672">=</span>~/spark-3.0.1-bin-hadoop3.2 
+<span style="color:#75715e">## PySpark Shell을 주피터 노트북에서 열 수 있도록 설정</span>
+export PYSPARK_DRIVER_PYTHON<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;jupyter&#34;</span>
+export PYSPARK_DRIVER_PYTHON_OPTS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;notebook&#34;</span>
+
+<span style="color:#75715e">## 파이썬 3를 사용한다면 아래 설정 추가해 주어야 에러가 나지 않음</span>
+export PYSPARK_PYTHON<span style="color:#f92672">=</span>python3
+
+<span style="color:#75715e">## sparknb는 명령어 마음대로 써준 것이므로, 원하는 이름으로 수정 가능</span>
+<span style="color:#75715e">## local[2] 는 로컬 코어 2개를 사용한다는 뜻으로 본인 로컬 환경에 맞게 수정 가능</span>
+alias sparknb<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;$SPARK_PATH/bin/pyspark --master local[2]&#39;</span>
+</code></pre></div><p>만약 nano .bash_profile 했었으면  ^x —&gt; Y —&gt; enter 로 저장하고 빠져나오기</p>
+<p>vi .bash_profile 했었으면 :wq 입력 후 저장하고 빠져나오기</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">source .bash_profile
+</code></pre></div><h2 id="step4-실행-확인">
+  STEP4. 실행 확인
+  <a class="anchor" href="#step4-%ec%8b%a4%ed%96%89-%ed%99%95%ec%9d%b8">#</a>
+</h2>
+<h3 id="spark-shell-실행">
+  spark-shell 실행
+  <a class="anchor" href="#spark-shell-%ec%8b%a4%ed%96%89">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">## 터미널에서 spark-shell 입력하여 스파크 쉘 실행</span>
+spark-shell
+</code></pre></div><p>터미널에 spark-shell 입력하면 아래와 같이 정상적으로 실행되면서 스칼라를 통해 코드를 작성할 수 있다.</p>
+<p><img src="spark-shell.png" alt="spark-shell.png" /></p>
+<h3 id="주피터-노트북에서-실행">
+  주피터 노트북에서 실행
+  <a class="anchor" href="#%ec%a3%bc%ed%94%bc%ed%84%b0-%eb%85%b8%ed%8a%b8%eb%b6%81%ec%97%90%ec%84%9c-%ec%8b%a4%ed%96%89">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">## 터미널에서 sparknb입력하여 주피터 노트북 실행</span>
+<span style="color:#75715e">## 위에서 alias 다른 이름으로 설정했다면, 해당 이름으로 실행</span>
+sparknb
+</code></pre></div><p>명령어 입력하면 주피터 노트북이 켜지고, pyspark를 작성할 수 있다.</p>
+<h2 id="step-5-이제-모두-완료됐으니-간단한-실습해보자">
+  STEP 5. 이제 모두 완료됐으니, 간단한 실습해보자!
+  <a class="anchor" href="#step-5-%ec%9d%b4%ec%a0%9c-%eb%aa%a8%eb%91%90-%ec%99%84%eb%a3%8c%eb%90%90%ec%9c%bc%eb%8b%88-%ea%b0%84%eb%8b%a8%ed%95%9c-%ec%8b%a4%ec%8a%b5%ed%95%b4%eb%b3%b4%ec%9e%90">#</a>
+</h2>
+<h3 id="주피터-노트북에서-파이썬-코드-작성">
+  주피터 노트북에서 파이썬 코드 작성
+  <a class="anchor" href="#%ec%a3%bc%ed%94%bc%ed%84%b0-%eb%85%b8%ed%8a%b8%eb%b6%81%ec%97%90%ec%84%9c-%ed%8c%8c%ec%9d%b4%ec%8d%ac-%ec%bd%94%eb%93%9c-%ec%9e%91%ec%84%b1">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Reason why we have the getOrCreate code</span>
+<span style="color:#75715e"># http://stackoverflow.com/questions/28999332/how-to-access-sparkcontext-in-pyspark-script</span>
+sc <span style="color:#f92672">=</span> SparkContext<span style="color:#f92672">.</span>getOrCreate()
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+
+TOTAL <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000000</span>
+dots <span style="color:#f92672">=</span> sc<span style="color:#f92672">.</span>parallelize([<span style="color:#ae81ff">2.0</span> <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>random(<span style="color:#ae81ff">2</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1.0</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(TOTAL)])<span style="color:#f92672">.</span>cache()
+print(<span style="color:#e6db74">&#34;Number of random points:&#34;</span>, dots<span style="color:#f92672">.</span>count())
+
+stats <span style="color:#f92672">=</span> dots<span style="color:#f92672">.</span>stats()
+print(<span style="color:#e6db74">&#39;Mean:&#39;</span>, stats<span style="color:#f92672">.</span>mean())
+print(<span style="color:#e6db74">&#39;stdev:&#39;</span>, stats<span style="color:#f92672">.</span>stdev())
+</code></pre></div><p>Number of random points: 1000000 <br>
+Mean: [-0.00076914  0.00090079]<br>
+stdev: [0.57721218 0.57750566]</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">dots<span style="color:#f92672">.</span>collect()[:<span style="color:#ae81ff">5</span>] <span style="color:#75715e">## 형식 구경하기</span>
+</code></pre></div><p>[array([0.71638614, 0.34966844]),<br>
+array([0.85926697, 0.43265725]),<br>
+array([-0.12204166, -0.8161978 ]),<br>
+array([-0.96733469, -0.57462963]),<br>
+array([-0.13704113, -0.48361848])]</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">dots
+</code></pre></div><p>ParallelCollectionRDD[0] at readRDDFromFile at PythonRDD.scala:262</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">%</span>matplotlib inline
+<span style="color:#f92672">from</span> operator <span style="color:#f92672">import</span> itemgetter
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot <span style="color:#66d9ef">as</span> plt
+
+plt<span style="color:#f92672">.</span>figure(figsize <span style="color:#f92672">=</span> (<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">5</span>))
+
+<span style="color:#75715e"># Plot 1</span>
+plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>)
+plt<span style="color:#f92672">.</span>xlim((<span style="color:#f92672">-</span><span style="color:#ae81ff">1.0</span>, <span style="color:#ae81ff">1.0</span>))
+plt<span style="color:#f92672">.</span>ylim((<span style="color:#f92672">-</span><span style="color:#ae81ff">1.0</span>, <span style="color:#ae81ff">1.0</span>))
+
+sample <span style="color:#f92672">=</span> dots<span style="color:#f92672">.</span>sample(<span style="color:#66d9ef">False</span>, <span style="color:#ae81ff">0.01</span>)
+X <span style="color:#f92672">=</span> sample<span style="color:#f92672">.</span>map(itemgetter(<span style="color:#ae81ff">0</span>))<span style="color:#f92672">.</span>collect()
+Y <span style="color:#f92672">=</span> sample<span style="color:#f92672">.</span>map(itemgetter(<span style="color:#ae81ff">1</span>))<span style="color:#f92672">.</span>collect()
+plt<span style="color:#f92672">.</span>scatter(X, Y)
+
+<span style="color:#75715e"># Plot 2</span>
+plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>)
+plt<span style="color:#f92672">.</span>xlim((<span style="color:#f92672">-</span><span style="color:#ae81ff">1.0</span>, <span style="color:#ae81ff">1.0</span>))
+plt<span style="color:#f92672">.</span>ylim((<span style="color:#f92672">-</span><span style="color:#ae81ff">1.0</span>, <span style="color:#ae81ff">1.0</span>))
+
+inCircle <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span> v: np<span style="color:#f92672">.</span>linalg<span style="color:#f92672">.</span>norm(v) <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1.0</span>
+dotsIn <span style="color:#f92672">=</span> sample<span style="color:#f92672">.</span>filter(inCircle)<span style="color:#f92672">.</span>cache()
+dotsOut <span style="color:#f92672">=</span> sample<span style="color:#f92672">.</span>filter(<span style="color:#66d9ef">lambda</span> v: <span style="color:#f92672">not</span> inCircle(v))<span style="color:#f92672">.</span>cache()
+
+<span style="color:#75715e"># inside circle</span>
+Xin <span style="color:#f92672">=</span> dotsIn<span style="color:#f92672">.</span>map(itemgetter(<span style="color:#ae81ff">0</span>))<span style="color:#f92672">.</span>collect()
+Yin <span style="color:#f92672">=</span> dotsIn<span style="color:#f92672">.</span>map(itemgetter(<span style="color:#ae81ff">1</span>))<span style="color:#f92672">.</span>collect()
+plt<span style="color:#f92672">.</span>scatter(Xin, Yin, color <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;r&#39;</span>)
+
+<span style="color:#75715e"># outside circle</span>
+Xout <span style="color:#f92672">=</span> dotsOut<span style="color:#f92672">.</span>map(itemgetter(<span style="color:#ae81ff">0</span>))<span style="color:#f92672">.</span>collect()
+Yout <span style="color:#f92672">=</span> dotsOut<span style="color:#f92672">.</span>map(itemgetter(<span style="color:#ae81ff">1</span>))<span style="color:#f92672">.</span>collect()
+plt<span style="color:#f92672">.</span>scatter(Xout, Yout)
+</code></pre></div><p>&lt;matplotlib.collections.PathCollection at 0x7f88920d0a50&gt;</p>
+<p><img src="spark_first_example_5_1.png" alt="png" /></p>
+<h2 id="reference">
+  Reference
+  <a class="anchor" href="#reference">#</a>
+</h2>
+<p><a href="https://medium.com/@GalarnykMichael/install-spark-on-mac-pyspark-453f395f240b">Install Spark on Mac (PySpark)</a></p>
+<p><a href="https://kingname.tistory.com/159">[mac] Apache Spark Study -1 ( Spark설치(HomeBrew) )</a></p>
+<p><a href="https://parkaparka.tistory.com/27">apache-spark@3.0.1 설치</a></p></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/key4920/docs/content/docs/bigdata_platform/ApacheSpark/spark_install/index.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#step1-스파크-버전-선택-후-다운로드">STEP1. 스파크 버전 선택 후 다운로드</a></li>
+        <li><a href="#step2-다운로드한-압축-파일을-home-directory에-풀어준다">STEP2. 다운로드한 압축 파일을 home directory에 풀어준다.</a></li>
+        <li><a href="#step3-bash_profile-환경변수-수정">STEP3. ~/.bash_profile 환경변수 수정</a></li>
+        <li><a href="#step4-실행-확인">STEP4. 실행 확인</a>
+          <ul>
+            <li><a href="#spark-shell-실행">spark-shell 실행</a></li>
+            <li><a href="#주피터-노트북에서-실행">주피터 노트북에서 실행</a></li>
+          </ul>
+        </li>
+        <li><a href="#step-5-이제-모두-완료됐으니-간단한-실습해보자">STEP 5. 이제 모두 완료됐으니, 간단한 실습해보자!</a>
+          <ul>
+            <li><a href="#주피터-노트북에서-파이썬-코드-작성">주피터 노트북에서 파이썬 코드 작성</a></li>
+          </ul>
+        </li>
+        <li><a href="#reference">Reference</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

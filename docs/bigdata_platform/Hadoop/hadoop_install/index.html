@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="맥북 Mac OS에 Hadoop을 설치해보자!">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Mac OS에 하둡(Hadoop) 설치" />
+<meta property="og:description" content="맥북 Mac OS에 Hadoop을 설치해보자!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://key4920.github.io/docs/bigdata_platform/Hadoop/hadoop_install/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2021-02-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-02-27T00:00:00+00:00" />
+
+<title>Mac OS에 하둡(Hadoop) 설치 | 202 Blue Note</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.97cfda4f5e3c9fa49a2bf8d401f4ddc0eec576c99cdcf6afbec19173200c37db.css" integrity="sha256-l8/aT148n6SaK/jUAfTdwO7Fdsmc3PavvsGRcyAMN9s=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.92a1f644d0d40f6eed88a17ae0c4c47c3bf5c1805c4668a196bb1ec823d2c722.js" integrity="sha256-kqH2RNDUD27tiKF64MTEfDv1wYBcRmihlrseyCPSxyI=" crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-189742603-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><img src="/logo.png" alt="Logo" /><span>202 Blue Note</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/" target="_blank" rel="noopener">
+        Home
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/bigdata_platform/" class="">BigData Platform</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-493de9819b5c0666906ab2facfddd86e" class="toggle"  />
+    <label for="section-493de9819b5c0666906ab2facfddd86e" class="flex justify-between">
+      <a href="https://key4920.github.io/docs/bigdata_platform/ApacheSpark/" class="">Apache Spark</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/bigdata_platform/ApacheSpark/spark_install/" class="">Mac OS에 스파크3 설치 및 pyspark 시작</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-884ac8cf1b1346e7e6d0492566fcf838" class="toggle" checked />
+    <label for="section-884ac8cf1b1346e7e6d0492566fcf838" class="flex justify-between">
+      <a href="https://key4920.github.io/docs/bigdata_platform/Hadoop/" class="">Hadoop</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/bigdata_platform/Hadoop/hadoop_install/" class=" active">Mac OS에 하둡(Hadoop) 설치</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/" class="">ETC</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eb9b6782719ffdbc4862381781d40384" class="toggle"  />
+    <label for="section-eb9b6782719ffdbc4862381781d40384" class="flex justify-between">
+      <a href="https://key4920.github.io/docs/ETC/Hugo/" class="">Hugo</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/Hugo/first_hugo_blog/" class="">초보자 Hugo 블로그 구축기</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/key4920" target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Mac OS에 하둡(Hadoop) 설치</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#설치-환경">설치 환경</a></li>
+          </ul>
+        </li>
+        <li><a href="#step1-하둡-설치">STEP1. 하둡 설치</a></li>
+        <li><a href="#step2-환경변수-수정">STEP2. 환경변수 수정</a>
+          <ul>
+            <li><a href="#2-1-hadoop-envsh-변경">2-1. hadoop-env.sh 변경</a></li>
+            <li><a href="#2-2-core-sitexml-변경">2-2. core-site.xml 변경</a></li>
+            <li><a href="#2-3-hdfs-sitexml-변경">2-3. hdfs-site.xml 변경</a></li>
+            <li><a href="#2-4-mapred-sitexml-변경">2-4. mapred-site.xml 변경</a></li>
+            <li><a href="#2-5-yarn-sitexml-변경">2-5. yarn-site.xml 변경</a></li>
+          </ul>
+        </li>
+        <li><a href="#step3-하둡-실행">STEP3. 하둡 실행</a>
+          <ul>
+            <li><a href="#3-1-실행-전-준비">3-1. 실행 전 준비</a></li>
+            <li><a href="#3-2-하둡-실행">3-2. 하둡 실행</a></li>
+            <li><a href="#3-3-실행-확인">3-3. 실행 확인</a></li>
+            <li><a href="#cluster-status">Cluster status</a></li>
+            <li><a href="#hdfs-status">HDFS status</a></li>
+            <li><a href="#3-4-실행-종료">3-4. 실행 종료</a></li>
+          </ul>
+        </li>
+        <li><a href="#reference">Reference</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h3 id="설치-환경">
+  설치 환경
+  <a class="anchor" href="#%ec%84%a4%ec%b9%98-%ed%99%98%ea%b2%bd">#</a>
+</h3>
+<blockquote>
+<p><strong>OS</strong> : MacOS Catalina 10.15.7<br>
+<strong>Hadoop</strong> : 3.3.0</p>
+</blockquote>
+<h2 id="step1-하둡-설치">
+  STEP1. 하둡 설치
+  <a class="anchor" href="#step1-%ed%95%98%eb%91%a1-%ec%84%a4%ec%b9%98">#</a>
+</h2>
+<p>터미널에 명령 입력</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install hadoop
+</code></pre></div><p>만약 brew가 없다면 <a href="https://brew.sh/index_ko">Homebrew</a>에 접속하여 설치해준다.</p>
+<h2 id="step2-환경변수-수정">
+  STEP2. 환경변수 수정
+  <a class="anchor" href="#step2-%ed%99%98%ea%b2%bd%eb%b3%80%ec%88%98-%ec%88%98%ec%a0%95">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">## 하둡 버전 X.X.X는 본인이 설치한 버전으로 수정 </span>
+cd /usr/local/cellar/hadoop/3.3.0/libexec/etc/hadoop
+</code></pre></div><p>Finder에서 저 경로가 보이지 않았지만, 터미널에서 명령어 치니 경로가 잘 들어가지긴 했다.</p>
+<p>그래도 직접 Finder에서 보기 위해서 Finder에서 <strong><em>&lsquo;Cmd+Shift+G&rsquo;</em></strong> 를 치니 경로 검색 창이 떴고 그걸로 들어가니 Finder에서 볼 수 있었다.</p>
+<p><strong>수정해야 할 파일들</strong></p>
+<blockquote>
+<p><strong>(1) hadoop-env.sh</strong><br>
+<strong>(2) core-site.xml</strong><br>
+<strong>(3) hdfs-site.xml</strong><br>
+<strong>(4) mapred-site.xml</strong><br>
+<strong>(5) yarn-site.xml</strong></p>
+</blockquote>
+<h3 id="2-1-hadoop-envsh-변경">
+  2-1. hadoop-env.sh 변경
+  <a class="anchor" href="#2-1-hadoop-envsh-%eb%b3%80%ea%b2%bd">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">open hadoop-env.sh
+</code></pre></div><p>파일을 열어서 HADOOP_OPTS 부분을 변경해 줘야한다.</p>
+<p>열어보니 아래 주석처리된 부분만 적혀있어서 마지막 한줄을 추가해서 입력해 주었다.</p>
+<p><img src="hadoop-env-sh.png" alt="hadoop-env-sh.png" /></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export HADOOP_OPTS<span style="color:#f92672">=</span>”-Djava.net.preferIPv4Stack<span style="color:#f92672">=</span>true -Djava.security.krb5.realm<span style="color:#f92672">=</span> -Djava.security.krb5.kdc<span style="color:#f92672">=</span>”
+</code></pre></div><p>또한, 터미널에 아래 명령어 입력하면 java경로를 보여준다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/usr/libexec/java_home
+</code></pre></div><p>이때 나온 경로 또한 <em>&lsquo;hadoop-env.sh&rsquo;</em> 파일 안에 없다면 추가해준다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export JAVA_HOME<span style="color:#f92672">=</span>“/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home”
+</code></pre></div><h3 id="2-2-core-sitexml-변경">
+  2-2. core-site.xml 변경
+  <a class="anchor" href="#2-2-core-sitexml-%eb%b3%80%ea%b2%bd">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">open core-site.xml
+</code></pre></div><p>파일을 열어 <configuration> 태그에 복사하여 넣어준다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">configuration</span>&gt;
+      &lt;<span style="color:#f92672">property</span>&gt;
+          &lt;<span style="color:#f92672">name</span>&gt;hadoop.tmp.dir&lt;/<span style="color:#f92672">name</span>&gt;
+          &lt;<span style="color:#f92672">value</span>&gt;/usr/local/Cellar/hadoop/hdfs/tmp&lt;/<span style="color:#f92672">value</span>&gt;
+          &lt;<span style="color:#f92672">description</span>&gt;A base for other temporary directories.&lt;/<span style="color:#f92672">description</span>&gt;
+      &lt;/<span style="color:#f92672">property</span>&gt;
+      &lt;<span style="color:#f92672">property</span>&gt;
+          &lt;<span style="color:#f92672">name</span>&gt;fs.default.name&lt;/<span style="color:#f92672">name</span>&gt;
+          &lt;<span style="color:#f92672">value</span>&gt;hdfs://localhost:9000&lt;/<span style="color:#f92672">value</span>&gt;
+      &lt;/<span style="color:#f92672">property</span>&gt;
+&lt;/<span style="color:#f92672">configuration</span>&gt;
+</code></pre></div><h3 id="2-3-hdfs-sitexml-변경">
+  2-3. hdfs-site.xml 변경
+  <a class="anchor" href="#2-3-hdfs-sitexml-%eb%b3%80%ea%b2%bd">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">open hdfs-site.xml
+</code></pre></div><p>파일을 열어 <configuration> 태그에 복사하여 넣어준다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">configuration</span>&gt;
+    &lt;<span style="color:#f92672">property</span>&gt;
+        &lt;<span style="color:#f92672">name</span>&gt;dfs.replication&lt;/<span style="color:#f92672">name</span>&gt;
+        &lt;<span style="color:#f92672">value</span>&gt;1&lt;/<span style="color:#f92672">value</span>&gt;
+    &lt;/<span style="color:#f92672">property</span>&gt;
+&lt;/<span style="color:#f92672">configuration</span>&gt;
+</code></pre></div><h3 id="2-4-mapred-sitexml-변경">
+  2-4. mapred-site.xml 변경
+  <a class="anchor" href="#2-4-mapred-sitexml-%eb%b3%80%ea%b2%bd">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">open mapred-site.xml
+</code></pre></div><p>파일을 열어 <configuration> 태그에 복사하여 넣어준다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">configuration</span>&gt;
+  &lt;<span style="color:#f92672">property</span>&gt;
+    &lt;<span style="color:#f92672">name</span>&gt;mapreduce.framework.name&lt;/<span style="color:#f92672">name</span>&gt;
+    &lt;<span style="color:#f92672">value</span>&gt;yarn&lt;/<span style="color:#f92672">value</span>&gt;
+  &lt;/<span style="color:#f92672">property</span>&gt;
+  &lt;<span style="color:#f92672">property</span>&gt;
+    &lt;<span style="color:#f92672">name</span>&gt;mapreduce.application.classpath&lt;/<span style="color:#f92672">name</span>&gt;   
+	  &lt;<span style="color:#f92672">value</span>&gt;$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/*:$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/lib/*&lt;/<span style="color:#f92672">value</span>&gt;
+  &lt;/<span style="color:#f92672">property</span>&gt;
+&lt;/<span style="color:#f92672">configuration</span>&gt;
+</code></pre></div><h3 id="2-5-yarn-sitexml-변경">
+  2-5. yarn-site.xml 변경
+  <a class="anchor" href="#2-5-yarn-sitexml-%eb%b3%80%ea%b2%bd">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">open yarn-site.xml
+</code></pre></div><p>파일을 열어 <configuration> 태그에 복사하여 넣어준다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">configuration</span>&gt;
+	&lt;<span style="color:#f92672">property</span>&gt;
+		&lt;<span style="color:#f92672">name</span>&gt;yarn.nodemanager.aux-services&lt;/<span style="color:#f92672">name</span>&gt;
+		&lt;<span style="color:#f92672">value</span>&gt;mapreduce_shuffle&lt;/<span style="color:#f92672">value</span>&gt;
+	&lt;/<span style="color:#f92672">property</span>&gt;
+	&lt;<span style="color:#f92672">property</span>&gt;
+		&lt;<span style="color:#f92672">name</span>&gt;yarn.nodemanager.env-whitelist&lt;/<span style="color:#f92672">name</span>&gt;
+		&lt;<span style="color:#f92672">value</span>&gt;JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_MAPRED_HOME&lt;/<span style="color:#f92672">value</span>&gt;
+	&lt;/<span style="color:#f92672">property</span>&gt;
+&lt;/<span style="color:#f92672">configuration</span>&gt;
+</code></pre></div><h2 id="step3-하둡-실행">
+  STEP3. 하둡 실행
+  <a class="anchor" href="#step3-%ed%95%98%eb%91%a1-%ec%8b%a4%ed%96%89">#</a>
+</h2>
+<h3 id="3-1-실행-전-준비">
+  3-1. 실행 전 준비
+  <a class="anchor" href="#3-1-%ec%8b%a4%ed%96%89-%ec%a0%84-%ec%a4%80%eb%b9%84">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh localhost
+</code></pre></div><p>터미널에 위 명령어를 입력해 봤을 때 마지막 접속시간이 안뜨고 Connection refused 라고 뜨면,</p>
+<p>아래 명령어를 입력해준다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -t rsa -P <span style="color:#e6db74">&#39;&#39;</span> -f ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys
+chmod <span style="color:#ae81ff">0600</span> ~/.ssh/authorized_keys
+</code></pre></div><p>그냥 hadoop 폴더 내에서 입력했더니 ./ssh 폴더가 없다고 떴다.</p>
+<p>나 같은 경우는 가장 하위 홈 디렉토리에서 명령어 입력하니 됐다. (/Users/&ldquo;user_name&rdquo;/)</p>
+<p>이제 HDFS 로 포맷한다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd /usr/local/cellar/hadoop/3.3.0/libexec/bin
+hdfs namenode -format
+</code></pre></div><h3 id="3-2-하둡-실행">
+  3-2. 하둡 실행
+  <a class="anchor" href="#3-2-%ed%95%98%eb%91%a1-%ec%8b%a4%ed%96%89">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd /usr/local/cellar/hadoop/3.3.0/libexec/sbin
+./start-all.sh
+<span style="color:#75715e"># 또는</span>
+./start-dfs.sh
+<span style="color:#75715e"># 또는</span>
+./start-yarn.sh
+</code></pre></div><p>위 명령어를 입력해주면 정상적으로 실행된다.</p>
+<p>만약 아래 같은 에러가 나면 원격 로그인을 허용하지 않은 것이므로 환경설정에서 허용 해준다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#e6db74">&#34;localhost: ssh: connect to host localhost port 22: Connection refused&#34;</span>
+</code></pre></div><p>환경설정 &gt; 공유 &gt; 원격 로그인에 체크박스를 눌러준다.</p>
+<p><img src="key_error.png" alt="key_error.png" /></p>
+<h3 id="3-3-실행-확인">
+  3-3. 실행 확인
+  <a class="anchor" href="#3-3-%ec%8b%a4%ed%96%89-%ed%99%95%ec%9d%b8">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">jps
+</code></pre></div><p>jps 를 터미널에 입력해주면, 하둡이 정상 설치 및 실행되고 있음을 아래와 같이 보여준다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ae81ff">29171</span> NodeManager
+<span style="color:#ae81ff">28644</span> NameNode
+<span style="color:#ae81ff">29255</span> Jps
+<span style="color:#ae81ff">28745</span> DataNode
+<span style="color:#ae81ff">28206</span> ResourceManager
+<span style="color:#ae81ff">28879</span> SecondaryNameNode
+</code></pre></div><p>그럼 이제 <em>localhost</em> 로 접속해서 확인해보자</p>
+<blockquote>
+<p><strong>Cluster status</strong> : <a href="http://localhost:8088/">http://localhost:8088</a><br>
+<strong>HDFS status</strong> : <a href="http://localhost:9870/">http://localhost:9870</a> <br>
+<strong>Secondary NameNode status</strong> : <a href="http://localhost:9868/">http://localhost:9868</a></p>
+</blockquote>
+<h3 id="cluster-status">
+  Cluster status
+  <a class="anchor" href="#cluster-status">#</a>
+</h3>
+<p><img src="cluster_status.png" alt="cluster_status.png" /></p>
+<h3 id="hdfs-status">
+  HDFS status
+  <a class="anchor" href="#hdfs-status">#</a>
+</h3>
+<p><img src="hdfs_status.png" alt="hdfs_status.png" /></p>
+<h3 id="3-4-실행-종료">
+  3-4. 실행 종료
+  <a class="anchor" href="#3-4-%ec%8b%a4%ed%96%89-%ec%a2%85%eb%a3%8c">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">## 만약 경로가 아래 경로에 들어와 있지 않다면 다시 들어가준다. </span>
+<span style="color:#75715e">## 하지만 해당 경로에서 ./start-all.sh 로 실행 해 줬기 때문에 </span>
+<span style="color:#75715e">## 그냥 아래 ./stop-all.sh만 실행해주면 된다.</span>
+<span style="color:#75715e"># cd /usr/local/cellar/hadoop/3.3.0/libexec/sbin</span>
+
+./stop-all.sh
+<span style="color:#75715e"># 또는</span>
+./stop-dfs.sh
+<span style="color:#75715e"># 또는</span>
+./stop-yarn.sh
+
+</code></pre></div><h2 id="reference">
+  Reference
+  <a class="anchor" href="#reference">#</a>
+</h2>
+<p><a href="https://towardsdatascience.com/installing-hadoop-on-a-mac-ec01c67b003c">Installing Hadoop on a Mac</a></p>
+<p><a href="https://rap0d.github.io/tip/2019/10/01/mac_hadoop_in_mac/">macOS에서 Hadoop 설치하기</a></p></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/key4920/docs/content/docs/bigdata_platform/Hadoop/hadoop_install/index.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#설치-환경">설치 환경</a></li>
+          </ul>
+        </li>
+        <li><a href="#step1-하둡-설치">STEP1. 하둡 설치</a></li>
+        <li><a href="#step2-환경변수-수정">STEP2. 환경변수 수정</a>
+          <ul>
+            <li><a href="#2-1-hadoop-envsh-변경">2-1. hadoop-env.sh 변경</a></li>
+            <li><a href="#2-2-core-sitexml-변경">2-2. core-site.xml 변경</a></li>
+            <li><a href="#2-3-hdfs-sitexml-변경">2-3. hdfs-site.xml 변경</a></li>
+            <li><a href="#2-4-mapred-sitexml-변경">2-4. mapred-site.xml 변경</a></li>
+            <li><a href="#2-5-yarn-sitexml-변경">2-5. yarn-site.xml 변경</a></li>
+          </ul>
+        </li>
+        <li><a href="#step3-하둡-실행">STEP3. 하둡 실행</a>
+          <ul>
+            <li><a href="#3-1-실행-전-준비">3-1. 실행 전 준비</a></li>
+            <li><a href="#3-2-하둡-실행">3-2. 하둡 실행</a></li>
+            <li><a href="#3-3-실행-확인">3-3. 실행 확인</a></li>
+            <li><a href="#cluster-status">Cluster status</a></li>
+            <li><a href="#hdfs-status">HDFS status</a></li>
+            <li><a href="#3-4-실행-종료">3-4. 실행 종료</a></li>
+          </ul>
+        </li>
+        <li><a href="#reference">Reference</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
