@@ -5,8 +5,7 @@
     <link>https://key4920.github.io/</link>
     <description>Recent content in Home on 202 Blue Note</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 06 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://key4920.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://key4920.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mac OS에 하둡(Hadoop) 설치</title>
       <link>https://key4920.github.io/docs/bigdata_platform/Hadoop/hadoop_install/</link>
