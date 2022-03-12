@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://key4920.github.io/docs/bigdata_platform/Hadoop/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Mac OS에 하둡(Hadoop) 설치</title>
-      <link>https://key4920.github.io/docs/bigdata_platform/Hadoop/hadoop_install/</link>
-      <pubDate>Sat, 27 Feb 2021 00:00:00 +0000</pubDate>
+      <title>[M1] Mac OS에 하둡(Hadoop) 설치</title>
+      <link>https://key4920.github.io/docs/bigdata_platform/Hadoop/hadoop_install_M1/</link>
+      <pubDate>Fri, 11 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://key4920.github.io/docs/bigdata_platform/Hadoop/hadoop_install/</guid>
+      <guid>https://key4920.github.io/docs/bigdata_platform/Hadoop/hadoop_install_M1/</guid>
       <description></description>
     </item>
     
