@@ -6,7 +6,7 @@
     <description>Recent content in Algorithms on 202 Blue Note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://key4920.github.io/tags/Algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://key4920.github.io/tags/Algorithms/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>알고리즘 공부 방향성</title>
       <link>https://key4920.github.io/docs/ETC/Algorithms/summary/</link>
@@ -19,6 +19,17 @@
 [ 문제풀이 플랫폼 ] LeetCode
  방향성 #   나의 1차적 목적은 코딩테스트이다.
 하지만 더 멀게는 효율적인 코드 구현 능력 향상을 목적으로하며 “왜?”에 집중하여 학습하고자 한다. 전체적으로 파이썬 알고리즘 인터뷰 책을 따라 학습하며</description>
+    </item>
+    
+    <item>
+      <title>[ LeetCode #125 ]</title>
+      <link>https://key4920.github.io/docs/ETC/Algorithms/LeetCode/125/</link>
+      <pubDate>Thu, 17 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://key4920.github.io/docs/ETC/Algorithms/LeetCode/125/</guid>
+      <description>[ LeetCode #125 ] Valid Palindrom 유효한 팰린드롬 #  [ LeetCode #125 ] Valid Palindrome 바로가기  #  💡 유용한 지식 #  ‘팰린드롬’ 이란?
+ 앞뒤가 똑같은 단어나 문장으로, 뒤집어도 같은말이 되는 단어 또는 문장  리스트 pop(0) 과 데크 popleft()
+ 리스트 pop(0) 이 O(n) 인데 반해 deque popleft() 가 O(1) 이기 때문에 n번씩 반복하면 리스트는 O(n2), deque 구현은 O(n)으로 성능 차이가 크다.  문자열 슬라이싱</description>
     </item>
     
   </channel>

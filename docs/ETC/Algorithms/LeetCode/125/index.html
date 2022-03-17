@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="[ LeetCode #125 ] Valid Palindrom 유효한 팰린드롬 #  [ LeetCode #125 ] Valid Palindrome 바로가기  #  💡 유용한 지식 #  ‘팰린드롬’ 이란?
+ 앞뒤가 똑같은 단어나 문장으로, 뒤집어도 같은말이 되는 단어 또는 문장  리스트 pop(0) 과 데크 popleft()
+ 리스트 pop(0) 이 O(n) 인데 반해 deque popleft() 가 O(1) 이기 때문에 n번씩 반복하면 리스트는 O(n2), deque 구현은 O(n)으로 성능 차이가 크다.  문자열 슬라이싱">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="[ LeetCode #125 ]" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/125/" />
+
+<title>[ LeetCode #125 ] | 202 Blue Note</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.97cfda4f5e3c9fa49a2bf8d401f4ddc0eec576c99cdcf6afbec19173200c37db.css" integrity="sha256-l8/aT148n6SaK/jUAfTdwO7Fdsmc3PavvsGRcyAMN9s=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.ef90fa4c0b5a42caaa0878e10f46512ea944c2e2fccdc26a3edb12bca7239fae.js" integrity="sha256-75D6TAtaQsqqCHjhD0ZRLqlEwuL8zcJqPtsSvKcjn64=" crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-189742603-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><link rel="alternate" type="application/rss+xml" href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/125/index.xml" title="202 Blue Note" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><img src="/logo.png" alt="Logo" /><span>202 Blue Note</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>BigData Platform</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-493de9819b5c0666906ab2facfddd86e" class="toggle"  />
+    <label for="section-493de9819b5c0666906ab2facfddd86e" class="flex justify-between">
+      <a role="button" class="">Apache Spark</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/bigdata_platform/ApacheSpark/spark_install/" class="">Mac OS에 스파크3 설치 및 pyspark 시작</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-884ac8cf1b1346e7e6d0492566fcf838" class="toggle"  />
+    <label for="section-884ac8cf1b1346e7e6d0492566fcf838" class="flex justify-between">
+      <a role="button" class="">Hadoop</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/bigdata_platform/Hadoop/hadoop_install_M1/" class="">[M1] Mac OS에 하둡(Hadoop) 설치</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>ETC</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-38719d68a470d8cb5ec219eaaacd6032" class="toggle" checked />
+    <label for="section-38719d68a470d8cb5ec219eaaacd6032" class="flex justify-between">
+      <a role="button" class="">Algorithms</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/Algorithms/summary/" class="">알고리즘 공부 방향성</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-35ed564960523d26d6e6dd6d00bc6ca8" class="toggle" checked />
+    <label for="section-35ed564960523d26d6e6dd6d00bc6ca8" class="flex justify-between">
+      <a role="button" class="">LeetCode 실습</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/125/" class=" active">[ LeetCode #125 ]</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eb9b6782719ffdbc4862381781d40384" class="toggle"  />
+    <label for="section-eb9b6782719ffdbc4862381781d40384" class="flex justify-between">
+      <a role="button" class="">Hugo</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/Hugo/first_hugo_blog/" class="">초보자 Hugo 블로그 구축기</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/key4920" target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>[ LeetCode #125 ]</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#-leetcode-125--valid-palindrom-유효한-팰린드롬">[ LeetCode #125 ] Valid Palindrom 유효한 팰린드롬</a>
+      <ul>
+        <li><a href="#--leetcode-125--valid-palindrome-바로가기-httpsleetcodecomproblemsvalid-palindrome"><a href="https://leetcode.com/problems/valid-palindrome/"> [ LeetCode #125 ] Valid Palindrome 바로가기 </a></a></li>
+        <li><a href="#-유용한-지식">💡 유용한 지식</a></li>
+        <li><a href="#문제">문제</a></li>
+        <li><a href="#내가-했던-접근">내가 했던 접근</a></li>
+        <li><a href="#책-풀이">책 풀이</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="-leetcode-125--valid-palindrom-유효한-팰린드롬">
+  [ LeetCode #125 ] Valid Palindrom 유효한 팰린드롬
+  <a class="anchor" href="#-leetcode-125--valid-palindrom-%ec%9c%a0%ed%9a%a8%ed%95%9c-%ed%8c%b0%eb%a6%b0%eb%93%9c%eb%a1%ac">#</a>
+</h1>
+<h2 id="--leetcode-125--valid-palindrome-바로가기-httpsleetcodecomproblemsvalid-palindrome">
+  <a href="https://leetcode.com/problems/valid-palindrome/"> [ LeetCode #125 ] Valid Palindrome 바로가기 </a>
+  <a class="anchor" href="#--leetcode-125--valid-palindrome-%eb%b0%94%eb%a1%9c%ea%b0%80%ea%b8%b0-httpsleetcodecomproblemsvalid-palindrome">#</a>
+</h2>
+<h2 id="-유용한-지식">
+  💡 유용한 지식
+  <a class="anchor" href="#-%ec%9c%a0%ec%9a%a9%ed%95%9c-%ec%a7%80%ec%8b%9d">#</a>
+</h2>
+<blockquote class="book-hint warning">
+  <p><strong>‘팰린드롬’</strong> 이란?</p>
+<ul>
+<li>앞뒤가 똑같은 단어나 문장으로, 뒤집어도 같은말이 되는 단어 또는 문장</li>
+</ul>
+<p><strong>리스트 pop(0) 과 데크 popleft()</strong></p>
+<ul>
+<li>리스트 pop(0) 이 O(n) 인데 반해 deque popleft() 가 O(1) 이기 때문에 n번씩 반복하면 리스트는 O(n<sup>2</sup>), deque 구현은 O(n)으로 성능 차이가 크다.</li>
+</ul>
+<p><strong>문자열 슬라이싱</strong></p>
+<ul>
+<li>슬라이싱은 내부적으로 C로 구현되어 있어서 더 빠르다.</li>
+<li>위치를 지정하면 해당 위치의 배열 포인터를 얻게 되며 이를 통해 연결된 객체를 찾아 실제 값을 찾아내어 슬라이싱 사용시 속도 개선에 유리하다.</li>
+</ul>
+<p><strong>문자열 판별 함수</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">string<span style="color:#f92672">.</span>isalnum() <span style="color:#75715e">## alphanumeric 판별</span>
+string<span style="color:#f92672">.</span>isalpha() <span style="color:#75715e">## alphabet 판별</span>
+<span style="color:#75715e"># 파이썬의 숫자 판별함수; 포함 범위 : numeric &gt; digit &gt; decimal</span>
+string<span style="color:#f92672">.</span>isnumeric() <span style="color:#75715e">## numeric 판별</span>
+string<span style="color:#f92672">.</span>isdigit()
+string<span style="color:#f92672">.</span>isdecimal()
+</code></pre></div><div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>문자열 숫자 판별 함수 비교 : isnumeric() &gt; isdigit() &gt; isdecimal()</span>
+      <span>↕</span>
+    </div>
+    <input type="checkbox" class="hidden" />
+    <div class="book-expand-content markdown-inner">
+      <ol>
+<li>isdigit()
+<ul>
+<li>특수 기호 중에서 어깨위에 제곱이나 세제곱을 표시하는 문자가 있다.</li>
+<li>digit은 이렇게 ‘숫자처럼 생긴’ 모든 글자를 다 숫자로 치는 것이다.</li>
+</ul>
+</li>
+<li>isnumeric()
+<ul>
+<li>numeric 하다는 것은 보다 넓은 의미인데, isdigit()은 단일 글자가 ‘숫자’ 모양으로 생겼으면 True를 리턴한다고 했다.</li>
+<li>isnumeric()은 숫자값 표현에 해당하는 텍스트까지 인정해준다.</li>
+<li>예를 들어 “½” 이런 특수문자도 isnumeric()에서는 True로 판정된다.</li>
+</ul>
+</li>
+<li>isdecimal()
+<ul>
+<li>이것이 우리가 흔히 생각하는 ‘숫자’와 같은 개념이다.</li>
+<li>즉 &lsquo;0123456789&rsquo;의 구성으로 이루어진 10개의 글자.</li>
+<li>말 그대로 int 타입으로 즉시 변환이 가능한 리터럴을 구성하는 문자</li>
+</ul>
+</li>
+</ol>
+<pre><code>&lt;/div&gt;
+</code></pre>
+  </label>
+</div>
+<div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>문자열을 alphanumeric 으로만 클린징하는 방법 시간 비교</span>
+      <span>↕</span>
+    </div>
+    <input type="checkbox" class="hidden" />
+    <div class="book-expand-content markdown-inner">
+      <img src="alnum_time_comp.png" alt="alnum_time_comp">
+    </div>
+  </label>
+</div>
+
+</blockquote>
+
+<h2 id="문제">
+  문제
+  <a class="anchor" href="#%eb%ac%b8%ec%a0%9c">#</a>
+</h2>
+<p>A phrase is a <strong>palindrome</strong> if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.</p>
+<p>Given a string s, return true <em>if it is a <strong>palindrome</strong>, or</em> false <em>otherwise</em>.</p>
+
+<div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>Examples</span>
+      <span>↕</span>
+    </div>
+    <input type="checkbox" class="hidden" />
+    <div class="book-expand-content markdown-inner">
+      <p><strong>Example 1:</strong></p>
+<pre tabindex="0"><code>Input: s = &quot;A man, a plan, a canal: Panama&quot;
+Output: true
+Explanation: &quot;amanaplanacanalpanama&quot; is a palindrome.
+
+</code></pre><p><strong>Example 2:</strong></p>
+<pre tabindex="0"><code>Input: s = &quot;race a car&quot;
+Output: false
+Explanation: &quot;raceacar&quot; is not a palindrome.
+
+</code></pre><p><strong>Example 3:</strong></p>
+<pre tabindex="0"><code>Input: s = &quot; &quot;
+Output: true
+Explanation: s is an empty string &quot;&quot; after removing non-alphanumeric characters.
+Since an empty string reads the same forward and backward, it is a palindrome.
+
+</code></pre>
+    </div>
+  </label>
+</div>
+
+<p><strong>Constraints:</strong></p>
+<ul>
+<li><code>1 &lt;= s.length &lt;= 2 * 105</code></li>
+<li><code>s</code> consists only of printable ASCII characters.</li>
+</ul>
+<h2 id="내가-했던-접근">
+  내가 했던 접근
+  <a class="anchor" href="#%eb%82%b4%ea%b0%80-%ed%96%88%eb%8d%98-%ec%a0%91%ea%b7%bc">#</a>
+</h2>
+
+<div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>실패 History</span>
+      <span>↕</span>
+    </div>
+    <input type="checkbox" class="hidden" />
+    <div class="book-expand-content markdown-inner">
+      <ul>
+<li>리스트 컴프리헨션 안에 else ‘’ 가 아닌 None 으로 해서 그냥 틀린 답안을 제출함</li>
+</ul>
+
+    </div>
+  </label>
+</div>
+
+<p><strong>[ 풀이 ]</strong></p>
+<p>alphanumeric 판별을 input을 차례로 읽으면서 직접 비교하였고 팰린드롬은 list의 슬라이싱으로 판별</p>
+<p><strong>[ 결과 ]</strong></p>
+<p><strong>Runtime</strong>: 56 ms, faster than 59.39% of Python online submissions.<br>
+<strong>Memory Usage</strong>: 16 MB, less than 14.33% of Python online submissions.</p>
+<p><strong>[ 코드 ]</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isPalindrome</span>(self, s):
+        alphabet<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span>
+        numeric<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0123456789&#39;</span>
+        new_s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join([char<span style="color:#f92672">.</span>lower() <span style="color:#66d9ef">if</span> char <span style="color:#f92672">in</span> alphabet \
+												<span style="color:#66d9ef">else</span> (char <span style="color:#66d9ef">if</span> char <span style="color:#f92672">in</span> numeric <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#39;&#39;</span>)\
+												<span style="color:#66d9ef">for</span> char <span style="color:#f92672">in</span> s ])
+        <span style="color:#66d9ef">if</span> new_s[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> new_s:
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</code></pre></div><p><strong>[ 반성 ]</strong></p>
+<ul>
+<li>과도한 리스트 컴프리헨션으로 가독성이 다소 떨어지는 것 같다.</li>
+<li>사실 처음에 문제를 자세하게 정독하지 않고 ‘alphanumeric’이 아닌 알파벳으로만 생각해서 풀었다.</li>
+<li>시간과 공간 효율이 좋지 못한 알고리즘인 것 같다.</li>
+<li>return이 True, False라면 if문 없이 더 간결하게 표현 가능하다.</li>
+</ul>
+<h2 id="책-풀이">
+  책 풀이
+  <a class="anchor" href="#%ec%b1%85-%ed%92%80%ec%9d%b4">#</a>
+</h2>
+<p><strong>[ 풀이 ]</strong></p>
+<ul>
+<li>input string 을 읽어들이면서 alphanumeric을 판별하는 방식 3가지
+(1) list 와 isalnum() (2) deque 와 isalnum() (3) re 정규표현식 활용</li>
+<li>팰린드롬 판별 3가지
+(1) list 의 pop() (2) deque 의 popleft() (3) list의 슬라이싱</li>
+<li>위의 방법을 조합하여 총 3가지 방법 소개
+<ul>
+<li>방법 1 : 방법 1 : list + isalnum() + pop()</li>
+<li>방법 2 : deque + isalnum() + popleft()</li>
+<li>방법 3 : re + list 슬라이싱</li>
+</ul>
+</li>
+</ul>
+<p><strong>[ 결과 ]</strong></p>
+<p>방법 1 : list + isalnum() + pop()</p>
+<p><strong>Runtime:</strong> 276 ms, faster than 29.50% of Python online submissions for Valid Palindrome.<br>
+<strong>Memory Usage:</strong> 15.2 MB, less than 37.33% of Python online submissions for Valid Palindrome.</p>
+<p>방법 2 : deque + isalnum() + popleft()</p>
+<p><strong>Runtime:</strong> 40 ms, faster than 85.54% of Python online submissions for Valid Palindrome.<br>
+<strong>Memory Usage:</strong> 14.8 MB, less than 53.26% of Python online submissions for Valid Palindrome.</p>
+<p>방법 3 : re + list 슬라이싱</p>
+<p><strong>Runtime:</strong> 38 ms, faster than 87.41% of Python online submissions for Valid Palindrome.<br>
+<strong>Memory Usage:</strong> 15.9 MB, less than 15.82% of Python online submissions for Valid Palindrome.</p>
+<p><strong>[ 코드 ]</strong></p>
+<p>방법 1 : list + isalnum() + pop()</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isPalindrome</span>(self, s:str)<span style="color:#f92672">-&gt;</span> bool:
+        str_list <span style="color:#f92672">=</span> []
+        <span style="color:#66d9ef">for</span> char <span style="color:#f92672">in</span> s:
+            <span style="color:#66d9ef">if</span> char<span style="color:#f92672">.</span>isalnum():
+                str_list<span style="color:#f92672">.</span>append(char<span style="color:#f92672">.</span>lower())
+        <span style="color:#66d9ef">while</span> len(str_list)<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">if</span> str_list<span style="color:#f92672">.</span>pop(<span style="color:#ae81ff">0</span>) <span style="color:#f92672">!=</span> str_list<span style="color:#f92672">.</span>pop():
+                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</code></pre></div><p>방법 2 : deque + isalnum() + popleft()</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isPalindrome</span>(self, s:str)<span style="color:#f92672">-&gt;</span> bool:
+        str_list <span style="color:#f92672">=</span> []
+        <span style="color:#66d9ef">for</span> char <span style="color:#f92672">in</span> s:
+            <span style="color:#66d9ef">if</span> char<span style="color:#f92672">.</span>isalnum():
+                str_list<span style="color:#f92672">.</span>append(char<span style="color:#f92672">.</span>lower())
+        <span style="color:#66d9ef">while</span> len(str_list)<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">if</span> str_list<span style="color:#f92672">.</span>pop(<span style="color:#ae81ff">0</span>) <span style="color:#f92672">!=</span> str_list<span style="color:#f92672">.</span>pop():
+                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</code></pre></div><p>방법 3 : re + list 슬라이싱</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> re
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isPalindrome</span>(self, s):
+        s <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>lower()
+        new_s <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">&#39;[^a-z0-9]&#39;</span>,<span style="color:#e6db74">&#39;&#39;</span>,s)
+        <span style="color:#66d9ef">return</span> new_s[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> new_s
+</code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/key4920/docs/content/docs/ETC/Algorithms/LeetCode/125/_index.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#-leetcode-125--valid-palindrom-유효한-팰린드롬">[ LeetCode #125 ] Valid Palindrom 유효한 팰린드롬</a>
+      <ul>
+        <li><a href="#--leetcode-125--valid-palindrome-바로가기-httpsleetcodecomproblemsvalid-palindrome"><a href="https://leetcode.com/problems/valid-palindrome/"> [ LeetCode #125 ] Valid Palindrome 바로가기 </a></a></li>
+        <li><a href="#-유용한-지식">💡 유용한 지식</a></li>
+        <li><a href="#문제">문제</a></li>
+        <li><a href="#내가-했던-접근">내가 했던 접근</a></li>
+        <li><a href="#책-풀이">책 풀이</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
