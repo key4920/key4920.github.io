@@ -6,7 +6,7 @@
     <description>Recent content in Python on 202 Blue Note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://key4920.github.io/tags/Python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://key4920.github.io/tags/Python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>알고리즘 공부 방향성</title>
       <link>https://key4920.github.io/docs/ETC/Algorithms/summary/</link>
@@ -19,6 +19,16 @@
 [ 문제풀이 플랫폼 ] LeetCode
  방향성 #   나의 1차적 목적은 코딩테스트이다.
 하지만 더 멀게는 효율적인 코드 구현 능력 향상을 목적으로하며 “왜?”에 집중하여 학습하고자 한다. 전체적으로 파이썬 알고리즘 인터뷰 책을 따라 학습하며</description>
+    </item>
+    
+    <item>
+      <title>[ LeetCode #344 ]</title>
+      <link>https://key4920.github.io/docs/ETC/Algorithms/LeetCode/344/</link>
+      <pubDate>Fri, 18 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://key4920.github.io/docs/ETC/Algorithms/LeetCode/344/</guid>
+      <description>[ LeetCode #344 ] Reverse String 문자열 뒤집기 #  [ LeetCode #344 ] Reverse String 바로가기  #  💡 유용한 지식 #  리스트 역순으로 정렬
+# reverse() 함수 활용 s.reverse() # 슬라이싱 방법 활용 s = s[::-1] s[:] = s[::-1] # 투포인터를 활용하는 방법도 있다. def reverseString(s): left, right = 0, len(s)-1 while left &amp;lt; right: s[left], s[right] = s[right], s[left] left += 1 right -= 1 return s   문제 #  Write a function that reverses a string.</description>
     </item>
     
     <item>
