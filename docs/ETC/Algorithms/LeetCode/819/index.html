@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="[ LeetCode #819 ] Most Common Word 가장 흔한 단어 #  [ LeetCode #819 ] Most Common Word 바로가기  #  💡 유용한 지식 #  Dictionary TIPS!
+# 빈도 세기 from collections import Counter count_dict = Counter(re.sub(&#39;[^a-z0-9]&#39;,&#39; &#39;,paragraph.lower()).split()) # key 삭제 for word in banned: del count_dict[word] # 가장 높은 빈도 추출 : most_common() # - (0)이 아닌 (1) 이 가장 높은 빈도 # - return = (key,value) count_dict.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="[ LeetCode #819 ]" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/819/" />
+
+<title>[ LeetCode #819 ] | 202 Blue Note</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.97cfda4f5e3c9fa49a2bf8d401f4ddc0eec576c99cdcf6afbec19173200c37db.css" integrity="sha256-l8/aT148n6SaK/jUAfTdwO7Fdsmc3PavvsGRcyAMN9s=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.0b6cca0f70bb0062c53654a3d036b90fa9f1ac400339ddf9c31d75fbaa79b09d.js" integrity="sha256-C2zKD3C7AGLFNlSj0Da5D6nxrEADOd35wx11&#43;6p5sJ0=" crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-189742603-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><link rel="alternate" type="application/rss+xml" href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/819/index.xml" title="202 Blue Note" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><img src="/logo.png" alt="Logo" /><span>202 Blue Note</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>BigData Platform</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-493de9819b5c0666906ab2facfddd86e" class="toggle"  />
+    <label for="section-493de9819b5c0666906ab2facfddd86e" class="flex justify-between">
+      <a role="button" class="">Apache Spark</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/bigdata_platform/ApacheSpark/spark_install/" class="">Mac OS에 스파크3 설치 및 pyspark 시작</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-884ac8cf1b1346e7e6d0492566fcf838" class="toggle"  />
+    <label for="section-884ac8cf1b1346e7e6d0492566fcf838" class="flex justify-between">
+      <a role="button" class="">Hadoop</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/bigdata_platform/Hadoop/hadoop_install_M1/" class="">[M1] Mac OS에 하둡(Hadoop) 설치</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>ETC</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-38719d68a470d8cb5ec219eaaacd6032" class="toggle" checked />
+    <label for="section-38719d68a470d8cb5ec219eaaacd6032" class="flex justify-between">
+      <a role="button" class="">Algorithms</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/Algorithms/summary/" class="">알고리즘 공부 방향성</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-35ed564960523d26d6e6dd6d00bc6ca8" class="toggle" checked />
+    <label for="section-35ed564960523d26d6e6dd6d00bc6ca8" class="flex justify-between">
+      <a role="button" class="">LeetCode 실습</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/49/" class="">[ LeetCode #49 ]</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/819/" class=" active">[ LeetCode #819 ]</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/937/" class="">[ LeetCode #937 ]</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/344/" class="">[ LeetCode #344 ]</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/125/" class="">[ LeetCode #125 ]</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eb9b6782719ffdbc4862381781d40384" class="toggle"  />
+    <label for="section-eb9b6782719ffdbc4862381781d40384" class="flex justify-between">
+      <a role="button" class="">Hugo</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/Hugo/first_hugo_blog/" class="">초보자 Hugo 블로그 구축기</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/key4920" target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>[ LeetCode #819 ]</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#-leetcode-819--most-common-word-가장-흔한-단어">[ LeetCode #819 ] Most Common Word 가장 흔한 단어</a>
+      <ul>
+        <li><a href="#-leetcode-819--most-common-word-바로가기-httpsleetcodecomproblemsmost-common-word"><a href="https://leetcode.com/problems/most-common-word/">[ LeetCode #819 ] Most Common Word 바로가기 </a></a></li>
+        <li><a href="#-유용한-지식">💡 유용한 지식</a></li>
+        <li><a href="#문제">문제</a></li>
+        <li><a href="#내가-했던-접근">내가 했던 접근</a></li>
+        <li><a href="#책-풀이">책 풀이</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="-leetcode-819--most-common-word-가장-흔한-단어">
+  [ LeetCode #819 ] Most Common Word 가장 흔한 단어
+  <a class="anchor" href="#-leetcode-819--most-common-word-%ea%b0%80%ec%9e%a5-%ed%9d%94%ed%95%9c-%eb%8b%a8%ec%96%b4">#</a>
+</h1>
+<h2 id="-leetcode-819--most-common-word-바로가기-httpsleetcodecomproblemsmost-common-word">
+  <a href="https://leetcode.com/problems/most-common-word/">[ LeetCode #819 ] Most Common Word 바로가기 </a>
+  <a class="anchor" href="#-leetcode-819--most-common-word-%eb%b0%94%eb%a1%9c%ea%b0%80%ea%b8%b0-httpsleetcodecomproblemsmost-common-word">#</a>
+</h2>
+<h2 id="-유용한-지식">
+  💡 유용한 지식
+  <a class="anchor" href="#-%ec%9c%a0%ec%9a%a9%ed%95%9c-%ec%a7%80%ec%8b%9d">#</a>
+</h2>
+<blockquote class="book-hint warning">
+  <p><strong>Dictionary TIPS!</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 빈도 세기</span>
+<span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter
+count_dict <span style="color:#f92672">=</span> Counter(re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">&#39;[^a-z0-9]&#39;</span>,<span style="color:#e6db74">&#39; &#39;</span>,paragraph<span style="color:#f92672">.</span>lower())<span style="color:#f92672">.</span>split())
+
+<span style="color:#75715e"># key 삭제</span>
+<span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> banned:
+	<span style="color:#66d9ef">del</span> count_dict[word]
+
+<span style="color:#75715e"># 가장 높은 빈도 추출 : most_common()</span>
+<span style="color:#75715e"># - (0)이 아닌 (1) 이 가장 높은 빈도</span>
+<span style="color:#75715e"># - return = (key,value)</span>
+count_dict<span style="color:#f92672">.</span>most_common(<span style="color:#ae81ff">1</span>)[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]
+
+<span style="color:#75715e"># defaultdict() 사용으로 불필요한 if 연산 제거</span>
+<span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> defaultdict
+groups <span style="color:#f92672">=</span> defaultdict(list)
+</code></pre></div>
+</blockquote>
+
+<h2 id="문제">
+  문제
+  <a class="anchor" href="#%eb%ac%b8%ec%a0%9c">#</a>
+</h2>
+<p>Given a string <code>paragraph</code> and a string array of the banned words <code>banned</code>, return <em>the most frequent word that is not banned</em>. It is <strong>guaranteed</strong> there is <strong>at least one word</strong> that is not banned, and that the answer is <strong>unique</strong>.</p>
+<p>The words in <code>paragraph</code> are <strong>case-insensitive</strong> and the answer should be returned in <strong>lowercase</strong>.</p>
+
+<div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>Examples</span>
+      <span>↕</span>
+    </div>
+    <input type="checkbox" class="hidden" />
+    <div class="book-expand-content markdown-inner">
+      <p><strong>Example 1:</strong></p>
+<pre tabindex="0"><code>Input: paragraph = &quot;Bob hit a ball, the hit BALL flew far after it was hit.&quot;, banned = [&quot;hit&quot;]
+Output: &quot;ball&quot;
+Explanation:
+&quot;hit&quot; occurs 3 times, but it is a banned word.
+&quot;ball&quot; occurs twice (and no other word does), so it is the most frequent non-banned word in the paragraph.
+Note that words in the paragraph are not case sensitive,
+that punctuation is ignored (even if adjacent to words, such as &quot;ball,&quot;),
+and that &quot;hit&quot; isn't the answer even though it occurs more because it is banned.
+
+</code></pre><p><strong>Example 2:</strong></p>
+<pre tabindex="0"><code>Input: paragraph = &quot;a.&quot;, banned = []
+Output: &quot;a&quot;
+</code></pre>
+    </div>
+  </label>
+</div>
+
+<p><strong>Constraints:</strong></p>
+<ul>
+<li><code>1 &lt;= paragraph.length &lt;= 1000</code></li>
+<li>paragraph consists of English letters, space <code>' '</code>, or one of the symbols: <code>&quot;!?',;.&quot;</code>.</li>
+<li><code>0 &lt;= banned.length &lt;= 100</code></li>
+<li><code>1 &lt;= banned[i].length &lt;= 10</code></li>
+<li><code>banned[i]</code> consists of only lowercase English letters.</li>
+</ul>
+<h2 id="내가-했던-접근">
+  내가 했던 접근
+  <a class="anchor" href="#%eb%82%b4%ea%b0%80-%ed%96%88%eb%8d%98-%ec%a0%91%ea%b7%bc">#</a>
+</h2>
+
+<div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>실패 History</span>
+      <span>↕</span>
+    </div>
+    <input type="checkbox" class="hidden" />
+    <div class="book-expand-content markdown-inner">
+      
+    </div>
+  </label>
+</div>
+
+<p><strong>[ 풀이 ]</strong></p>
+<ol>
+<li>input 읽으면서 클렌징하고 Counter() 함수로 단어별 빈도 딕셔너리 생성</li>
+<li>banned 리스트 읽으면서 딕셔너리에서 key 삭제</li>
+<li>딕셔너리의 most_common() 함수 활용하여 결과 반환</li>
+</ol>
+<p><strong>[ 결과 ]</strong></p>
+<p><strong>Runtime:</strong> 32 ms, faster than 65.55% of Python online submissions for Most Common Word.<br>
+<strong>Memory Usage:</strong> 13.7 MB, less than 39.48% of Python online submissions for Most Common Word.</p>
+<p><strong>[ 코드 ]</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter
+<span style="color:#f92672">import</span> re
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">mostCommonWord</span>(self, paragraph, banned):
+        count_dict <span style="color:#f92672">=</span> Counter(re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">&#39;[^a-z0-9]&#39;</span>,<span style="color:#e6db74">&#39; &#39;</span>,paragraph<span style="color:#f92672">.</span>lower())<span style="color:#f92672">.</span>split())
+        <span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> banned:
+            <span style="color:#66d9ef">del</span> count_dict[word]
+        <span style="color:#66d9ef">return</span> count_dict<span style="color:#f92672">.</span>most_common(<span style="color:#ae81ff">1</span>)[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]
+</code></pre></div><p><strong>[ 반성 ]</strong></p>
+<ul>
+<li>Counter 딕셔너리를 모두 생성 후 banned 리스트 단어를 삭제하는데
+클렌징 과정에서 banned 리스트 단어를 삭제하면서 Counter 딕셔너리 생성 가능</li>
+</ul>
+<h2 id="책-풀이">
+  책 풀이
+  <a class="anchor" href="#%ec%b1%85-%ed%92%80%ec%9d%b4">#</a>
+</h2>
+<p><strong>[ 풀이 ]</strong></p>
+<ul>
+<li>내 접근과 동일하지만 input 클렌징시 banned 단어 삭제</li>
+</ul>
+<p><strong>[ 결과 ]</strong></p>
+<p><strong>Runtime:</strong> 39 ms, faster than 45.79% of Python online submissions for Most Common Word.<br>
+<strong>Memory Usage:</strong> 13.6 MB, less than 66.92% of Python online submissions for Most Common Word.</p>
+<p><strong>[ 코드 ]</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter
+<span style="color:#f92672">import</span> re
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">mostCommonWord</span>(self, paragraph, banned):
+        words <span style="color:#f92672">=</span> [word <span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">&#39;[^\w]&#39;</span>,<span style="color:#e6db74">&#39; &#39;</span>,paragraph<span style="color:#f92672">.</span>lower())<span style="color:#f92672">.</span>split() <span style="color:#66d9ef">if</span> word <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> banned]
+
+        count_dict <span style="color:#f92672">=</span> Counter(words)
+        <span style="color:#66d9ef">return</span> count_dict<span style="color:#f92672">.</span>most_common(<span style="color:#ae81ff">1</span>)[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]
+</code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/key4920/docs/content/docs/ETC/Algorithms/LeetCode/819/_index.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#-leetcode-819--most-common-word-가장-흔한-단어">[ LeetCode #819 ] Most Common Word 가장 흔한 단어</a>
+      <ul>
+        <li><a href="#-leetcode-819--most-common-word-바로가기-httpsleetcodecomproblemsmost-common-word"><a href="https://leetcode.com/problems/most-common-word/">[ LeetCode #819 ] Most Common Word 바로가기 </a></a></li>
+        <li><a href="#-유용한-지식">💡 유용한 지식</a></li>
+        <li><a href="#문제">문제</a></li>
+        <li><a href="#내가-했던-접근">내가 했던 접근</a></li>
+        <li><a href="#책-풀이">책 풀이</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

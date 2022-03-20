@@ -22,6 +22,26 @@
     </item>
     
     <item>
+      <title>[ LeetCode #49 ]</title>
+      <link>https://key4920.github.io/docs/ETC/Algorithms/LeetCode/49/</link>
+      <pubDate>Sun, 20 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://key4920.github.io/docs/ETC/Algorithms/LeetCode/49/</guid>
+      <description>[ LeetCode #49 ] Group Anagrams 그룹 애너그램 #  [ LeetCode #49 ] Group Anagrams 바로가기  #  💡 유용한 지식 #  Dictionary defaultdict 객체
+ 존재하지 않는 키를 조회할 경우 에러 메시지 대신 디폴트 값을 기준으로 키에 대한 딕셔너리 아이템을 생성해줌  # defaultdict() 사용으로 불필요한 if 연산 제거 from collections import defaultdict groups = defaultdict(list)    문제 #  Given an array of strings strs, group the anagrams together.</description>
+    </item>
+    
+    <item>
+      <title>[ LeetCode #819 ]</title>
+      <link>https://key4920.github.io/docs/ETC/Algorithms/LeetCode/819/</link>
+      <pubDate>Sun, 20 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://key4920.github.io/docs/ETC/Algorithms/LeetCode/819/</guid>
+      <description>[ LeetCode #819 ] Most Common Word 가장 흔한 단어 #  [ LeetCode #819 ] Most Common Word 바로가기  #  💡 유용한 지식 #  Dictionary TIPS!
+# 빈도 세기 from collections import Counter count_dict = Counter(re.sub(&amp;#39;[^a-z0-9]&amp;#39;,&amp;#39; &amp;#39;,paragraph.lower()).split()) # key 삭제 for word in banned: del count_dict[word] # 가장 높은 빈도 추출 : most_common() # - (0)이 아닌 (1) 이 가장 높은 빈도 # - return = (key,value) count_dict.</description>
+    </item>
+    
+    <item>
       <title>[ LeetCode #937 ]</title>
       <link>https://key4920.github.io/docs/ETC/Algorithms/LeetCode/937/</link>
       <pubDate>Sun, 20 Mar 2022 00:00:00 +0000</pubDate>

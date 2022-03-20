@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="[ LeetCode #344 ] Reverse String 문자열 뒤집기 #  [ LeetCode #344 ] Reverse String 바로가기  #  💡 유용한 지식 #  리스트 역순으로 정렬
-# reverse() 함수 활용 s.reverse() # 슬라이싱 방법 활용 s = s[::-1] s[:] = s[::-1] # 투포인터를 활용하는 방법도 있다. def reverseString(s): left, right = 0, len(s)-1 while left &lt; right: s[left], s[right] = s[right], s[left] left &#43;= 1 right -= 1 return s   문제 #  Write a function that reverses a string.">
+<meta name="description" content="[ LeetCode #49 ] Group Anagrams 그룹 애너그램 #  [ LeetCode #49 ] Group Anagrams 바로가기  #  💡 유용한 지식 #  Dictionary defaultdict 객체
+ 존재하지 않는 키를 조회할 경우 에러 메시지 대신 디폴트 값을 기준으로 키에 대한 딕셔너리 아이템을 생성해줌  # defaultdict() 사용으로 불필요한 if 연산 제거 from collections import defaultdict groups = defaultdict(list)    문제 #  Given an array of strings strs, group the anagrams together.">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="[ LeetCode #344 ]" />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="[ LeetCode #49 ]" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/344/" />
+<meta property="og:url" content="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/49/" />
 
-<title>[ LeetCode #344 ] | 202 Blue Note</title>
+<title>[ LeetCode #49 ] | 202 Blue Note</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.97cfda4f5e3c9fa49a2bf8d401f4ddc0eec576c99cdcf6afbec19173200c37db.css" integrity="sha256-l8/aT148n6SaK/jUAfTdwO7Fdsmc3PavvsGRcyAMN9s=" crossorigin="anonymous">
@@ -29,7 +29,7 @@ if (!doNotTrack) {
 	
 	ga('send', 'pageview');
 }
-</script><link rel="alternate" type="application/rss+xml" href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/344/index.xml" title="202 Blue Note" />
+</script><link rel="alternate" type="application/rss+xml" href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/49/index.xml" title="202 Blue Note" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -230,7 +230,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/49/" class="">[ LeetCode #49 ]</a>
+    <a href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/49/" class=" active">[ LeetCode #49 ]</a>
   
 
           
@@ -284,7 +284,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/344/" class=" active">[ LeetCode #344 ]</a>
+    <a href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/344/" class="">[ LeetCode #344 ]</a>
   
 
           
@@ -421,7 +421,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>[ LeetCode #344 ]</strong>
+  <strong>[ LeetCode #49 ]</strong>
 
   <label for="toc-control">
     
@@ -437,9 +437,9 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#-leetcode-344--reverse-string-문자열-뒤집기">[ LeetCode #344 ] Reverse String 문자열 뒤집기</a>
+    <li><a href="#-leetcode-49--group-anagrams-그룹-애너그램">[ LeetCode #49 ] Group Anagrams 그룹 애너그램</a>
       <ul>
-        <li><a href="#-leetcode-344--reverse-string-바로가기-httpsleetcodecomproblemsreverse-string"><a href="https://leetcode.com/problems/reverse-string/">[ LeetCode #344 ] Reverse String 바로가기 </a></a></li>
+        <li><a href="#-leetcode-49--group-anagrams-바로가기-httpsleetcodecomproblemsgroup-anagrams"><a href="https://leetcode.com/problems/group-anagrams/">[ LeetCode #49 ] Group Anagrams 바로가기 </a></a></li>
         <li><a href="#-유용한-지식">💡 유용한 지식</a></li>
         <li><a href="#문제">문제</a></li>
         <li><a href="#내가-했던-접근">내가 했던 접근</a></li>
@@ -458,44 +458,36 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="-leetcode-344--reverse-string-문자열-뒤집기">
-  [ LeetCode #344 ] Reverse String 문자열 뒤집기
-  <a class="anchor" href="#-leetcode-344--reverse-string-%eb%ac%b8%ec%9e%90%ec%97%b4-%eb%92%a4%ec%a7%91%ea%b8%b0">#</a>
+  <article class="markdown"><h1 id="-leetcode-49--group-anagrams-그룹-애너그램">
+  [ LeetCode #49 ] Group Anagrams 그룹 애너그램
+  <a class="anchor" href="#-leetcode-49--group-anagrams-%ea%b7%b8%eb%a3%b9-%ec%95%a0%eb%84%88%ea%b7%b8%eb%9e%a8">#</a>
 </h1>
-<h2 id="-leetcode-344--reverse-string-바로가기-httpsleetcodecomproblemsreverse-string">
-  <a href="https://leetcode.com/problems/reverse-string/">[ LeetCode #344 ] Reverse String 바로가기 </a>
-  <a class="anchor" href="#-leetcode-344--reverse-string-%eb%b0%94%eb%a1%9c%ea%b0%80%ea%b8%b0-httpsleetcodecomproblemsreverse-string">#</a>
+<h2 id="-leetcode-49--group-anagrams-바로가기-httpsleetcodecomproblemsgroup-anagrams">
+  <a href="https://leetcode.com/problems/group-anagrams/">[ LeetCode #49 ] Group Anagrams 바로가기 </a>
+  <a class="anchor" href="#-leetcode-49--group-anagrams-%eb%b0%94%eb%a1%9c%ea%b0%80%ea%b8%b0-httpsleetcodecomproblemsgroup-anagrams">#</a>
 </h2>
 <h2 id="-유용한-지식">
   💡 유용한 지식
   <a class="anchor" href="#-%ec%9c%a0%ec%9a%a9%ed%95%9c-%ec%a7%80%ec%8b%9d">#</a>
 </h2>
 <blockquote class="book-hint warning">
-  <p><strong>리스트 역순으로 정렬</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># reverse() 함수 활용</span>
-s<span style="color:#f92672">.</span>reverse()
-
-<span style="color:#75715e"># 슬라이싱 방법 활용</span>
-s <span style="color:#f92672">=</span> s[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
-s[:] <span style="color:#f92672">=</span> s[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
-
-<span style="color:#75715e"># 투포인터를 활용하는 방법도 있다.</span>
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reverseString</span>(s):
-	left, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, len(s)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-	<span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;</span> right:
-		s[left], s[right] <span style="color:#f92672">=</span> s[right], s[left]
-		left <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-		right <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
-	<span style="color:#66d9ef">return</span> s
+  <p><strong>Dictionary defaultdict 객체</strong></p>
+<ul>
+<li>존재하지 않는 키를 조회할 경우 에러 메시지 대신 디폴트 값을 기준으로 키에 대한 딕셔너리 아이템을 생성해줌</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># defaultdict() 사용으로 불필요한 if 연산 제거</span>
+<span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> defaultdict
+groups <span style="color:#f92672">=</span> defaultdict(list)
 </code></pre></div>
 </blockquote>
 
+<hr>
 <h2 id="문제">
   문제
   <a class="anchor" href="#%eb%ac%b8%ec%a0%9c">#</a>
 </h2>
-<p>Write a function that reverses a string. The input string is given as an array of characters <code>s</code>.</p>
-<p>You must do this by modifying the input array <a href="https://en.wikipedia.org/wiki/In-place_algorithm">in-place</a> with <code>O(1)</code> extra memory.</p>
+<p>Given an array of strings <code>strs</code>, group <strong>the anagrams</strong> together. You can return the answer in <strong>any order</strong>.</p>
+<p>An <strong>Anagram</strong> is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.</p>
 
 <div class="book-expand">
   <label>
@@ -505,24 +497,39 @@ s[:] <span style="color:#f92672">=</span> s[::<span style="color:#f92672">-</spa
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <p><strong>Example 1:</strong></p>
-<pre tabindex="0"><code>Input: s = [&quot;h&quot;,&quot;e&quot;,&quot;l&quot;,&quot;l&quot;,&quot;o&quot;]
-Output: [&quot;o&quot;,&quot;l&quot;,&quot;l&quot;,&quot;e&quot;,&quot;h&quot;]
+      <pre><code>**Example 1:**
 
-</code></pre><p><strong>Example 2:</strong></p>
-<pre tabindex="0"><code>Input: s = [&quot;H&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;h&quot;]
-Output: [&quot;h&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;H&quot;]
+```
+Input: strs = [&quot;eat&quot;,&quot;tea&quot;,&quot;tan&quot;,&quot;ate&quot;,&quot;nat&quot;,&quot;bat&quot;]
+Output: [[&quot;bat&quot;],[&quot;nat&quot;,&quot;tan&quot;],[&quot;ate&quot;,&quot;eat&quot;,&quot;tea&quot;]]
+```
 
+**Example 2:**
+
+```
+Input: strs = [&quot;&quot;]
+Output: [[&quot;&quot;]]
+```
+
+**Example 3:**
+
+```
+Input: strs = [&quot;a&quot;]
+Output: [[&quot;a&quot;]]
+```
 </code></pre>
+
     </div>
   </label>
 </div>
 
 <p><strong>Constraints:</strong></p>
 <ul>
-<li><code>1 &lt;= s.length &lt;= 105</code></li>
-<li><code>s[i]</code> is a <a href="https://en.wikipedia.org/wiki/ASCII#Printable_characters">printable ascii character</a>.</li>
+<li><code>1 &lt;= strs.length &lt;= 104</code></li>
+<li><code>0 &lt;= strs[i].length &lt;= 100</code></li>
+<li><code>strs[i]</code> consists of lowercase English letters.</li>
 </ul>
+<hr>
 <h2 id="내가-했던-접근">
   내가 했던 접근
   <a class="anchor" href="#%eb%82%b4%ea%b0%80-%ed%96%88%eb%8d%98-%ec%a0%91%ea%b7%bc">#</a>
@@ -536,79 +543,53 @@ Output: [&quot;h&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <ul>
-<li>슬라이싱을 활용하여 s[::-1] 만으로 제출하려했지만 O(1) 의 메모리 공간만 허용해서 불가능했다.</li>
-</ul>
-
+      
     </div>
   </label>
 </div>
 
 <p><strong>[ 풀이 ]</strong></p>
-<p>메모리 공간이 O(1) 만 있으므로 끝에서부터 pop()하여 맨 앞에 insert() 수행</p>
+<ul>
+<li>input 단어를 각각 sorted() 후 동일한 단어끼리 딕셔너리로 그룹을 묶고 values() 로 결과 반환</li>
+</ul>
 <p><strong>[ 결과 ]</strong></p>
-<p><strong>Runtime:</strong> 628 ms, faster than 5.01% of Python online submissions for Reverse String.<br>
-<strong>Memory Usage:</strong> 22 MB, less than 7.54% of Python online submissions for Reverse String.</p>
+<p><strong>Runtime:</strong> 1956 ms, faster than 7.46% of Python online submissions for Group Anagrams.<br>
+<strong>Memory Usage:</strong> 17.3 MB, less than 83.24% of Python online submissions for Group Anagrams.</p>
 <p><strong>[ 코드 ]</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reverseString</span>(self, s):
-        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(s)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
-            s<span style="color:#f92672">.</span>insert(i, s<span style="color:#f92672">.</span>pop())
-        <span style="color:#66d9ef">return</span> s
-
-<span style="color:#75715e">## 초기 생각 : 슬라이싱 s[::-1]</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">groupAnagrams</span>(self, strs):
+        groups <span style="color:#f92672">=</span> dict()
+        <span style="color:#66d9ef">for</span> string <span style="color:#f92672">in</span> strs:
+            sorted_string <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(sorted(string))
+            <span style="color:#66d9ef">if</span> sorted_string <span style="color:#f92672">in</span> groups<span style="color:#f92672">.</span>keys():
+                groups[sorted_string]<span style="color:#f92672">.</span>append(string)
+            <span style="color:#66d9ef">else</span>:
+                groups[sorted_string] <span style="color:#f92672">=</span> [string]
+        <span style="color:#66d9ef">return</span> list(groups<span style="color:#f92672">.</span>values())
 </code></pre></div><p><strong>[ 반성 ]</strong></p>
 <ul>
-<li>처음에는 슬라이싱으로 해결하려했지만 extra memory O(1)을 간과했다. 따라서 insert로 접근</li>
-<li>새로 리스트 만드는건 물론 더 메모리를 잡아먹으므로 불가능</li>
-<li>메모리에만 집중해서 시간복잡도는 생각을 못했다.</li>
+<li>dict() 대신 collections.defaultdict(list) 사용하면 불필요한 if문 제거 가능</li>
 </ul>
+<hr>
 <h2 id="책-풀이">
   책 풀이
   <a class="anchor" href="#%ec%b1%85-%ed%92%80%ec%9d%b4">#</a>
 </h2>
 <p><strong>[ 풀이 ]</strong></p>
 <ul>
-<li>총 3가지 방법 소개
-<ul>
-<li>방법 1 : 투포인터</li>
-<li>방법 2 : Pythonic 방법, reverse() 활용</li>
-<li>방법 3 : Pythonic 방법, 슬라이싱 활용</li>
-</ul>
-</li>
+<li>내 접근과 동일하지만 dict() 대신 collections.defaultdict(list) 사용하여 불필요한 if문 제거 가능</li>
 </ul>
 <p><strong>[ 결과 ]</strong></p>
-<p>방법 1 : 투포인터</p>
-<p><strong>Runtime:</strong> 215 ms, faster than 55.01% of Python online submissions for Reverse String.<br>
-<strong>Memory Usage:</strong> 21 MB, less than 81.03% of Python online submissions for Reverse String.</p>
-<p>방법 2 : Pythonic 방법, reverse() 활용</p>
-<p><strong>Runtime:</strong> 162 ms, faster than 95.45% of Python online submissions for Reverse String.<br>
-<strong>Memory Usage:</strong> 21.3 MB, less than 29.73% of Python online submissions for Reverse String.</p>
-<p>방법 3 : Pythonic 방법, 슬라이싱 활용</p>
-<p><strong>Runtime:</strong> 164 ms, faster than 95.03% of Python online submissions for Reverse String.<br>
-<strong>Memory Usage:</strong> 20.9 MB, less than 94.74% of Python online submissions for Reverse String.</p>
+<p><strong>Runtime:</strong> 117 ms, faster than 58.08% of Python online submissions for Group Anagrams.<br>
+<strong>Memory Usage:</strong> 17.6 MB, less than 71.25% of Python online submissions for Group Anagrams.</p>
 <p><strong>[ 코드 ]</strong></p>
-<p>방법 1 : 투포인터</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reverseString</span>(self, s):
-        left, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, len(s)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-        <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;</span> right:
-            s[left],s[right] <span style="color:#f92672">=</span> s[right], s[left]
-            left <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-            right <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
-        <span style="color:#66d9ef">return</span> s
-</code></pre></div><p>방법 2 : Pythonic 방법, reverse() 활용</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reverseString</span>(self, s):
-        s<span style="color:#f92672">.</span>reverse()
-        <span style="color:#66d9ef">return</span> s
-</code></pre></div><p>방법 3 : Pythonic 방법, 슬라이싱 활용</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reverseString</span>(self, s):
-        s[:] <span style="color:#f92672">=</span> s[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
-        <span style="color:#66d9ef">return</span> s
-<span style="color:#75715e"># s = s[::-1] 을 사용하면 메모리가 부족하지만</span>
-<span style="color:#75715e"># s[:] = s[::-1] 을 사용하면 된다.</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> defaultdict
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">groupAnagrams</span>(self, strs):
+        groups <span style="color:#f92672">=</span> defaultdict(list)
+        <span style="color:#66d9ef">for</span> string <span style="color:#f92672">in</span> strs:
+            groups[<span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(sorted(string))]<span style="color:#f92672">.</span>append(string)
+        <span style="color:#66d9ef">return</span> list(groups<span style="color:#f92672">.</span>values())
 </code></pre></div></article>
  
       
@@ -618,16 +599,10 @@ Output: [&quot;h&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/key4920/commit/1cc6c2307c6a25bb9f28c28cb168f975ff4fea20" title='Last modified by key4920 | March 18, 2022' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>March 18, 2022</span>
-    </a>
-  </div>
-
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/key4920/docs/content/docs/ETC/Algorithms/LeetCode/344/_index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/key4920/docs/content/docs/ETC/Algorithms/LeetCode/49/_index.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>Edit this page</span>
     </a>
@@ -659,9 +634,9 @@ Output: [&quot;h&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#-leetcode-344--reverse-string-문자열-뒤집기">[ LeetCode #344 ] Reverse String 문자열 뒤집기</a>
+    <li><a href="#-leetcode-49--group-anagrams-그룹-애너그램">[ LeetCode #49 ] Group Anagrams 그룹 애너그램</a>
       <ul>
-        <li><a href="#-leetcode-344--reverse-string-바로가기-httpsleetcodecomproblemsreverse-string"><a href="https://leetcode.com/problems/reverse-string/">[ LeetCode #344 ] Reverse String 바로가기 </a></a></li>
+        <li><a href="#-leetcode-49--group-anagrams-바로가기-httpsleetcodecomproblemsgroup-anagrams"><a href="https://leetcode.com/problems/group-anagrams/">[ LeetCode #49 ] Group Anagrams 바로가기 </a></a></li>
         <li><a href="#-유용한-지식">💡 유용한 지식</a></li>
         <li><a href="#문제">문제</a></li>
         <li><a href="#내가-했던-접근">내가 했던 접근</a></li>
