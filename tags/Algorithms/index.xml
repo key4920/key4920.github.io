@@ -6,7 +6,7 @@
     <description>Recent content in Algorithms on 202 Blue Note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://key4920.github.io/tags/Algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://key4920.github.io/tags/Algorithms/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>알고리즘 공부 방향성</title>
       <link>https://key4920.github.io/docs/ETC/Algorithms/summary/</link>
@@ -19,6 +19,16 @@
 [ 문제풀이 플랫폼 ] LeetCode
  방향성 #   나의 1차적 목적은 코딩테스트이다.
 하지만 더 멀게는 효율적인 코드 구현 능력 향상을 목적으로하며 “왜?”에 집중하여 학습하고자 한다. 전체적으로 파이썬 알고리즘 인터뷰 책을 따라 학습하며</description>
+    </item>
+    
+    <item>
+      <title>[ LeetCode #937 ]</title>
+      <link>https://key4920.github.io/docs/ETC/Algorithms/LeetCode/937/</link>
+      <pubDate>Sun, 20 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://key4920.github.io/docs/ETC/Algorithms/LeetCode/937/</guid>
+      <description>[ LeetCode #937 ] Reorder Log Files 로그 파일 재정렬 #  [ LeetCode #937 ] Reorder Log Files 바로가기  #  💡 유용한 지식 #  리스트 정렬
+# 리스트 정렬 index 반환 index = sorted(range(len(s)), key = lambda x : s[x]) s = [s[i] for i in index] # string split list로 sort s.sort(key = lambda x: (x.split(&amp;#39; &amp;#39;)[1:], x.split(&amp;#39; &amp;#39;)[0])) # 함수를 이용한 sorting def fn(s): return s[0], s[-1] sorted(a, key=fn) sorted(a, key=len)   문제 #  You are given an array of logs.</description>
     </item>
     
     <item>
