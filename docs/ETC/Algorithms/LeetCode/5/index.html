@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="[ LeetCode #49 ] Group Anagrams 그룹 애너그램 #  [ LeetCode #49 ] Group Anagrams 바로가기  #  💡 유용한 지식 #  Dictionary defaultdict 객체
- 존재하지 않는 키를 조회할 경우 에러 메시지 대신 디폴트 값을 기준으로 키에 대한 딕셔너리 아이템을 생성해줌  # defaultdict() 사용으로 불필요한 if 연산 제거 from collections import defaultdict groups = defaultdict(list)    문제 #  Given an array of strings strs, group the anagrams together.">
+<meta name="description" content="[ LeetCode #5 ] Longest Palindrome Substring 가장 긴 팰린드롬 부분 문자열 #  [ LeetCode #5 ] Longest Palindromic Substring 바로가기  #  💡 유용한 지식 #  max() 함수 key 활용
+max( result, two_pointer(i, i&#43;1), two_pointer(i, i&#43;2), key = len) 투포인터 좁히는 방향이 아닌 확장하며 탐색
+def two_pointer(left, right): while left &gt;= 0 and right &lt; len(s) and s[left] == s[right]: left -= 1 right &#43;= 1 return s[left&#43;1:right]    문제 #  Given a string s, return the longest palindromic substring in s.">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="[ LeetCode #49 ]" />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="[ LeetCode #5 ]" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/49/" />
+<meta property="og:url" content="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/5/" />
 
-<title>[ LeetCode #49 ] | 202 Blue Note</title>
+<title>[ LeetCode #5 ] | 202 Blue Note</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.97cfda4f5e3c9fa49a2bf8d401f4ddc0eec576c99cdcf6afbec19173200c37db.css" integrity="sha256-l8/aT148n6SaK/jUAfTdwO7Fdsmc3PavvsGRcyAMN9s=" crossorigin="anonymous">
@@ -29,7 +30,7 @@ if (!doNotTrack) {
 	
 	ga('send', 'pageview');
 }
-</script><link rel="alternate" type="application/rss+xml" href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/49/index.xml" title="202 Blue Note" />
+</script><link rel="alternate" type="application/rss+xml" href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/5/index.xml" title="202 Blue Note" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -230,7 +231,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/5/" class="">[ LeetCode #5 ]</a>
+    <a href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/5/" class=" active">[ LeetCode #5 ]</a>
   
 
           
@@ -248,7 +249,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/49/" class=" active">[ LeetCode #49 ]</a>
+    <a href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/49/" class="">[ LeetCode #49 ]</a>
   
 
           
@@ -439,7 +440,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>[ LeetCode #49 ]</strong>
+  <strong>[ LeetCode #5 ]</strong>
 
   <label for="toc-control">
     
@@ -455,9 +456,9 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#-leetcode-49--group-anagrams-그룹-애너그램">[ LeetCode #49 ] Group Anagrams 그룹 애너그램</a>
+    <li><a href="#-leetcode-5--longest-palindrome-substring-가장-긴-팰린드롬-부분-문자열">[ LeetCode #5 ] Longest Palindrome Substring 가장 긴 팰린드롬 부분 문자열</a>
       <ul>
-        <li><a href="#-leetcode-49--group-anagrams-바로가기-httpsleetcodecomproblemsgroup-anagrams"><a href="https://leetcode.com/problems/group-anagrams/">[ LeetCode #49 ] Group Anagrams 바로가기 </a></a></li>
+        <li><a href="#-leetcode-5--longest-palindromic-substring-바로가기-httpsleetcodecomproblemslongest-palindromic-substring"><a href="https://leetcode.com/problems/longest-palindromic-substring/">[ LeetCode #5 ] Longest Palindromic Substring 바로가기 </a></a></li>
         <li><a href="#-유용한-지식">💡 유용한 지식</a></li>
         <li><a href="#문제">문제</a></li>
         <li><a href="#내가-했던-접근">내가 했던 접근</a></li>
@@ -476,26 +477,30 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="-leetcode-49--group-anagrams-그룹-애너그램">
-  [ LeetCode #49 ] Group Anagrams 그룹 애너그램
-  <a class="anchor" href="#-leetcode-49--group-anagrams-%ea%b7%b8%eb%a3%b9-%ec%95%a0%eb%84%88%ea%b7%b8%eb%9e%a8">#</a>
+  <article class="markdown"><h1 id="-leetcode-5--longest-palindrome-substring-가장-긴-팰린드롬-부분-문자열">
+  [ LeetCode #5 ] Longest Palindrome Substring 가장 긴 팰린드롬 부분 문자열
+  <a class="anchor" href="#-leetcode-5--longest-palindrome-substring-%ea%b0%80%ec%9e%a5-%ea%b8%b4-%ed%8c%b0%eb%a6%b0%eb%93%9c%eb%a1%ac-%eb%b6%80%eb%b6%84-%eb%ac%b8%ec%9e%90%ec%97%b4">#</a>
 </h1>
-<h2 id="-leetcode-49--group-anagrams-바로가기-httpsleetcodecomproblemsgroup-anagrams">
-  <a href="https://leetcode.com/problems/group-anagrams/">[ LeetCode #49 ] Group Anagrams 바로가기 </a>
-  <a class="anchor" href="#-leetcode-49--group-anagrams-%eb%b0%94%eb%a1%9c%ea%b0%80%ea%b8%b0-httpsleetcodecomproblemsgroup-anagrams">#</a>
+<h2 id="-leetcode-5--longest-palindromic-substring-바로가기-httpsleetcodecomproblemslongest-palindromic-substring">
+  <a href="https://leetcode.com/problems/longest-palindromic-substring/">[ LeetCode #5 ] Longest Palindromic Substring 바로가기 </a>
+  <a class="anchor" href="#-leetcode-5--longest-palindromic-substring-%eb%b0%94%eb%a1%9c%ea%b0%80%ea%b8%b0-httpsleetcodecomproblemslongest-palindromic-substring">#</a>
 </h2>
 <h2 id="-유용한-지식">
   💡 유용한 지식
   <a class="anchor" href="#-%ec%9c%a0%ec%9a%a9%ed%95%9c-%ec%a7%80%ec%8b%9d">#</a>
 </h2>
 <blockquote class="book-hint warning">
-  <p><strong>Dictionary defaultdict 객체</strong></p>
-<ul>
-<li>존재하지 않는 키를 조회할 경우 에러 메시지 대신 디폴트 값을 기준으로 키에 대한 딕셔너리 아이템을 생성해줌</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># defaultdict() 사용으로 불필요한 if 연산 제거</span>
-<span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> defaultdict
-groups <span style="color:#f92672">=</span> defaultdict(list)
+  <p><strong>max() 함수 key 활용</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">max( result,
+        two_pointer(i, i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>),
+        two_pointer(i, i<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>),
+        key <span style="color:#f92672">=</span> len)
+</code></pre></div><p><strong>투포인터 좁히는 방향이 아닌 확장하며 탐색</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">two_pointer</span>(left, right):
+	<span style="color:#66d9ef">while</span> left <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> right <span style="color:#f92672">&lt;</span> len(s) <span style="color:#f92672">and</span> s[left] <span style="color:#f92672">==</span> s[right]:
+		left <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+		right <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+	<span style="color:#66d9ef">return</span> s[left<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:right]
 </code></pre></div>
 </blockquote>
 
@@ -504,8 +509,7 @@ groups <span style="color:#f92672">=</span> defaultdict(list)
   문제
   <a class="anchor" href="#%eb%ac%b8%ec%a0%9c">#</a>
 </h2>
-<p>Given an array of strings <code>strs</code>, group <strong>the anagrams</strong> together. You can return the answer in <strong>any order</strong>.</p>
-<p>An <strong>Anagram</strong> is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.</p>
+<p>Given a string <code>s</code>, return <em>the longest palindromic substring</em> in <code>s</code>.</p>
 
 <div class="book-expand">
   <label>
@@ -518,22 +522,18 @@ groups <span style="color:#f92672">=</span> defaultdict(list)
       <pre><code>**Example 1:**
 
 ```
-Input: strs = [&quot;eat&quot;,&quot;tea&quot;,&quot;tan&quot;,&quot;ate&quot;,&quot;nat&quot;,&quot;bat&quot;]
-Output: [[&quot;bat&quot;],[&quot;nat&quot;,&quot;tan&quot;],[&quot;ate&quot;,&quot;eat&quot;,&quot;tea&quot;]]
+Input: s = &quot;babad&quot;
+Output: &quot;bab&quot;
+Explanation: &quot;aba&quot; is also a valid answer.
+
 ```
 
 **Example 2:**
 
 ```
-Input: strs = [&quot;&quot;]
-Output: [[&quot;&quot;]]
-```
+Input: s = &quot;cbbd&quot;
+Output: &quot;bb&quot;
 
-**Example 3:**
-
-```
-Input: strs = [&quot;a&quot;]
-Output: [[&quot;a&quot;]]
 ```
 </code></pre>
 
@@ -543,37 +543,32 @@ Output: [[&quot;a&quot;]]
 
 <p><strong>Constraints:</strong></p>
 <ul>
-<li><code>1 &lt;= strs.length &lt;= 104</code></li>
-<li><code>0 &lt;= strs[i].length &lt;= 100</code></li>
-<li><code>strs[i]</code> consists of lowercase English letters.</li>
+<li><code>1 &lt;= s.length &lt;= 1000</code></li>
+<li><code>s</code> consist of only digits and English letters.</li>
 </ul>
 <hr>
 <h2 id="내가-했던-접근">
   내가 했던 접근
   <a class="anchor" href="#%eb%82%b4%ea%b0%80-%ed%96%88%eb%8d%98-%ec%a0%91%ea%b7%bc">#</a>
 </h2>
-
-<div class="book-expand">
-  <label>
-    <div class="book-expand-head flex justify-between">
-      <span>실패 History</span>
-      <span>↕</span>
-    </div>
-    <input type="checkbox" class="hidden" />
-    <div class="book-expand-content markdown-inner">
-      
-    </div>
-  </label>
-</div>
-
-<p><strong>[ 풀이 ]</strong></p>
+<p><strong>[ 풀이(실패) ]</strong></p>
 <ul>
-<li>input 단어를 각각 sorted() 후 동일한 단어끼리 딕셔너리로 그룹을 묶고 values() 로 결과 반환</li>
+<li>1차 시도 : ‘가장 긴' 팰린드롬을 찾아야했기 때문에 전체 문자열부터 하나씩 길이를 줄여가며 탐색하는 방향으로 잡았다. 따라서 하나씩 길이를 줄여가면서 문자열이 팰린드롬인지 탐색했다.</li>
+<li>2차 시도 : 1차 시도에 투포인터 방법을 적용해봤지만 여전히 시간초과로 실패하였다.</li>
 </ul>
-<p><strong>[ 결과 ]</strong></p>
-<p><strong>Runtime:</strong> 1956 ms, faster than 7.46% of Python online submissions for Group Anagrams.<br>
-<strong>Memory Usage:</strong> 17.3 MB, less than 83.24% of Python online submissions for Group Anagrams.</p>
+<p><strong>[ 결과 ] Time Limit Exceed</strong></p>
 <p><strong>[ 코드 ]</strong></p>
+<p>1차 시도</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">longestPalindrome</span>(self, s):
+        len_sub <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+            <span style="color:#66d9ef">for</span> ind <span style="color:#f92672">in</span> range(len_sub<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+                new_s <span style="color:#f92672">=</span> s[ind:len(s)<span style="color:#f92672">-</span>(len_sub<span style="color:#f92672">-</span>ind)]
+                <span style="color:#66d9ef">if</span> new_s <span style="color:#f92672">==</span> new_s[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]:
+                    <span style="color:#66d9ef">return</span> new_s
+            len_sub <span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>
+</code></pre></div><p>2차 시도</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">groupAnagrams</span>(self, strs):
         groups <span style="color:#f92672">=</span> dict()
@@ -586,7 +581,7 @@ Output: [[&quot;a&quot;]]
         <span style="color:#66d9ef">return</span> list(groups<span style="color:#f92672">.</span>values())
 </code></pre></div><p><strong>[ 반성 ]</strong></p>
 <ul>
-<li>dict() 대신 collections.defaultdict(list) 사용하면 불필요한 if문 제거 가능</li>
+<li>시간 복잡도가 너무 큰 방법으로, 처음에 전체 문자열부터 차츰 길이를 줄여가는 접근부터가 잘못됐다.</li>
 </ul>
 <hr>
 <h2 id="책-풀이">
@@ -595,19 +590,35 @@ Output: [[&quot;a&quot;]]
 </h2>
 <p><strong>[ 풀이 ]</strong></p>
 <ul>
-<li>내 접근과 동일하지만 dict() 대신 collections.defaultdict(list) 사용하여 불필요한 if문 제거 가능</li>
+<li>크게 문자열의 길이가 <strong>짝수</strong>인 경우 <strong>홀수</strong>인 경우 2가지만 존재</li>
+<li>맨 앞에서부터 짝수인 경우 홀수인 경우로 나눠
+가장 짧은 길이인 2, 3일때 투포인터로 팰린드롬 판별</li>
+<li>만약 팰린드롬이 맞으면 포인터를 왼쪽은 왼쪽, 오른쪽은 오른쪽으로 확장해서 가장 긴 팰린드롬을 찾는다.</li>
+<li>가장 긴 팰린드롬을 저장해두고 인덱스를 넓혀가며 반복한다.</li>
 </ul>
 <p><strong>[ 결과 ]</strong></p>
-<p><strong>Runtime:</strong> 117 ms, faster than 58.08% of Python online submissions for Group Anagrams.<br>
-<strong>Memory Usage:</strong> 17.6 MB, less than 71.25% of Python online submissions for Group Anagrams.</p>
+<p><strong>Runtime:</strong> 809 ms, faster than 85.78% of Python online submissions for Longest Palindromic Substring.<br>
+<strong>Memory Usage:</strong> 13.5 MB, less than 70.60% of Python online submissions for Longest Palindromic Substring.</p>
 <p><strong>[ 코드 ]</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> defaultdict
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">groupAnagrams</span>(self, strs):
-        groups <span style="color:#f92672">=</span> defaultdict(list)
-        <span style="color:#66d9ef">for</span> string <span style="color:#f92672">in</span> strs:
-            groups[<span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(sorted(string))]<span style="color:#f92672">.</span>append(string)
-        <span style="color:#66d9ef">return</span> list(groups<span style="color:#f92672">.</span>values())
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">longestPalindrome</span>(self, s):
+        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">two_pointer</span>(left, right):
+            <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> right <span style="color:#f92672">&lt;</span> len(s) <span style="color:#f92672">and</span> s[left] <span style="color:#f92672">==</span> s[right]:
+                left <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+                right <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">return</span> s[left<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:right]
+
+        <span style="color:#66d9ef">if</span> len(s) <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">return</span> s
+
+        result <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(s)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+            result <span style="color:#f92672">=</span> max( result,
+                        two_pointer(i, i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>),
+                        two_pointer(i, i<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>),
+                        key <span style="color:#f92672">=</span> len)
+
+        <span style="color:#66d9ef">return</span> result
 </code></pre></div></article>
  
       
@@ -617,16 +628,10 @@ Output: [[&quot;a&quot;]]
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/key4920/commit/8dbcb49c0d4107fb38282b93bdcf8986bf8a8e36" title='Last modified by key4920 | March 20, 2022' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>March 20, 2022</span>
-    </a>
-  </div>
-
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/key4920/docs/content/docs/ETC/Algorithms/LeetCode/49/_index.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/key4920/docs/content/docs/ETC/Algorithms/LeetCode/5/_index.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
       <span>Edit this page</span>
     </a>
@@ -658,9 +663,9 @@ Output: [[&quot;a&quot;]]
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#-leetcode-49--group-anagrams-그룹-애너그램">[ LeetCode #49 ] Group Anagrams 그룹 애너그램</a>
+    <li><a href="#-leetcode-5--longest-palindrome-substring-가장-긴-팰린드롬-부분-문자열">[ LeetCode #5 ] Longest Palindrome Substring 가장 긴 팰린드롬 부분 문자열</a>
       <ul>
-        <li><a href="#-leetcode-49--group-anagrams-바로가기-httpsleetcodecomproblemsgroup-anagrams"><a href="https://leetcode.com/problems/group-anagrams/">[ LeetCode #49 ] Group Anagrams 바로가기 </a></a></li>
+        <li><a href="#-leetcode-5--longest-palindromic-substring-바로가기-httpsleetcodecomproblemslongest-palindromic-substring"><a href="https://leetcode.com/problems/longest-palindromic-substring/">[ LeetCode #5 ] Longest Palindromic Substring 바로가기 </a></a></li>
         <li><a href="#-유용한-지식">💡 유용한 지식</a></li>
         <li><a href="#문제">문제</a></li>
         <li><a href="#내가-했던-접근">내가 했던 접근</a></li>
