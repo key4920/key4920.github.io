@@ -6,7 +6,7 @@
     <description>Recent content in Algorithms on 202 Blue Note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://key4920.github.io/tags/Algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://key4920.github.io/tags/Algorithms/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>알고리즘 공부 방향성</title>
       <link>https://key4920.github.io/docs/ETC/Algorithms/summary/</link>
@@ -19,6 +19,16 @@
 [ 문제풀이 플랫폼 ] LeetCode
  방향성 #   나의 1차적 목적은 코딩테스트이다.
 하지만 더 멀게는 효율적인 코드 구현 능력 향상을 목적으로하며 “왜?”에 집중하여 학습하고자 한다. 전체적으로 파이썬 알고리즘 인터뷰 책을 따라 학습하며</description>
+    </item>
+    
+    <item>
+      <title>[ LeetCode #234 ]</title>
+      <link>https://key4920.github.io/docs/ETC/Algorithms/LeetCode/234/</link>
+      <pubDate>Sat, 26 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://key4920.github.io/docs/ETC/Algorithms/LeetCode/234/</guid>
+      <description>[ LeetCode #234 ] Palindrome Linked List 팰린드롬 연결 리스트 #  [ LeetCode #234 ] Palindrome Linked List 바로가기  #  💡 유용한 지식 #  러너 기법
+ 연결 리스트를 순회할 때 2개의 포인터를 동시에 사용하는 기법 빠른 러너와 느린 러너를 생성하여 병합 지점이나 중간 위치, 길이 등을 판별할 때 유용 빠른 러너가 연결 리스트의 끝에 도달하면 느린 러너는 연결 리스트의 중간 지점을 가리키게 되어 중간 위치를 찾아내면 값 비교하거나 뒤집기를 시도하는 등 다각도로 활용이 가능  ## runner 기법 # - fast, slow 는 모두 Linked List # - fast 에 값이 있다면 길이가 홀수인 경우이므로 한칸 더 전진시킨다.</description>
     </item>
     
     <item>

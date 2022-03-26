@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="[ LeetCode #234 ] Palindrome Linked List 팰린드롬 연결 리스트 #  [ LeetCode #234 ] Palindrome Linked List 바로가기  #  💡 유용한 지식 #  러너 기법
+ 연결 리스트를 순회할 때 2개의 포인터를 동시에 사용하는 기법 빠른 러너와 느린 러너를 생성하여 병합 지점이나 중간 위치, 길이 등을 판별할 때 유용 빠른 러너가 연결 리스트의 끝에 도달하면 느린 러너는 연결 리스트의 중간 지점을 가리키게 되어 중간 위치를 찾아내면 값 비교하거나 뒤집기를 시도하는 등 다각도로 활용이 가능  ## runner 기법 # - fast, slow 는 모두 Linked List # - fast 에 값이 있다면 길이가 홀수인 경우이므로 한칸 더 전진시킨다.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="[ LeetCode #234 ]" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/234/" />
+
+<title>[ LeetCode #234 ] | 202 Blue Note</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.97cfda4f5e3c9fa49a2bf8d401f4ddc0eec576c99cdcf6afbec19173200c37db.css" integrity="sha256-l8/aT148n6SaK/jUAfTdwO7Fdsmc3PavvsGRcyAMN9s=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.48bbc4949efbdbe8d115f1ea038bc9b0b74dfd2d062623c60ab53673cb93690a.js" integrity="sha256-SLvElJ772&#43;jRFfHqA4vJsLdN/S0GJiPGCrU2c8uTaQo=" crossorigin="anonymous"></script>
+<link rel="alternate" type="application/rss+xml" href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/234/index.xml" title="202 Blue Note" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><img src="/logo.png" alt="Logo" /><span>202 Blue Note</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>BigData Platform</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-493de9819b5c0666906ab2facfddd86e" class="toggle"  />
+    <label for="section-493de9819b5c0666906ab2facfddd86e" class="flex justify-between">
+      <a role="button" class="">Apache Spark</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/bigdata_platform/ApacheSpark/spark_install/" class="">Mac OS에 스파크3 설치 및 pyspark 시작</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-884ac8cf1b1346e7e6d0492566fcf838" class="toggle"  />
+    <label for="section-884ac8cf1b1346e7e6d0492566fcf838" class="flex justify-between">
+      <a role="button" class="">Hadoop</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/bigdata_platform/Hadoop/hadoop_install_M1/" class="">[M1] Mac OS에 하둡(Hadoop) 설치</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>ETC</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-38719d68a470d8cb5ec219eaaacd6032" class="toggle" checked />
+    <label for="section-38719d68a470d8cb5ec219eaaacd6032" class="flex justify-between">
+      <a role="button" class="">Algorithms</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/Algorithms/summary/" class="">알고리즘 공부 방향성</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-35ed564960523d26d6e6dd6d00bc6ca8" class="toggle" checked />
+    <label for="section-35ed564960523d26d6e6dd6d00bc6ca8" class="flex justify-between">
+      <a role="button" class="">LeetCode 실습</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/234/" class=" active">[ LeetCode #234 ]</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/1/" class="">[ LeetCode #1 ]</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/5/" class="">[ LeetCode #5 ]</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/49/" class="">[ LeetCode #49 ]</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/819/" class="">[ LeetCode #819 ]</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/937/" class="">[ LeetCode #937 ]</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/344/" class="">[ LeetCode #344 ]</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/Algorithms/LeetCode/125/" class="">[ LeetCode #125 ]</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eb9b6782719ffdbc4862381781d40384" class="toggle"  />
+    <label for="section-eb9b6782719ffdbc4862381781d40384" class="flex justify-between">
+      <a role="button" class="">Hugo</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://key4920.github.io/docs/ETC/Hugo/first_hugo_blog/" class="">초보자 Hugo 블로그 구축기</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/key4920" target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>[ LeetCode #234 ]</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#-leetcode-234--palindrome-linked-list-팰린드롬-연결-리스트">[ LeetCode #234 ] Palindrome Linked List 팰린드롬 연결 리스트</a>
+      <ul>
+        <li><a href="#-leetcode-234--palindrome-linked-list-바로가기-httpsleetcodecomproblemspalindrome-linked-list"><a href="https://leetcode.com/problems/palindrome-linked-list/">[ LeetCode #234 ] Palindrome Linked List 바로가기 </a></a></li>
+        <li><a href="#-유용한-지식">💡 유용한 지식</a></li>
+        <li><a href="#문제">문제</a></li>
+        <li><a href="#내가-했던-접근">내가 했던 접근</a></li>
+        <li><a href="#책-풀이">책 풀이</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="-leetcode-234--palindrome-linked-list-팰린드롬-연결-리스트">
+  [ LeetCode #234 ] Palindrome Linked List 팰린드롬 연결 리스트
+  <a class="anchor" href="#-leetcode-234--palindrome-linked-list-%ed%8c%b0%eb%a6%b0%eb%93%9c%eb%a1%ac-%ec%97%b0%ea%b2%b0-%eb%a6%ac%ec%8a%a4%ed%8a%b8">#</a>
+</h1>
+<h2 id="-leetcode-234--palindrome-linked-list-바로가기-httpsleetcodecomproblemspalindrome-linked-list">
+  <a href="https://leetcode.com/problems/palindrome-linked-list/">[ LeetCode #234 ] Palindrome Linked List 바로가기 </a>
+  <a class="anchor" href="#-leetcode-234--palindrome-linked-list-%eb%b0%94%eb%a1%9c%ea%b0%80%ea%b8%b0-httpsleetcodecomproblemspalindrome-linked-list">#</a>
+</h2>
+<h2 id="-유용한-지식">
+  💡 유용한 지식
+  <a class="anchor" href="#-%ec%9c%a0%ec%9a%a9%ed%95%9c-%ec%a7%80%ec%8b%9d">#</a>
+</h2>
+<blockquote class="book-hint warning">
+  <p><strong>러너 기법</strong></p>
+<ul>
+<li>연결 리스트를 순회할 때 2개의 포인터를 동시에 사용하는 기법</li>
+<li>빠른 러너와 느린 러너를 생성하여 병합 지점이나 중간 위치, 길이 등을 판별할 때 유용</li>
+<li>빠른 러너가 연결 리스트의 끝에 도달하면 느린 러너는 연결 리스트의 중간 지점을 가리키게 되어 중간 위치를 찾아내면 값 비교하거나 뒤집기를 시도하는 등 다각도로 활용이 가능</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">## runner 기법</span>
+<span style="color:#75715e"># - fast, slow 는 모두 Linked List</span>
+<span style="color:#75715e"># - fast 에 값이 있다면 길이가 홀수인 경우이므로 한칸 더 전진시킨다.</span>
+<span style="color:#66d9ef">while</span> fast <span style="color:#f92672">and</span> fast<span style="color:#f92672">.</span>next:
+	fast <span style="color:#f92672">=</span> fast<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>next
+	history, history<span style="color:#f92672">.</span>next, slow <span style="color:#f92672">=</span> slow, history, slow<span style="color:#f92672">.</span>next
+<span style="color:#66d9ef">if</span> fast:
+	slow <span style="color:#f92672">=</span> slow<span style="color:#f92672">.</span>next
+</code></pre></div><p><strong>다중 할당 (Multiple Assignment)</strong></p>
+<ul>
+<li>파이썬은 원시 타입이 존재하지 않고 모든 것이 객체</li>
+<li>줄을 구분해서 할당하면 <a href="http://history.next">history</a> = slow 구문으로 인해 같은 객체를 참조를 할당하므로 줄을 나누는 것과 한번에 처리하는 것은 다른 풀이가 된다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">history, history<span style="color:#f92672">.</span>next, slow <span style="color:#f92672">=</span> slow, history, slow<span style="color:#f92672">.</span>next
+</code></pre></div>
+</blockquote>
+
+<hr>
+<h2 id="문제">
+  문제
+  <a class="anchor" href="#%eb%ac%b8%ec%a0%9c">#</a>
+</h2>
+<p>Given the <code>head</code> of a singly linked list, return <code>true</code> if it is a palindrome.</p>
+
+<div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>Examples</span>
+      <span>↕</span>
+    </div>
+    <input type="checkbox" class="hidden" />
+    <div class="book-expand-content markdown-inner">
+      <p><strong>Example 1:</strong>
+<img src="https://assets.leetcode.com/uploads/2021/03/03/pal1linked-list.jpg" alt="https://assets.leetcode.com/uploads/2021/03/03/pal1linked-list.jpg"></p>
+<pre tabindex="0"><code>Input: head = [1,2,2,1]
+Output: true
+
+</code></pre><p><strong>Example 2:</strong>
+<img src="https://assets.leetcode.com/uploads/2021/03/03/pal2linked-list.jpg" alt="https://assets.leetcode.com/uploads/2021/03/03/pal2linked-list.jpg"></p>
+<pre tabindex="0"><code>Input: head = [1,2]
+Output: false
+
+</code></pre>
+    </div>
+  </label>
+</div>
+
+<p><strong>Constraints:</strong></p>
+<ul>
+<li>The number of nodes in the list is in the range <code>[1, 105]</code>.</li>
+<li><code>0 &lt;= Node.val &lt;= 9</code></li>
+</ul>
+<p><strong>Follow up:</strong></p>
+<p>Could you do it in O(n) time and O(1) space?</p>
+<hr>
+<h2 id="내가-했던-접근">
+  내가 했던 접근
+  <a class="anchor" href="#%eb%82%b4%ea%b0%80-%ed%96%88%eb%8d%98-%ec%a0%91%ea%b7%bc">#</a>
+</h2>
+
+<div class="book-expand">
+  <label>
+    <div class="book-expand-head flex justify-between">
+      <span>실패 History</span>
+      <span>↕</span>
+    </div>
+    <input type="checkbox" class="hidden" />
+    <div class="book-expand-content markdown-inner">
+      <ul>
+<li>linked list 개념을 잘 이해하지 못했으며 palindrome 판별이라는 것을 잊고 조금 헤맸다.</li>
+</ul>
+
+    </div>
+  </label>
+</div>
+
+<p><strong>[ 풀이 ]</strong></p>
+<ul>
+<li>리스트에 append 후 슬라이싱으로 판별하기</li>
+</ul>
+<p><strong>[ 결과 ]</strong></p>
+<p><strong>Runtime:</strong> 1214 ms, faster than 68.41% of Python online submissions for Palindrome Linked List.
+<strong>Memory Usage:</strong> 85.6 MB, less than 17.58% of Python online submissions for Palindrome Linked List.</p>
+<p><strong>[ 코드 ]</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for singly-linked list.</span>
+<span style="color:#75715e"># class ListNode(object):</span>
+<span style="color:#75715e">#     def __init__(self, val=0, next=None):</span>
+<span style="color:#75715e">#         self.val = val</span>
+<span style="color:#75715e">#         self.next = next</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isPalindrome</span>(self, head):
+        history <span style="color:#f92672">=</span> list()
+        <span style="color:#66d9ef">if</span> head<span style="color:#f92672">.</span>next <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+
+        <span style="color:#66d9ef">while</span> head:
+            history<span style="color:#f92672">.</span>append( head<span style="color:#f92672">.</span>val )
+            head <span style="color:#f92672">=</span> head<span style="color:#f92672">.</span>next
+
+        <span style="color:#66d9ef">return</span> history <span style="color:#f92672">==</span> history[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</code></pre></div><p><strong>[ 반성 ]</strong></p>
+<ul>
+<li>linked list 특성을 살리지 못한 풀이</li>
+</ul>
+<hr>
+<h2 id="책-풀이">
+  책 풀이
+  <a class="anchor" href="#%ec%b1%85-%ed%92%80%ec%9d%b4">#</a>
+</h2>
+<p><strong>[ 풀이 ]</strong></p>
+<ul>
+<li>방법 1 : list + pop(0) (내 접근과 유사)
+<ul>
+<li>나는 팰린드롬 판별을 리스트 슬라이싱으로 했지만 pop(0)을 사용</li>
+</ul>
+</li>
+<li>방법 2 : deque + popleft()
+<ul>
+<li>방법 1 은 pop(0) 으로 조회가 O(n)이었지만 데크 자료형으로 O(1)로 조회 가능</li>
+</ul>
+</li>
+<li><strong>방법 3 : 러너 **</strong>
+<ul>
+<li>fast, slow 러너 2가지를 만들고 fast는 두칸씩, slow는 한칸씩 전진시켜 fast가 끝에 도달할때 slow를 중간지점에 위치시킨다.</li>
+<li>slow가 오면서 지나친 길을 역순으로 history를 만들고 만약 길이가 홀수였으면 slow 를 한칸 더 전진 시킨다.</li>
+<li>slow의 중간을 지나친 값과 역순으로 기록해둔 history의 값을 차례로 비교한다.</li>
+<li>모두 일치하여 slow가 None이 되면 True, 아니면 False 반환</li>
+</ul>
+</li>
+</ul>
+<p><strong>[ 결과 ]</strong></p>
+<p>방법 1 : list + pop(0) (내 접근과 유사)</p>
+<p><strong>Runtime:</strong> 1690 ms, faster than 23.68% of Python online submissions for Palindrome Linked List.</p>
+<p><strong>Memory Usage:</strong> 84.7 MB, less than 46.59% of Python online submissions for Palindrome Linked List.</p>
+<p>방법 2 : deque + popleft()</p>
+<p>Runtime: 1469 ms, faster than 41.47% of Python online submissions for Palindrome Linked List.
+Memory Usage: 84.5 MB, less than 51.87% of Python online submissions for Palindrome Linked List.</p>
+<p><strong>방법 3 : (연결리스트 특성 활용한 방법) 러너 (992 ms)**</strong></p>
+<p><strong>Runtime:</strong> 992 ms, faster than 93.93% of Python online submissions for Palindrome Linked List.</p>
+<p><strong>Memory Usage:</strong> 49.6 MB, less than 96.18% of Python online submissions for Palindrome Linked List.</p>
+<p><strong>[ 코드 ]</strong></p>
+<p>방법 1 : list + pop(0) (1690 ms)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isPalindrome</span>(self, head):
+        history <span style="color:#f92672">=</span> list()
+
+        <span style="color:#66d9ef">if</span> head<span style="color:#f92672">.</span>next <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+
+        <span style="color:#66d9ef">while</span> head:
+            history<span style="color:#f92672">.</span>append( head<span style="color:#f92672">.</span>val )
+            head <span style="color:#f92672">=</span> head<span style="color:#f92672">.</span>next
+
+        <span style="color:#66d9ef">while</span> len(history) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span> :
+            <span style="color:#66d9ef">if</span> history<span style="color:#f92672">.</span>pop(<span style="color:#ae81ff">0</span>) <span style="color:#f92672">!=</span> history<span style="color:#f92672">.</span>pop():
+                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</code></pre></div><p>방법 2 : deque + popleft() (1469 ms)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> deque
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isPalindrome</span>(self, head):
+        history <span style="color:#f92672">=</span> deque()
+
+        <span style="color:#66d9ef">if</span> head<span style="color:#f92672">.</span>next <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+
+        <span style="color:#66d9ef">while</span> head:
+            history<span style="color:#f92672">.</span>append( head<span style="color:#f92672">.</span>val )
+            head <span style="color:#f92672">=</span> head<span style="color:#f92672">.</span>next
+
+        <span style="color:#66d9ef">while</span> len(history) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span> :
+            <span style="color:#66d9ef">if</span> history<span style="color:#f92672">.</span>popleft() <span style="color:#f92672">!=</span> history<span style="color:#f92672">.</span>pop():
+                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</code></pre></div><p><strong>방법 3 : (연결리스트 특성 활용한 방법) 러너 (992 ms)**</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isPalindrome</span>(self, head):
+
+        history <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+        fast <span style="color:#f92672">=</span> slow <span style="color:#f92672">=</span> head
+
+        <span style="color:#66d9ef">while</span> fast <span style="color:#f92672">and</span> fast<span style="color:#f92672">.</span>next:
+            fast <span style="color:#f92672">=</span> fast<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>next
+            history, history<span style="color:#f92672">.</span>next, slow <span style="color:#f92672">=</span> slow, history, slow<span style="color:#f92672">.</span>next
+        <span style="color:#66d9ef">if</span> fast:
+            slow <span style="color:#f92672">=</span> slow<span style="color:#f92672">.</span>next
+
+        <span style="color:#66d9ef">while</span> history <span style="color:#f92672">and</span> history<span style="color:#f92672">.</span>val <span style="color:#f92672">==</span> slow<span style="color:#f92672">.</span>val:
+            history, slow <span style="color:#f92672">=</span> history<span style="color:#f92672">.</span>next, slow<span style="color:#f92672">.</span>next
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">not</span> slow
+</code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/key4920/docs/content/docs/ETC/Algorithms/LeetCode/234/_index.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#-leetcode-234--palindrome-linked-list-팰린드롬-연결-리스트">[ LeetCode #234 ] Palindrome Linked List 팰린드롬 연결 리스트</a>
+      <ul>
+        <li><a href="#-leetcode-234--palindrome-linked-list-바로가기-httpsleetcodecomproblemspalindrome-linked-list"><a href="https://leetcode.com/problems/palindrome-linked-list/">[ LeetCode #234 ] Palindrome Linked List 바로가기 </a></a></li>
+        <li><a href="#-유용한-지식">💡 유용한 지식</a></li>
+        <li><a href="#문제">문제</a></li>
+        <li><a href="#내가-했던-접근">내가 했던 접근</a></li>
+        <li><a href="#책-풀이">책 풀이</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
