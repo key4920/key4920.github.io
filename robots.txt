@@ -1,3 +1,1 @@
 User-agent: *
-Allow: /
-Sitemap: http://key4920.github.io/sitemap.xml
