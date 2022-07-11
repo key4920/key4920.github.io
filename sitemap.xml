@@ -162,7 +162,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://key4920.github.io/categories/Apache-Spark/</loc>
-    <lastmod>2022-02-03T21:13:26+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -181,13 +180,7 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://key4920.github.io/docs/bigdata_platform/ApacheSpark/spark_install/</loc>
-    <lastmod>2022-02-03T21:13:26+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://key4920.github.io/tags/Spark/</loc>
-    <lastmod>2022-02-03T21:13:26+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
